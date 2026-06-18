@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proud Physio & Wellness - Move Better, Live Stronger</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --teal: #2a9d8f;
+    --teal-dark: #1f7a6e;
+    --teal-light: #e6f5f3;
+    --teal-mid: #3ab5a5;
+    --green-accent: #57cc99;
+    --dark: #1a2e2a;
+    --text: #3d4c48;
+    --light-gray: #f5f7f6;
+    --border: #e0ecea;
+    --white: #ffffff;
+    --gold: #f4a261;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); font-size: 15px; line-height: 1.6; }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 1000;
+    background: var(--white);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 60px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-icon { width: 40px; height: 40px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .nav-logo-icon svg { width: 22px; height: 22px; fill: white; }
+  .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .nav-logo-text span:first-child { font-size: 14px; font-weight: 700; color: var(--teal); letter-spacing: 0.5px; }
+  .nav-logo-text span:last-child { font-size: 10px; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--dark); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-cta { background: var(--teal); color: white !important; padding: 10px 22px; border-radius: 25px; font-weight: 600 !important; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--teal-dark) !important; color: white !important; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #f0faf8 0%, #e8f5f2 50%, #fef9f0 100%);
+    padding: 70px 60px 50px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; right: -100px; top: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(42,157,143,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-label { font-size: 12px; font-weight: 600; color: var(--teal); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+  .hero h1 { font-family: 'DM Sans', sans-serif; font-size: 48px; font-weight: 800; color: var(--dark); line-height: 1.15; margin-bottom: 6px; }
+  .hero h1 span { color: var(--teal); }
+  .hero-tagline { font-size: 18px; font-weight: 500; color: var(--teal); margin-bottom: 18px; }
+  .hero-desc { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 28px; max-width: 480px; }
+  .hero-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--teal); color: white; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s; box-shadow: 0 6px 20px rgba(42,157,143,0.35); }
+  .hero-btn:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(42,157,143,0.4); }
+  .hero-btn svg { width: 16px; height: 16px; fill: white; }
+  .hero-stats { display: flex; align-items: center; gap: 30px; margin-top: 30px; }
+  .hero-rating { display: flex; align-items: center; gap: 8px; }
+  .hero-rating-stars { color: #f4a261; font-size: 14px; }
+  .hero-rating-text { font-size: 12px; color: #888; }
+  .hero-rating-text strong { color: var(--dark); }
+  .hero-divider { width: 1px; height: 30px; background: #ddd; }
+
+  .hero-images { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .hero-img-main { grid-column: 1 / -1; border-radius: 16px; overflow: hidden; height: 220px; position: relative; }
+  .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-stat-badge {
+    position: absolute; background: white; border-radius: 12px; padding: 10px 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 10px;
+  }
+  .hero-stat-badge.top-left { top: 16px; left: 16px; }
+  .hero-stat-badge.bottom-right { bottom: 16px; right: 16px; }
+  .badge-num { font-size: 22px; font-weight: 700; color: var(--teal); line-height: 1; }
+  .badge-label { font-size: 11px; color: #888; line-height: 1.3; }
+  .hero-img-sub { border-radius: 12px; overflow: hidden; height: 130px; }
+  .hero-img-sub img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-vid-btn {
+    position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    background: var(--teal); color: white; border: none; border-radius: 25px;
+    padding: 10px 20px; font-size: 12px; font-weight: 600; cursor: pointer;
+    display: flex; align-items: center; gap: 8px; white-space: nowrap;
+  }
+  .play-icon { width: 20px; height: 20px; background: rgba(255,255,255,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8px; }
+
+  /* FEATURES STRIP */
+  .features-strip {
+    background: var(--teal);
+    padding: 28px 60px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  }
+  .feature-item { display: flex; align-items: flex-start; gap: 14px; }
+  .feature-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .feature-icon i { color: white; font-size: 20px; }
+  .feature-text h4 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .feature-text p { font-size: 11px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+
+  /* ABOUT SECTION */
+  .about-section { padding: 70px 60px; background: var(--white); }
+  .section-label { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--teal); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+  .section-label::before { content: '✦'; font-size: 10px; }
+  .about-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 50px; }
+  .about-header-left h2 { font-family: 'DM Sans', sans-serif; font-size: 34px; font-weight: 800; color: var(--dark); line-height: 1.25; max-width: 500px; }
+  .about-header-right { display: flex; gap: 40px; align-items: flex-end; }
+  .about-stat { text-align: center; }
+  .about-stat .num { font-family: 'DM Sans', sans-serif; font-size: 42px; font-weight: 700; color: var(--teal); line-height: 1; }
+  .about-stat .lbl { font-size: 11px; color: #888; margin-top: 4px; text-align: center; }
+  .about-btn-sm { background: var(--teal-light); color: var(--teal); padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-left: 30px; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+  .about-left h3 { font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+  .about-left p { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 14px; }
+  .about-img { border-radius: 16px; overflow: hidden; height: 280px; margin-top: 24px; }
+  .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-right h3 { font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
+  .about-right .mission-text { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 24px; }
+  .about-right h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
+  .healing-process { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .healing-img { border-radius: 12px; overflow: hidden; height: 160px; }
+  .healing-img img { width: 100%; height: 100%; object-fit: cover; }
+  .healing-steps { font-size: 13px; color: #666; line-height: 2; }
+  .healing-steps li { list-style: none; padding-left: 18px; position: relative; }
+  .healing-steps li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+  .see-more-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--teal); color: white; padding: 11px 22px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; margin-top: 16px; }
+
+  /* SERVICES */
+  .services-section { padding: 70px 60px; background: var(--light-gray); }
+  .services-header { margin-bottom: 36px; }
+  .services-header h2 { font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .service-card {
+    background: white; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+  .service-card-img { height: 160px; overflow: hidden; }
+  .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .service-card:hover .service-card-img img { transform: scale(1.06); }
+  .service-card-body { padding: 18px; }
+  .service-card-icon { width: 38px; height: 38px; background: var(--teal-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .service-card-icon i { color: var(--teal); font-size: 18px; }
+  .service-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .service-card p { font-size: 12px; color: #888; line-height: 1.6; }
+  .service-card-badge {
+    position: absolute; top: 12px; right: 12px;
+    width: 30px; height: 30px; background: var(--teal); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 14px; font-weight: 700;
+  }
+
+  /* WHY CHOOSE */
+  .why-section {
+    background: var(--teal);
+    padding: 60px;
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: center;
+  }
+  .why-left { position: relative; }
+  .why-left::after {
+    content: ''; position: absolute;
+    right: -30px; top: 50%; transform: translateY(-50%);
+    width: 1px; height: 60%; background: rgba(255,255,255,0.2);
+  }
+  .why-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .why-label::before { content: '✦'; }
+  .why-left h2 { font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 800; color: white; line-height: 1.25; margin-bottom: 20px; }
+  .why-left p { font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 24px; }
+  .why-btn { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--teal); padding: 12px 24px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 700; }
+  .why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .why-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 22px; backdrop-filter: blur(10px); }
+  .why-card-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .why-card-icon i { color: white; font-size: 18px; }
+  .why-card h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 8px; }
+  .why-card p { font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+
+  /* VISIT */
+  .visit-section { padding: 70px 60px; background: var(--white); }
+  .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+  .visit-left h2 { font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; margin-bottom: 16px; }
+  .visit-left p { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 24px; }
+  .visit-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--teal); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; }
+  .map-container { border-radius: 16px; overflow: hidden; height: 280px; background: #e8f4f0; position: relative; }
+  .map-container iframe { width: 100%; height: 100%; border: 0; }
+  .visit-info-strip { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .visit-info-box { background: var(--teal); border-radius: 12px; padding: 18px 20px; color: white; }
+  .visit-info-box .info-title { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; opacity: 0.8; display: flex; align-items: center; gap: 6px; }
+  .visit-info-box .info-val { font-size: 14px; font-weight: 600; }
+  .social-icons { display: flex; gap: 12px; margin-top: 8px; }
+  .social-icons a { width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; text-decoration: none; transition: background 0.2s; }
+  .social-icons a:hover { background: rgba(255,255,255,0.35); }
+
+  /* TESTIMONIALS */
+  .testimonials-section { padding: 70px 60px; background: var(--light-gray); }
+  .testimonials-header { margin-bottom: 40px; }
+  .testimonials-header h2 { font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .testimonial-card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .testimonial-stars { color: #f4a261; font-size: 13px; margin-bottom: 12px; }
+  .testimonial-text { font-size: 13px; color: #666; line-height: 1.75; margin-bottom: 18px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+  .testimonial-name { font-size: 14px; font-weight: 700; color: var(--dark); }
+  .testimonial-role { font-size: 12px; color: #aaa; }
+  .testimonials-more { text-align: center; margin-top: 30px; }
+  .see-more-link { display: inline-flex; align-items: center; gap: 6px; background: white; border: 2px solid var(--teal); color: var(--teal); padding: 11px 24px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; }
+
+  /* REACH OUT CTA */
+  .cta-section {
+    background: var(--teal);
+    padding: 50px 60px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: ''; position: absolute; right: 200px; top: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.07); border-radius: 50%;
+  }
+  .cta-section::after {
+    content: ''; position: absolute; right: 100px; bottom: -60px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.05); border-radius: 50%;
+  }
+  .cta-left { position: relative; z-index: 2; }
+  .cta-label { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .cta-label::before { content: '✦'; }
+  .cta-left h2 { font-family: 'DM Sans', sans-serif; font-size: 34px; font-weight: 800; color: white; line-height: 1.25; margin-bottom: 16px; }
+  .cta-left p { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 24px; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--teal); padding: 14px 28px; border-radius: 30px; text-decoration: none; font-size: 14px; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+  .cta-img { border-radius: 16px; overflow: hidden; height: 300px; position: relative; z-index: 2; }
+  .cta-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+  /* BLOG */
+  .blog-section { padding: 70px 60px; background: var(--white); }
+  .blog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 36px; }
+  .blog-header h2 { font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 800; color: var(--dark); }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .blog-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
+  .blog-card:hover { transform: translateY(-4px); }
+  .blog-card-img { height: 190px; overflow: hidden; }
+  .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .blog-card:hover .blog-card-img img { transform: scale(1.06); }
+  .blog-card-body { padding: 20px; }
+  .blog-tag { display: inline-block; background: var(--teal-light); color: var(--teal); font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; }
+  .blog-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 10px; }
+  .blog-card p { font-size: 12px; color: #888; line-height: 1.6; }
+  .blog-more { display: flex; align-items: center; gap: 6px; color: var(--teal); font-size: 13px; font-weight: 600; text-decoration: none; margin-top: 12px; }
+
+  /* MARQUEE */
+  .marquee-strip { background: var(--teal); padding: 16px 0; overflow: hidden; white-space: nowrap; }
+  .marquee-track { display: inline-flex; animation: marquee 20s linear infinite; }
+  .marquee-track span { font-size: 13px; color: white; font-weight: 500; padding: 0 30px; opacity: 0.9; }
+  .marquee-track span::after { content: '✦'; margin-left: 30px; opacity: 0.5; }
+  @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* FOOTER */
+  footer { background: var(--dark); padding: 50px 60px 24px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-brand .brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .footer-brand .brand-name { font-size: 16px; font-weight: 700; color: white; }
+  .footer-brand p { font-size: 13px; color: #888; line-height: 1.8; max-width: 260px; }
+  .footer-col h4 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 16px; letter-spacing: 0.5px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul li a { color: #888; font-size: 13px; text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--teal); }
+  .footer-col ul li span { color: #888; font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
+  .footer-col ul li span i { color: var(--teal); margin-top: 2px; flex-shrink: 0; }
+  .footer-social { display: flex; gap: 10px; margin-top: 16px; }
+  .footer-social a { width: 34px; height: 34px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #888; font-size: 14px; text-decoration: none; transition: all 0.2s; }
+  .footer-social a:hover { background: var(--teal); color: white; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; text-align: center; }
+  .footer-bottom p { font-size: 12px; color: #555; }
+  .footer-bottom span { color: var(--teal); }
+
+  /* UTILS */
+  .see-more-btn-outline { display: inline-flex; align-items: center; gap: 6px; border: 2px solid var(--teal); color: var(--teal); padding: 10px 22px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; background: transparent; }
+
+  @media (max-width: 900px) {
+    nav, .hero, .features-strip, .about-grid, .services-grid, .why-section, .visit-grid, .testimonials-grid, .cta-section, .blog-grid, .footer-grid { grid-template-columns: 1fr; padding: 30px 20px; }
+    .hero { padding: 40px 20px; }
+    .about-header { flex-direction: column; gap: 20px; }
+    .healing-process { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+    </div>
+    <div class="nav-logo-text">
+      <span>Proud Physio</span>
+      <span>& Wellness</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Our Services</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-label">✦ Proud Physio</div>
+    <h1>Move Better, Live Stronger<br><span>Feel the Difference</span></h1>
+    <p class="hero-desc">At Proud Physio and Wellness, helping you recover from injuries, improve mobility, and enhance well-being are top priorities — improving everyday function with expert care and compassionate support, and bringing solutions you can feel from pain to relief, helping you to managing a better tomorrow from recovery to regaining every step of the way.</p>
+    <a href="#" class="hero-btn">
+      <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+      Book An Appointment
+    </a>
+    <div class="hero-stats">
+      <div class="hero-rating">
+        <div class="hero-rating-stars">★★★★★</div>
+        <div class="hero-rating-text"><strong>4.9</strong> / 5 Reviews</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-rating">
+        <div class="hero-rating-text"><strong>4.5K+</strong> Families Trusted</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-images">
+    <div class="hero-img-main">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80" alt="Physiotherapy session">
+      <div class="hero-stat-badge top-left">
+        <div>
+          <div class="badge-num">1.2K+</div>
+          <div class="badge-label">Happy Patients<br>Served</div>
+        </div>
+      </div>
+      <div class="hero-stat-badge bottom-right">
+        <div>
+          <div class="badge-num">2019</div>
+          <div class="badge-label">Established<br>Year</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-sub">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80" alt="Physio treatment">
+    </div>
+    <div class="hero-img-sub">
+      <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80" alt="Exercise therapy">
+    </div>
+    <button class="hero-vid-btn">
+      <span class="play-icon">▶</span>
+      View Introduction Video
+    </button>
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<div class="features-strip">
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fas fa-home"></i></div>
+    <div class="feature-text">
+      <h4>Home Care Physiotherapy</h4>
+      <p>Specialised physiotherapy at home for those who are unable to travel, ensuring effective recovery.</p>
+    </div>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+    <div class="feature-text">
+      <h4>Personalised Treatment</h4>
+      <p>Each treatment is designed specifically for you, based on your unique needs, goals and recovery.</p>
+    </div>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fas fa-couch"></i></div>
+    <div class="feature-text">
+      <h4>Comfortable Environment</h4>
+      <p>Our clinic is supportive and comfortable designed to make you feel at ease during treatment.</p>
+    </div>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fas fa-award"></i></div>
+    <div class="feature-text">
+      <h4>Certified Physiotherapists</h4>
+      <p>Our team holds advanced qualifications and certifications, delivering safe and trusted results.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="section-label">About Us</div>
+  <div class="about-header">
+    <div class="about-header-left">
+      <h2>We're Here to Support Your Recovery Every Step of the Way</h2>
+    </div>
+    <div class="about-header-right">
+      <div class="about-stat">
+        <div class="num">10+</div>
+        <div class="lbl">Years Experience</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">1200+</div>
+        <div class="lbl">Happy Patients</div>
+      </div>
+      <a href="#" class="about-btn-sm">About Us →</a>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-left">
+      <h3>Welcome to Proud Physio & Wellness</h3>
+      <p>At Proud Physio, we are dedicated to helping you recover faster, move with greater confidence, and live your life with less pain. Our team of expert physiotherapists are committed to providing personalised care for each and every patient.</p>
+      <p>Whether you're recovering from an injury, managing a chronic condition, or simply wanting to improve your physical performance, we're here to guide you through every step of your recovery journey.</p>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80" alt="Physio team">
+      </div>
+    </div>
+    <div class="about-right">
+      <h3>Mission Statement</h3>
+      <p class="mission-text">Our mission at Proud Physio and Wellness is to help each individual reach their full physical health potential and achieve an optimal quality of life. We believe that everyone deserves access to high-quality physiotherapy that is tailored to their specific needs, goals and personal circumstances.</p>
+      <h4>The Healing Process</h4>
+      <div class="healing-process">
+        <div class="healing-img">
+          <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80" alt="Healing process 1">
+        </div>
+        <div class="healing-img">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80" alt="Healing process 2">
+        </div>
+      </div>
+      <ul class="healing-steps">
+        <li>From sports injuries to chronic pain, we treat a full range of conditions.</li>
+        <li>Proud Physio, we're committed to delivering evidence-based treatments.</li>
+        <li>Trusted rehabilitation for complete recovery and long-term wellbeing.</li>
+      </ul>
+      <a href="#" class="see-more-btn">See More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="section-label">Our Services</div>
+  <div class="services-header">
+    <h2>How We Can Help You Feel Better</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80" alt="Geriatric Physiotherapy">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-user-injured"></i></div>
+        <h3>Geriatric Physiotherapy</h3>
+        <p>Our geriatric physiotherapy focuses on improving mobility, balance and independence for older adults, and helping restore function and reduce discomfort in daily activities.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&q=80" alt="Neurological Rehabilitation">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-brain"></i></div>
+        <h3>Neurological Rehabilitation</h3>
+        <p>We support people with neurological conditions such as stroke, multiple sclerosis, and Parkinson's disease through targeted movement therapy and rehabilitation.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="Pediatric Physiotherapy">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-child"></i></div>
+        <h3>Pediatric Physiotherapy</h3>
+        <p>We treat children across a wide range of conditions with a focus on friendly, compassionate care designed for a child's unique stage of physical development.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1434608519344-49d77a124f2a?w=500&q=80" alt="Musculoskeletal & sports physiotherapy">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-running"></i></div>
+        <h3>Musculoskeletal & sports physiotherapy</h3>
+        <p>Our musculoskeletal physiotherapy addresses issues stemming from joint, muscle and ligament problems. We work to restore function and relieve pain through targeted exercise, manual therapy and education.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=500&q=80" alt="Geriatric Physiotherapy">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Geriatric Physiotherapy</h3>
+        <p>We provide specialised physiotherapy care for elderly patients with a focus on maintaining independence, mobility and quality of life through compassionate, evidence-based treatment and lifestyle guidance.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=80" alt="Ergonomic, nutrition & lifestyle guidance">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-apple-alt"></i></div>
+        <h3>Ergonomic, nutrition & lifestyle guidance.</h3>
+        <p>We provide ergonomic advice and nutritional methods and lifestyle strategies to support your overall health and wellbeing, and improve your physical and mental performance.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80" alt="Women's health physiotherapy">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-venus"></i></div>
+        <h3>Women's health physiotherapy</h3>
+        <p>We offer expert care with a specialist physiotherapy service that is designed to address a range of women's health conditions, from pelvic floor dysfunction to prenatal and postnatal support.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=500&q=80" alt="Recurrence Management">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-redo-alt"></i></div>
+        <h3>Recurrence Management</h3>
+        <p>We help identify the root cause of recurring injury or pain, and work to reduce future injury risk through injury prevention programmes, education, movement analysis and rehabilitation.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&q=80" alt="Post-Surgical Rehabilitation">
+      </div>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-procedures"></i></div>
+        <h3>Post-Surgical Rehabilitation</h3>
+        <p>We assist patients during their recovery after surgery to rebuild strength and balance, and restore confidence in movement through safe and guided rehabilitation exercise programmes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="why-left">
+    <div class="why-label">Why Physio Us?</div>
+    <h2>You're not just a patient, you're someone we care about deeply.</h2>
+    <p>At Proud Physio, we're committed to supporting, and empowering our patients through their recovery journey. Our physiotherapists provide expert and personalised care for each patient, ensuring every patient gets the best possible treatment outcome.</p>
+    <a href="#" class="why-btn">See More →</a>
+  </div>
+  <div class="why-right">
+    <div class="why-card">
+      <div class="why-card-icon"><i class="fas fa-user-check"></i></div>
+      <h4>Personalised care for you</h4>
+      <p>Our treatment plans are designed around each patient individually, ensuring you receive the right treatment for your body and your goals, delivered with care and expertise.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon"><i class="fas fa-home"></i></div>
+      <h4>Home Care Physiotherapy</h4>
+      <p>We bring quality physiotherapy directly to your home, giving you the convenience and support you need to recover comfortably from wherever you are.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon"><i class="fas fa-chart-line"></i></div>
+      <h4>Recovery and prevention</h4>
+      <p>We help you not only recover from injury but also prevent future problems by teaching you strategies that keep your body strong, mobile, and pain-free for the long term.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon"><i class="fas fa-hands-helping"></i></div>
+      <h4>Friendly and Supportive</h4>
+      <p>Our team creates a warm and welcoming environment to every patient who visits us, making sure you always feel heard, respected, and fully supported through every visit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit-section">
+  <div class="section-label">Join Us</div>
+  <div class="visit-grid">
+    <div class="visit-left">
+      <h2>Come Visit Us. A Safe, Peaceful Place for Your Healing</h2>
+      <p>Our friendly team is always happy to welcome you to our clinic. Whether it is for a consultation, treatment or follow-up, you will find a calm, professional environment designed to support your healing journey. We look forward to seeing you.</p>
+      <a href="#" class="visit-btn">See More →</a>
+    </div>
+    <div>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.5!2d76.9358!3d8.5241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMzEnMjYuOCJOIDc2wrA1NicwOS4xIkU!5e0!3m2!1sen!2sin!4v1234567890"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      <div class="visit-info-strip">
+        <div class="visit-info-box">
+          <div class="info-title"><i class="fas fa-clock"></i> Operational Hours</div>
+          <div class="info-val">Everyday: 05:00 AM – 09:00 PM</div>
+        </div>
+        <div class="visit-info-box" style="background: var(--teal-dark);">
+          <div class="info-title"><i class="fas fa-share-alt"></i> Follow Us</div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-label">Testimonials</div>
+  <div class="testimonials-header">
+    <h2>Stories of Healing and Hope from<br>Our Patients</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"The team at Proud Physio was absolutely incredible. I came in with severe back pain and after just a few sessions I was feeling so much better. The care and attention I received was outstanding."</p>
+      <div class="testimonial-author">
+        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=100&q=80" alt="Patient 1">
+        <div>
+          <div class="testimonial-name">Sarah Johnson</div>
+          <div class="testimonial-role">Back Pain Recovery</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"After my knee surgery, I was worried about getting back to my active lifestyle. The team here designed a personalised recovery plan and I'm now back to playing tennis. Couldn't be happier!"</p>
+      <div class="testimonial-author">
+        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Patient 2">
+        <div>
+          <div class="testimonial-name">Michael Chen</div>
+          <div class="testimonial-role">Post-Surgical Rehab</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Wonderful physiotherapy clinic. The team genuinely care about your progress and make every session count. The home care service was a lifesaver when I couldn't travel. Highly recommended."</p>
+      <div class="testimonial-author">
+        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Patient 3">
+        <div>
+          <div class="testimonial-name">Priya Nair</div>
+          <div class="testimonial-role">Home Care Physio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonials-more">
+    <a href="#" class="see-more-link">See More →</a>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-left">
+    <div class="cta-label">Reach Out Anytime</div>
+    <h2>We're Here to Guide You Toward Healing</h2>
+    <p>Please feel free to reach out any time that you have a question or would like to take the first step toward improving your health and wellbeing. Our dedicated team are ready and waiting to help.</p>
+    <a href="#" class="cta-btn">Book Us Now →</a>
+  </div>
+  <div class="cta-img">
+    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Physiotherapist">
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-section">
+  <div class="section-label">Blog</div>
+  <div class="blog-header">
+    <h2>Helpful Tips and Insights for Your<br>Journey to Better Health</h2>
+    <a href="#" class="see-more-btn-outline">See More →</a>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?w=500&q=80" alt="Beyond the Baby Bloom">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Women's Health</span>
+        <h3>Beyond the Baby Bloom: Why Postpartum Care and physiotherapy is more than you think</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
+        <a href="#" class="blog-more">Read More →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=500&q=80" alt="Beyond the Baby Bloom">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Women's Health</span>
+        <h3>Beyond the Baby Bloom: Why Postpartum Care and Physiotherapy is more than you think</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
+        <a href="#" class="blog-more">Read More →</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-card-img">
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&q=80" alt="Better Stamina">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Sports & Fitness</span>
+        <h3>Beyond the Better Stamina: Tackle's Journey Back to Your Best: A Guide for Athletes</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco.</p>
+        <a href="#" class="blog-more">Read More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Your health is our mission, move better, live better with Proud Physio</span>
+    <span>Your health is our mission, move better, live better with Proud Physio</span>
+    <span>Your health is our mission, move better, live better with Proud Physio</span>
+    <span>Your health is our mission, move better, live better with Proud Physio</span>
+    <span>Your health is our mission, move better, live better with Proud Physio</span>
+    <span>Your health is our mission, move better, live better with Proud Physio</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <span class="brand-name">Proud Physio & Wellness</span>
+      </div>
+      <p>We are dedicated to helping you move better, feel stronger and live life to the fullest with expert physiotherapy care.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><span><i class="fas fa-map-marker-alt"></i> Thiruvananthapuram, Kerala, India</span></li>
+        <li><span><i class="fas fa-phone"></i> +91 98765 43210</span></li>
+        <li><span><i class="fas fa-envelope"></i> info@proudphysio.com</span></li>
+        <li><span><i class="fas fa-clock"></i> Everyday: 05:00 AM – 09:00 PM</span></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Social Media</h4>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 <span>Proud Physio & Wellness</span>. All Rights Reserved. Designed with ♥ for your health.</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href="#"]').forEach(a => {
+    a.addEventListener('click', e => e.preventDefault());
+  });
+
+  // Intersection observer for animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .testimonial-card, .blog-card, .why-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
