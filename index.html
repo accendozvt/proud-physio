@@ -9,21 +9,27 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --blue: #1a8fb5;
-    --blue-dark: #0e7196;
-    --blue-deep: #134e63;
-    --blue-light: #e6f3f8;
-    --green: #8dc63f;
+    /* Green palette from the logo */
+    --blue: #6cae3e;          /* primary (mapped to green) */
+    --blue-dark: #57962f;
+    --blue-deep: #11283a;     /* navy from logo wordmark */
+    --blue-light: #eaf5dc;
+    --green: #8cc63f;
     --green-light: #a4d65e;
     --green-soft: #eef7e0;
-    --dark: #15323d;
+    --dark: #11283a;
     --text: #46555b;
-    --light-gray: #f4f8fa;
-    --border: #e0ecf0;
+    --light-gray: #f5f9ef;
+    --border: #e4efd6;
     --white: #ffffff;
   }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; background: #eef2ea; }
   body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); font-size: 15px; line-height: 1.6; }
+
+  /* Constrain whole site to 70% of viewport width, centered */
+  .page-wrap { width: 70vw; margin: 0 auto; background: var(--white); box-shadow: 0 0 60px rgba(0,0,0,0.08); }
+  @media (max-width: 1100px) { .page-wrap { width: 92vw; } }
+  @media (max-width: 700px) { .page-wrap { width: 100vw; } }
 
   /* NAV */
   nav {
@@ -69,7 +75,7 @@
   .hero-divider { width: 1px; height: 30px; background: #ccd; }
 
   .hero-images { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .hero-img-main { grid-column: 1 / -1; border-radius: 16px; overflow: hidden; height: 230px; position: relative; }
+  .hero-img-main { grid-column: 1 / -1; border-radius: 16px; overflow: hidden; height: 320px; position: relative; }
   .hero-img-main img { width: 100%; height: 100%; object-fit: cover; }
   .hero-stat-badge {
     position: absolute; background: white; border-radius: 12px; padding: 10px 16px;
@@ -79,7 +85,7 @@
   .hero-stat-badge.bottom-right { bottom: 16px; right: 16px; }
   .badge-num { font-size: 22px; font-weight: 700; color: var(--blue); line-height: 1; }
   .badge-label { font-size: 11px; color: #888; line-height: 1.3; }
-  .hero-img-sub { border-radius: 12px; overflow: hidden; height: 140px; }
+  .hero-img-sub { border-radius: 12px; overflow: hidden; height: 190px; }
   .hero-img-sub img { width: 100%; height: 100%; object-fit: cover; }
 
   /* FEATURES STRIP */
@@ -111,13 +117,13 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
   .about-left h3 { font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
   .about-left p { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 14px; }
-  .about-img { border-radius: 16px; overflow: hidden; height: 280px; margin-top: 24px; }
+  .about-img { border-radius: 16px; overflow: hidden; height: 380px; margin-top: 24px; }
   .about-img img { width: 100%; height: 100%; object-fit: cover; }
   .about-right h3 { font-size: 24px; font-weight: 700; color: var(--dark); margin-bottom: 16px; }
   .about-right .mission-text { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 24px; }
   .about-right h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
   .healing-process { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
-  .healing-img { border-radius: 12px; overflow: hidden; height: 160px; }
+  .healing-img { border-radius: 12px; overflow: hidden; height: 210px; }
   .healing-img img { width: 100%; height: 100%; object-fit: cover; }
   .healing-steps { font-size: 13px; color: #666; line-height: 2; }
   .healing-steps li { list-style: none; padding-left: 18px; position: relative; }
@@ -135,7 +141,7 @@
     position: relative;
   }
   .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
-  .service-card-img { height: 180px; overflow: hidden; }
+  .service-card-img { height: 230px; overflow: hidden; }
   .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
   .service-card:hover .service-card-img img { transform: scale(1.06); }
   .service-card-body { padding: 18px; }
@@ -181,7 +187,7 @@
   .team-header h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; }
   .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 980px; margin: 0 auto; }
   .team-card { border-radius: 16px; overflow: hidden; position: relative; background: var(--blue-light); }
-  .team-img { height: 340px; overflow: hidden; }
+  .team-img { height: 420px; overflow: hidden; }
   .team-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .team-info {
     position: absolute; bottom: 14px; left: 14px; right: 14px;
@@ -200,7 +206,7 @@
   .visit-left h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; margin-bottom: 16px; }
   .visit-left p { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 24px; }
   .visit-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--blue); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; }
-  .map-container { border-radius: 16px; overflow: hidden; height: 280px; background: #e8f4f0; position: relative; }
+  .map-container { border-radius: 16px; overflow: hidden; height: 360px; background: #e8f4f0; position: relative; }
   .map-container iframe { width: 100%; height: 100%; border: 0; }
   .visit-info-strip { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .visit-info-box { background: var(--blue); border-radius: 12px; padding: 18px 20px; color: white; }
@@ -228,7 +234,7 @@
   .faq-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; align-items: start; }
   .faq-left h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; margin-bottom: 16px; }
   .faq-left p { font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 24px; }
-  .faq-img { border-radius: 16px; overflow: hidden; height: 240px; }
+  .faq-img { border-radius: 16px; overflow: hidden; height: 320px; }
   .faq-img img { width: 100%; height: 100%; object-fit: cover; }
   .faq-item { background: white; border-radius: 12px; margin-bottom: 14px; overflow: hidden; border: 1px solid var(--border); }
   .faq-q { padding: 18px 20px; font-size: 15px; font-weight: 600; color: var(--dark); cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
@@ -260,7 +266,7 @@
   .cta-left h2 { font-size: 34px; font-weight: 800; color: white; line-height: 1.25; margin-bottom: 16px; }
   .cta-left p { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 24px; }
   .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--blue); padding: 14px 28px; border-radius: 30px; text-decoration: none; font-size: 14px; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-  .cta-img { border-radius: 16px; overflow: hidden; height: 300px; position: relative; z-index: 2; }
+  .cta-img { border-radius: 16px; overflow: hidden; height: 380px; position: relative; z-index: 2; }
   .cta-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
   /* BLOG */
@@ -270,7 +276,7 @@
   .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .blog-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.3s; }
   .blog-card:hover { transform: translateY(-4px); }
-  .blog-card-img { height: 190px; overflow: hidden; }
+  .blog-card-img { height: 240px; overflow: hidden; }
   .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
   .blog-card:hover .blog-card-img img { transform: scale(1.06); }
   .blog-card-body { padding: 20px; }
@@ -320,11 +326,12 @@
 </style>
 </head>
 <body>
+<div class="page-wrap">
 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="assets/Proud-Physio-Logo.png" alt="Proud Physio & Wellness">
+    <img src="assets/logo.svg" alt="Proud Physio & Wellness">
   </a>
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
@@ -844,7 +851,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="brand-logo">
-        <img src="assets/Proud-Physio-Logo.png" alt="Proud Physio & Wellness">
+        <img src="assets/logo.svg" alt="Proud Physio & Wellness">
       </div>
       <p>We are dedicated to helping you move better, feel stronger and live life to the fullest with expert physiotherapy care.</p>
     </div>
@@ -885,6 +892,8 @@
     <p>© 2026 <span>Proud Physio & Wellness</span>. All Rights Reserved. Designed with ♥ for your health.</p>
   </div>
 </footer>
+
+</div><!-- /page-wrap -->
 
 <script>
   // Prevent default on placeholder links
