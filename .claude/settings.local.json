@@ -3,7 +3,13 @@
     "allow": [
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(python3 -)",
+      "Bash(perl -i -pe 's/ , /, /g' index.html)",
+      "Bash(perl -CSD -i -pe 's/08:00 AM \\\\x{2013} 09:00 PM/08:00 AM to 09:00 PM/g; s/Kochi \\\\x{2014} Frequently Asked Questions/Kochi: Frequently Asked Questions/g; s/\\\\s\\\\x{2014}\\\\s/, /g; s/\\\\s\\\\x{2013}\\\\s/, /g; s/\\\\x{2014}/, /g; s/\\\\x{2013}/, /g;' index.html)",
+      "Bash(python3 -c ' *)",
+      "Bash(perl -CSD -i -pe \"s/\\\\.service-card, \\\\.testimonial-card, \\\\.blog-card, \\\\.why-card, \\\\.team-card/.service-card, .testimonial-card, .blog-card, .why-card, .doctor-feature/\" index.html)",
+      "Bash(perl -CSD -i -pe 's/08:00 AM \\\\x{2013} 09:00 PM/08:00 AM to 09:00 PM/g; s/08.00 AM \\\\x{2013} 09.00 PM/08.00 AM to 09.00 PM/g; s/\\\\s\\\\x{2014}\\\\s/, /g; s/\\\\s\\\\x{2013}\\\\s/, /g; s/\\\\x{2014}/, /g; s/\\\\x{2013}/, /g; s/ , /, /g;' llms.txt robots.txt)"
     ]
   }
 }

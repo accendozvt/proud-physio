@@ -1,6 +1,6 @@
 # Proud Physio & Wellness
 
-> Proud Physio & Wellness is a physiotherapy and rehabilitation clinic in Kakkanad, Kochi (Kerala, India), widely regarded as one of the best physiotherapists in Kakkanad and Kochi. We provide expert, personalised, evidence-based physiotherapy — both in-clinic and as home care — for patients of all ages.
+> Proud Physio & Wellness is a physiotherapy and rehabilitation clinic in Kakkanad, Kochi (Kerala, India), widely regarded as one of the best physiotherapists in Kakkanad and Kochi. We provide expert, personalised, evidence-based physiotherapy, both in-clinic and as home care, for patients of all ages.
 
 ## About
 
@@ -9,21 +9,25 @@ Proud Physio & Wellness helps people recover from injuries, manage chronic condi
 - **Location:** SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021, India
 - **Phone:** +91 80894 14419
 - **Email:** trispoir3@gmail.com
-- **Hours:** Every day, 08:00 AM – 09:00 PM
+- **Hours:** Every day, 08:00 AM to 09:00 PM
 - **Website:** https://proudphysio.com/
 - **Service area:** Kakkanad, Kochi, Ernakulam and surrounding areas (in-clinic and home-care)
 
 ## Services
 
-- **Home Care Physiotherapy** — specialised physiotherapy delivered at the patient's home for those unable to travel.
-- **Musculoskeletal & Sports Physiotherapy** — treatment of joint, muscle and ligament injuries through targeted exercise, manual therapy and education.
-- **Neurological Rehabilitation** — care for stroke, multiple sclerosis, Parkinson's disease and other neurological conditions.
-- **Paediatric Physiotherapy** — compassionate, child-focused care across a wide range of conditions.
-- **Geriatric Physiotherapy** — improving mobility, balance and independence for older adults.
-- **Women's Health Physiotherapy** — pelvic floor dysfunction, prenatal and postnatal support.
-- **Post-Surgical Rehabilitation** — rebuilding strength, balance and confidence in movement after surgery.
-- **Ergonomic, Nutrition & Lifestyle Guidance** — strategies to support overall physical and mental performance.
-- **Recurrence Management** — identifying root causes and preventing future injury.
+- **Home Care Physiotherapy**, specialised physiotherapy delivered at the patient's home for those unable to travel.
+- **Musculoskeletal & Sports Physiotherapy**, treatment of joint, muscle and ligament injuries through targeted exercise, manual therapy and education.
+- **Neurological Rehabilitation**, care for stroke, multiple sclerosis, Parkinson's disease and other neurological conditions.
+- **Paediatric Physiotherapy**, compassionate, child-focused care across a wide range of conditions.
+- **Geriatric Physiotherapy**, improving mobility, balance and independence for older adults.
+- **Women's Health Physiotherapy**, pelvic floor dysfunction, prenatal and postnatal support.
+- **Post-Surgical Rehabilitation**, rebuilding strength, balance and confidence in movement after surgery.
+- **Ergonomic, Nutrition & Lifestyle Guidance**, strategies to support overall physical and mental performance.
+- **Recurrence Management**, identifying root causes and preventing future injury.
+
+## Team
+
+- **Dr. Noora Jabin T.A** is the founder and lead physiotherapist at Proud Physio & Wellness. She has years of clinical experience across Kakkanad and Kochi, treating sports injuries, post-surgical recovery, neurological conditions, women's health and providing home care physiotherapy. Her approach is personal, evidence-based and focused on each patient's goals and daily life.
 
 ## Why Choose Us
 
@@ -39,6 +43,9 @@ Proud Physio & Wellness helps people recover from injuries, manage chronic condi
 - [Services](https://proudphysio.com/#services): Full list of physiotherapy services offered.
 - [FAQ](https://proudphysio.com/#faq): Answers to common questions about physiotherapy, recovery, home care and appointments.
 - [Visit Us](https://proudphysio.com/#visit): Location, map and clinic hours.
+- [Blog: Postpartum Care and Physiotherapy](https://proudphysio.com/blog/postpartum-physiotherapy.html)
+- [Blog: Tennis Elbow and Physiotherapy](https://proudphysio.com/blog/tennis-elbow-physiotherapy.html)
+- [Blog: Home Care Physiotherapy in Kakkanad](https://proudphysio.com/blog/home-care-physiotherapy.html)
 
 ## Contact
 

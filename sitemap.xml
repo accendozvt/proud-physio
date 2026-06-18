@@ -3,12 +3,30 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://proudphysio.com/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://proudphysio.com/assets/opengraph/preview.webp</image:loc>
-      <image:title>Best Physiotherapist in Kakkanad &amp; Kochi — Proud Physio &amp; Wellness</image:title>
+      <image:title>Best Physiotherapist in Kakkanad and Kochi, Proud Physio and Wellness</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://proudphysio.com/blog/postpartum-physiotherapy.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://proudphysio.com/blog/tennis-elbow-physiotherapy.html</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://proudphysio.com/blog/home-care-physiotherapy.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

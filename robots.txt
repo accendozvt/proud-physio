@@ -1,4 +1,4 @@
-# robots.txt — Proud Physio & Wellness
+# robots.txt, Proud Physio & Wellness
 # https://proudphysio.com
 
 User-agent: *

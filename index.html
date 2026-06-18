@@ -23,7 +23,7 @@
 <meta property="og:image" content="https://proudphysio.com/assets/opengraph/preview.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Proud Physio & Wellness — Best Physiotherapist in Kakkanad & Kochi">
+<meta property="og:image:alt" content="Proud Physio & Wellness, Best Physiotherapist in Kakkanad & Kochi">
 <meta property="og:locale" content="en_IN">
 
 <!-- Twitter Card -->
@@ -32,25 +32,28 @@
 <meta name="twitter:title" content="Best Physiotherapist in Kakkanad & Kochi | Proud Physio & Wellness">
 <meta name="twitter:description" content="Expert home care physiotherapy, sports, neurological, paediatric, geriatric and women's health physiotherapy in Kakkanad & Kochi.">
 <meta name="twitter:image" content="https://proudphysio.com/assets/opengraph/preview.webp">
-<meta name="twitter:image:alt" content="Proud Physio & Wellness — Best Physiotherapist in Kakkanad & Kochi">
+<meta name="twitter:image:alt" content="Proud Physio & Wellness, Best Physiotherapist in Kakkanad & Kochi">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    /* Green palette from the logo */
-    --blue: #6cae3e;          /* primary (mapped to green) */
-    --blue-dark: #57962f;
+    /* Green palette taken from the darker part of the logo */
+    --blue: #4e8a2c;          /* primary (darker logo green) */
+    --blue-dark: #3c6e21;
     --blue-deep: #11283a;     /* navy from logo wordmark */
-    --blue-light: #eaf5dc;
-    --green: #8cc63f;
-    --green-light: #a4d65e;
-    --green-soft: #eef7e0;
+    --blue-light: #e4f1d4;
+    --green: #6fae33;
+    --green-light: #8cc63f;
+    --green-soft: #eaf5dc;
+    --logo-green: #4e8a2c;
+    --logo-blue: #1e5099;     /* blue from the logo figure */
+    --grad: linear-gradient(135deg, #4e8a2c 0%, #2f7a55 48%, #1e5099 100%);
     --dark: #11283a;
     --text: #46555b;
-    --light-gray: #f5f9ef;
-    --border: #e4efd6;
+    --light-gray: #f4f8ef;
+    --border: #e1ecd2;
     --white: #ffffff;
   }
   html { scroll-behavior: smooth; }
@@ -67,12 +70,13 @@
     padding: 12px 10vw;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   }
-  .nav-logo img { height: 52px; width: auto; display: block; }
+  .nav-logo img { height: 68px; width: auto; display: block; }
   .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
   .nav-links a { text-decoration: none; color: var(--dark); font-size: 14px; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: var(--blue); }
   .nav-cta { background: var(--blue); color: white !important; padding: 10px 22px; border-radius: 25px; font-weight: 600 !important; transition: background 0.2s !important; }
   .nav-cta:hover { background: var(--blue-dark) !important; color: white !important; }
+  .nav-toggle { display: none; background: none; border: 0; cursor: pointer; font-size: 24px; color: var(--blue-deep); padding: 6px; }
 
   /* HERO */
   .hero {
@@ -118,14 +122,14 @@
 
   /* FEATURES STRIP */
   .features-strip {
-    background: var(--blue);
+    background: var(--grad);
     padding: 28px 10vw;
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
   }
   .feature-item { display: flex; align-items: flex-start; gap: 14px; }
   .feature-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .feature-icon i { color: white; font-size: 20px; }
-  .feature-text h4 { font-size: 13px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .feature-text h4 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 5px; }
   .feature-text p { font-size: 11px; color: rgba(255,255,255,0.78); line-height: 1.5; }
 
   /* SECTION LABEL */
@@ -175,7 +179,7 @@
   .service-card-body { padding: 18px; }
   .service-card-icon { width: 38px; height: 38px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
   .service-card-icon i { color: var(--blue); font-size: 18px; }
-  .service-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .service-card h3 { font-size: 19px; font-weight: 700; color: var(--dark); margin-bottom: 8px; line-height: 1.3; }
   .service-card p { font-size: 12px; color: #888; line-height: 1.6; }
   .service-card-badge {
     position: absolute; top: 12px; right: 12px;
@@ -186,7 +190,7 @@
 
   /* WHY CHOOSE */
   .why-section {
-    background: var(--blue);
+    background: var(--grad);
     padding: 60px 10vw;
     display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: center;
   }
@@ -205,28 +209,29 @@
   .why-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 22px; backdrop-filter: blur(10px); }
   .why-card-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
   .why-card-icon i { color: white; font-size: 18px; }
-  .why-card h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 8px; }
+  .why-card h4 { font-size: 17px; font-weight: 700; color: white; margin-bottom: 8px; }
   .why-card p { font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.6; }
 
-  /* TEAM */
+  /* TEAM / DOCTOR */
   .team-section { padding: 70px 10vw; background: var(--white); }
   .team-header { text-align: center; margin-bottom: 44px; }
   .team-header .section-label { justify-content: center; }
   .team-header h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; }
-  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 980px; margin: 0 auto; }
-  .team-card { border-radius: 16px; overflow: hidden; position: relative; background: var(--blue-light); }
-  .team-img { height: 420px; overflow: hidden; }
-  .team-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .team-info {
-    position: absolute; bottom: 14px; left: 14px; right: 14px;
-    background: white; border-radius: 12px; padding: 14px 18px;
-    display: flex; align-items: center; justify-content: space-between;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  }
-  .team-info h4 { font-size: 15px; font-weight: 700; color: var(--dark); }
-  .team-info span { font-size: 12px; color: #999; }
-  .team-info .team-socials { display: flex; gap: 8px; }
-  .team-info .team-socials a { width: 28px; height: 28px; background: var(--blue-light); color: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; text-decoration: none; }
+  .doctor-feature { display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px; align-items: center; }
+  .doctor-info h3 { font-size: 28px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+  .doctor-role { font-size: 15px; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+  .doctor-credential { font-size: 13px; color: #888; margin-bottom: 20px; }
+  .doctor-info p { font-size: 14px; color: #666; line-height: 1.85; margin-bottom: 14px; }
+  .doctor-points { list-style: none; margin: 18px 0 24px; }
+  .doctor-points li { font-size: 13.5px; color: #555; line-height: 1.7; padding-left: 26px; position: relative; margin-bottom: 8px; }
+  .doctor-points li i { position: absolute; left: 0; top: 3px; color: var(--green); }
+  .doctor-socials { display: flex; gap: 10px; }
+  .doctor-socials a { width: 38px; height: 38px; background: var(--blue-light); color: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; text-decoration: none; transition: all 0.2s; }
+  .doctor-socials a:hover { background: var(--blue); color: #fff; }
+  .doctor-photo { position: relative; border-radius: 20px; overflow: hidden; background: var(--grad); min-height: 420px; display: flex; align-items: flex-end; justify-content: center; }
+  .doctor-photo img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+  .doctor-badge { position: absolute; top: 18px; left: 18px; background: #fff; border-radius: 12px; padding: 10px 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); font-size: 12px; font-weight: 700; color: var(--blue-deep); }
+  @media (max-width: 900px) { .doctor-feature { grid-template-columns: 1fr; gap: 28px; } .doctor-photo { min-height: 360px; order: -1; } }
 
   /* VISIT */
   .visit-section { padding: 70px 10vw; background: var(--light-gray); }
@@ -274,7 +279,7 @@
 
   /* CTA */
   .cta-section {
-    background: var(--blue);
+    background: var(--grad);
     padding: 50px 10vw;
     display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
     position: relative; overflow: hidden;
@@ -295,8 +300,8 @@
   .cta-left h2 { font-size: 34px; font-weight: 800; color: white; line-height: 1.25; margin-bottom: 16px; }
   .cta-left p { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.8; margin-bottom: 24px; }
   .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--blue); padding: 14px 28px; border-radius: 30px; text-decoration: none; font-size: 14px; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-  .cta-img { border-radius: 16px; overflow: hidden; height: 380px; position: relative; z-index: 2; }
-  .cta-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .cta-img { border-radius: 16px; overflow: hidden; height: 380px; position: relative; z-index: 2; background: #f3f8ef; }
+  .cta-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
   /* BLOG */
   .blog-section { padding: 70px 10vw; background: var(--white); }
@@ -310,7 +315,7 @@
   .blog-card:hover .blog-card-img img { transform: scale(1.06); }
   .blog-card-body { padding: 20px; }
   .blog-tag { display: inline-block; background: var(--green-soft); color: var(--green); font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; }
-  .blog-card h3 { font-size: 15px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 10px; }
+  .blog-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 10px; }
   .blog-card p { font-size: 12px; color: #888; line-height: 1.6; }
   .blog-more { display: flex; align-items: center; gap: 6px; color: var(--blue); font-size: 13px; font-weight: 600; text-decoration: none; margin-top: 12px; }
 
@@ -345,12 +350,26 @@
   .see-more-btn-outline { display: inline-flex; align-items: center; gap: 6px; border: 2px solid var(--blue); color: var(--blue); padding: 10px 22px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; background: transparent; }
 
   @media (max-width: 900px) {
-    nav, .hero, .features-strip, .about-grid, .services-grid, .why-section, .team-grid, .visit-grid, .testimonials-grid, .faq-columns, .cta-section, .blog-grid, .footer-grid { grid-template-columns: 1fr; }
-    .about-section, .services-section, .why-section, .team-section, .visit-section, .testimonials-section, .faq-section, .cta-section, .blog-section, footer, nav, .features-strip { padding: 40px 20px; }
+    .hero, .features-strip, .about-grid, .services-grid, .why-section, .visit-grid, .testimonials-grid, .faq-columns, .cta-section, .blog-grid, .footer-grid { grid-template-columns: 1fr; }
+    .about-section, .services-section, .why-section, .team-section, .visit-section, .testimonials-section, .faq-section, .cta-section, .blog-section, footer, .features-strip { padding: 40px 20px; }
     .hero { padding: 40px 20px; grid-template-columns: 1fr; }
     .about-header { flex-direction: column; gap: 20px; }
     .healing-process { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
+
+    /* Shorter header + hamburger */
+    nav { padding: 8px 20px; }
+    .nav-logo img { height: 54px; }
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--white); box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      padding: 8px 0; border-top: 1px solid var(--border);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 14px 24px; font-size: 15px; }
+    .nav-cta { border-radius: 0; margin: 6px 24px 4px; text-align: center; }
   }
 </style>
 </head>
@@ -376,15 +395,16 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="assets/logo.png" alt="Proud Physio & Wellness">
+    <img src="assets/logo.png" alt="Proud Physio & Wellness - Best Physiotherapist in Kakkanad and Kochi">
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#">Home</a></li>
     <li><a href="#about">About Us</a></li>
     <li><a href="#services">Our Services</a></li>
     <li><a href="#visit">Visit Us</a></li>
     <li><a href="#blog">Blogs</a></li>
-    <li><a href="#" class="nav-cta">Contact Us</a></li>
+    <li><a href="#visit" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
 
@@ -393,7 +413,7 @@
   <div class="hero-content">
     <div class="hero-label">✦ Physiotherapy in Kakkanad & Kochi</div>
     <h1>The Best Physiotherapist in <span>Kakkanad &amp; Kochi</span></h1>
-    <p class="hero-tagline">Move Better, Live Stronger — Feel the Difference</p>
+    <p class="hero-tagline">Move Better, Live Stronger, Feel the Difference</p>
     <p class="hero-desc">Proud Physio &amp; Wellness is a trusted physiotherapy clinic in Kakkanad, Kochi offering expert <strong>home care physiotherapy</strong>, sports &amp; musculoskeletal therapy, neurological rehabilitation, paediatric, geriatric, women's health and post-surgical rehab. Whether it's pain relief, post-injury recovery, or improving performance, our personalised, evidence-based programmes are designed to get you back to your best.</p>
     <a href="#" class="hero-btn">
       <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
@@ -659,57 +679,33 @@
   </div>
 </section>
 
-<!-- TEAM -->
-<section class="team-section">
+<!-- DOCTOR -->
+<section class="team-section" id="doctor">
   <div class="team-header">
-    <div class="section-label">Our Team</div>
-    <h2>Meet Our Expert Physiotherapists</h2>
+    <div class="section-label">Meet Your Physiotherapist</div>
+    <h2>Expert Care, Led by Dr. Noora</h2>
   </div>
-  <div class="team-grid">
-    <div class="team-card">
-      <div class="team-img">
-        <img src="assets/asian-male-doctor-in-white-coat-protective-gloves-2024-12-12-23-57-09-utc.png" alt="Jenny Wilson">
-      </div>
-      <div class="team-info">
-        <div>
-          <h4>Jenny Wilson</h4>
-          <span>Physiotherapist</span>
-        </div>
-        <div class="team-socials">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="team-img">
-        <img src="assets/military-doctor-in-medical-clothes-sits-in-a-physi-2025-03-09-13-50-01-utc.png" alt="Darrell Steward">
-      </div>
-      <div class="team-info">
-        <div>
-          <h4>Darrell Steward</h4>
-          <span>Physiotherapist</span>
-        </div>
-        <div class="team-socials">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+  <div class="doctor-feature">
+    <div class="doctor-info">
+      <h3>Dr. Noora Jabin T.A</h3>
+      <div class="doctor-role">Founder and Lead Physiotherapist</div>
+      <div class="doctor-credential">BPT, MPT (Physiotherapy)</div>
+      <p>Dr. Noora is the heart of Proud Physio and Wellness. With years of clinical experience across Kakkanad and Kochi, she has helped hundreds of patients move better, recover faster, and live with less pain. Her approach is simple and personal. She listens first, assesses thoroughly, and builds a treatment plan around each patient's body, goals, and daily life.</p>
+      <p>From sports injuries and post surgical recovery to neurological rehabilitation, women's health, and home care physiotherapy, Dr. Noora brings warmth, patience, and evidence based expertise to every session. She believes recovery is a partnership, and she stays by your side at every step.</p>
+      <ul class="doctor-points">
+        <li><i class="fas fa-circle-check"></i> Certified, experienced physiotherapist trusted across Kakkanad and Kochi</li>
+        <li><i class="fas fa-circle-check"></i> Personalised, evidence based treatment for every patient</li>
+        <li><i class="fas fa-circle-check"></i> Home care visits for those who cannot travel to the clinic</li>
+      </ul>
+      <div class="doctor-socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#visit" aria-label="Book an appointment"><i class="fas fa-calendar-check"></i></a>
       </div>
     </div>
-    <div class="team-card">
-      <div class="team-img">
-        <img src="assets/contented-physiatrist-with-a-clipboard-in-his-hand-2024-10-18-17-22-39-utc.png" alt="Cameron Williamson">
-      </div>
-      <div class="team-info">
-        <div>
-          <h4>Cameron Williamson</h4>
-          <span>Physiotherapist</span>
-        </div>
-        <div class="team-socials">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
+    <div class="doctor-photo">
+      <div class="doctor-badge">Founder &amp; Lead Physiotherapist</div>
+      <img src="assets/Dr.Noora.png" alt="Dr. Noora Jabin T.A, Lead Physiotherapist at Proud Physio and Wellness, Kakkanad">
     </div>
   </div>
 </section>
@@ -725,7 +721,7 @@
       <div class="visit-info-strip">
         <div class="visit-info-box">
           <div class="info-title"><i class="fas fa-clock"></i> Operational Hours</div>
-          <div class="info-val">Everyday: 08:00 AM – 09:00 PM</div>
+          <div class="info-val">Everyday: 08:00 AM to 09:00 PM</div>
         </div>
         <div class="visit-info-box" style="background: var(--blue-dark);">
           <div class="info-title"><i class="fas fa-share-alt"></i> Follow Us</div>
@@ -795,7 +791,7 @@
 <section class="faq-section" id="faq">
   <div class="faq-head">
     <div class="section-label">FAQ</div>
-    <h2>Physiotherapy in Kakkanad &amp; Kochi — Frequently Asked Questions</h2>
+    <h2>Physiotherapy in Kakkanad &amp; Kochi: Frequently Asked Questions</h2>
     <p>Everything you need to know about our physiotherapy and home care services. Can't find your answer? Reach out and our team in Kakkanad will be happy to help.</p>
   </div>
   <div class="faq-columns">
@@ -861,7 +857,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">Will my first physiotherapy session hurt? <i class="fas fa-plus"></i></div>
-      <div class="faq-a">Your first session is mostly an assessment. Treatment is always within your comfort level — our physiotherapists work with you to manage pain, not increase it, and explain every step along the way.</div>
+      <div class="faq-a">Your first session is mostly an assessment. Treatment is always within your comfort level, our physiotherapists work with you to manage pain, not increase it, and explain every step along the way.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">What should I wear to a physiotherapy appointment? <i class="fas fa-plus"></i></div>
@@ -877,7 +873,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">Why choose Proud Physio &amp; Wellness in Kakkanad? <i class="fas fa-plus"></i></div>
-      <div class="faq-a">We combine certified, experienced physiotherapists with truly personalised, evidence-based care, flexible home-care options and a warm, supportive environment — so every patient gets the best possible recovery outcome in Kakkanad and Kochi.</div>
+      <div class="faq-a">We combine certified, experienced physiotherapists with truly personalised, evidence-based care, flexible home-care options and a warm, supportive environment, so every patient gets the best possible recovery outcome in Kakkanad and Kochi.</div>
     </div>
   </div>
 </section>
@@ -887,11 +883,11 @@
   <div class="cta-left">
     <div class="cta-label">Reach Out Anytime</div>
     <h2>We're Here to Guide You Toward Healing</h2>
-    <p>Please feel free to reach out any time that you have a question or would like to take the first step toward improving your health and wellbeing. Our dedicated team are ready and waiting to help.</p>
-    <a href="#" class="cta-btn">Book Us Now →</a>
+    <p>Please feel free to reach out any time you have a question, or would like to take the first step toward improving your health and wellbeing. Our dedicated team in Kakkanad and Kochi are ready and waiting to help.</p>
+    <a href="#visit" class="cta-btn">Book Us Now →</a>
   </div>
   <div class="cta-img">
-    <img src="assets/contented-physiatrist-with-a-clipboard-in-his-hand-2024-10-18-17-22-39-utc.png" alt="Physiotherapist">
+    <img src="assets/image.png" alt="Physiotherapist caring for a patient at Proud Physio and Wellness, Kakkanad">
   </div>
 </section>
 
@@ -900,40 +896,39 @@
   <div class="section-label">Blog</div>
   <div class="blog-header">
     <h2>Helpful Tips and Insights for Your<br>Journey to Better Health</h2>
-    <a href="#" class="see-more-btn-outline">See More →</a>
   </div>
   <div class="blog-grid">
     <div class="blog-card">
       <div class="blog-card-img">
-        <img src="assets/269427-1.jpg" alt="Postpartum Care">
+        <a href="blog/postpartum-physiotherapy.html"><img src="assets/269427-1.jpg" alt="Postpartum physiotherapy and recovery for new mothers"></a>
       </div>
       <div class="blog-card-body">
         <span class="blog-tag">Women's Health</span>
-        <h3>Beyond the Baby Blues: Why Postpartum Care with Physiotherapy is the Missing Piece of Motherhood</h3>
-        <p>Postpartum recovery is about more than rest. Discover how physiotherapy supports new mothers through pelvic floor recovery, posture, and regaining strength after childbirth.</p>
-        <a href="#" class="blog-more">Read More →</a>
+        <h3>Postpartum Care and Physiotherapy: The Missing Piece of Motherhood Recovery</h3>
+        <p>Postpartum recovery is about more than rest. Learn how physiotherapy helps new mothers rebuild core and pelvic floor strength, ease back pain, and feel like themselves again.</p>
+        <a href="blog/postpartum-physiotherapy.html" class="blog-more">Read More →</a>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-card-img">
-        <img src="assets/269396.jpg" alt="Postpartum Care Malayalam">
+        <a href="blog/tennis-elbow-physiotherapy.html"><img src="assets/472357-1024x720.jpg" alt="Physiotherapy treatment for tennis elbow"></a>
       </div>
       <div class="blog-card-body">
-        <span class="blog-tag">Women's Health</span>
-        <h3>Beyond the Baby Blues: Why Postpartum Care with Physiotherapy is the Missing Piece of Motherhood – Malayalam</h3>
-        <p>പ്രസവശേഷമുള്ള വീണ്ടെടുപ്പ് വിശ്രമത്തിനപ്പുറമാണ്. ഫിസിയോതെറാപ്പി പുതിയ അമ്മമാരെ എങ്ങനെ പിന്തുണയ്ക്കുന്നു എന്നു അറിയൂ.</p>
-        <a href="#" class="blog-more">Read More →</a>
+        <span class="blog-tag">Sports &amp; Fitness</span>
+        <h3>Tennis Elbow Explained: How Physiotherapy Gets You Back to Your Best</h3>
+        <p>Tennis elbow can sideline anyone, not just athletes. Understand what causes it, the warning signs, and how targeted physiotherapy relieves pain and restores a strong, pain free grip.</p>
+        <a href="blog/tennis-elbow-physiotherapy.html" class="blog-more">Read More →</a>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-card-img">
-        <img src="assets/472357-1024x720.jpg" alt="Tennis Elbow">
+        <a href="blog/home-care-physiotherapy.html"><img src="assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Home care physiotherapy in Kakkanad and Kochi"></a>
       </div>
       <div class="blog-card-body">
-        <span class="blog-tag">Sports & Fitness</span>
-        <h3>Beyond the Bat: Sachin Tendulkar's Battle with Tennis Elbow – Malayalam</h3>
-        <p>ടെന്നീസ് എൽബോ ഒരു അത്‌ലറ്റിന്റെ കരിയറിനെ എങ്ങനെ ബാധിക്കാം എന്നും ശരിയായ ഫിസിയോതെറാപ്പി എങ്ങനെ സഹായിക്കുന്നു എന്നും വായിക്കൂ.</p>
-        <a href="#" class="blog-more">Read More →</a>
+        <span class="blog-tag">Home Care</span>
+        <h3>Home Care Physiotherapy in Kakkanad: Expert Recovery Without Leaving Home</h3>
+        <p>For many patients, travelling to a clinic is the hardest part of recovery. Discover how home care physiotherapy in Kakkanad and Kochi brings expert, personalised treatment to your door.</p>
+        <a href="blog/home-care-physiotherapy.html" class="blog-more">Read More →</a>
       </div>
     </div>
   </div>
@@ -976,7 +971,7 @@
         <li><span><i class="fas fa-map-marker-alt"></i> SRA 26-C, Crash Rd, Vazhakkala, Kochi, Kakkanad, Kerala 682021</span></li>
         <li><span><i class="fas fa-phone"></i> +91 80894 14419</span></li>
         <li><span><i class="fas fa-envelope"></i> trispoir3@gmail.com</span></li>
-        <li><span><i class="fas fa-clock"></i> Everyday: 08:00 AM – 09:00 PM</span></li>
+        <li><span><i class="fas fa-clock"></i> Everyday: 08:00 AM to 09:00 PM</span></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1006,6 +1001,26 @@
     a.addEventListener('click', e => e.preventDefault());
   });
 
+  // Mobile hamburger menu
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+      });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+    }
+  })();
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
@@ -1026,7 +1041,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.service-card, .testimonial-card, .blog-card, .why-card, .team-card').forEach(el => {
+  document.querySelectorAll('.service-card, .testimonial-card, .blog-card, .why-card, .doctor-feature').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1105,11 +1120,11 @@
     { "@type": "Question", "name": "What are your clinic timings?", "acceptedAnswer": { "@type": "Answer", "text": "We are open every day from 08:00 AM to 09:00 PM, making it easy to schedule appointments around your work and family commitments." } },
     { "@type": "Question", "name": "Where is your physiotherapy clinic located?", "acceptedAnswer": { "@type": "Answer", "text": "Our clinic is located at SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021, easily accessible from across Kochi and Ernakulam." } },
     { "@type": "Question", "name": "How do I book an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Call us at +91 80894 14419, email trispoir3@gmail.com, or use the Book An Appointment button on this page. Our team will confirm a convenient time for you." } },
-    { "@type": "Question", "name": "Will my first physiotherapy session hurt?", "acceptedAnswer": { "@type": "Answer", "text": "Your first session is mostly an assessment. Treatment is always within your comfort level — our physiotherapists work with you to manage pain, not increase it, and explain every step along the way." } },
+    { "@type": "Question", "name": "Will my first physiotherapy session hurt?", "acceptedAnswer": { "@type": "Answer", "text": "Your first session is mostly an assessment. Treatment is always within your comfort level, our physiotherapists work with you to manage pain, not increase it, and explain every step along the way." } },
     { "@type": "Question", "name": "What should I wear to a physiotherapy appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Wear comfortable, loose-fitting clothing that allows easy movement and access to the area being treated, such as shorts or a t-shirt, so the therapist can assess and treat you effectively." } },
     { "@type": "Question", "name": "Can physiotherapy prevent future injuries?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Beyond recovery, we focus on prevention through injury-prevention programmes, movement analysis, education and strengthening strategies that keep your body strong, mobile and pain-free long term." } },
     { "@type": "Question", "name": "Do you offer ergonomic and lifestyle guidance?", "acceptedAnswer": { "@type": "Answer", "text": "We provide ergonomic advice along with nutrition and lifestyle strategies to support your overall health and wellbeing and improve both your physical and mental performance." } },
-    { "@type": "Question", "name": "Why choose Proud Physio & Wellness in Kakkanad?", "acceptedAnswer": { "@type": "Answer", "text": "We combine certified, experienced physiotherapists with truly personalised, evidence-based care, flexible home-care options and a warm, supportive environment — so every patient gets the best possible recovery outcome in Kakkanad and Kochi." } }
+    { "@type": "Question", "name": "Why choose Proud Physio & Wellness in Kakkanad?", "acceptedAnswer": { "@type": "Answer", "text": "We combine certified, experienced physiotherapists with truly personalised, evidence-based care, flexible home-care options and a warm, supportive environment, so every patient gets the best possible recovery outcome in Kakkanad and Kochi." } }
   ]
 }
 </script>
