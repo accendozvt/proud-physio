@@ -23,11 +23,11 @@
     --border: #e4efd6;
     --white: #ffffff;
   }
-  html { scroll-behavior: smooth; background: #eef2ea; }
+  html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); font-size: 15px; line-height: 1.6; }
 
-  /* Constrain whole site to 70% of viewport width, centered */
-  .page-wrap { width: 70vw; margin: 0 auto; background: var(--white); box-shadow: 0 0 60px rgba(0,0,0,0.08); }
+  /* Center the content column at 80% of viewport width (no card/sheet look) */
+  .page-wrap { width: 80vw; margin: 0 auto; }
   @media (max-width: 1100px) { .page-wrap { width: 92vw; } }
   @media (max-width: 700px) { .page-wrap { width: 100vw; } }
 
