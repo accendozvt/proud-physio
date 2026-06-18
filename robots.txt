@@ -1,0 +1,37 @@
+# robots.txt — Proud Physio & Wellness
+# https://proudphysio.com
+
+User-agent: *
+Allow: /
+Allow: /assets/opengraph/
+
+# Block private / internal paths (none public, reserved for future use)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /*?*sessionid=
+Disallow: /*?*replytocom=
+
+# Allow major AI / answer-engine crawlers explicitly (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://proudphysio.com/sitemap.xml
