@@ -23,83 +23,172 @@
 <meta name="twitter:description" content="Tennis elbow affects far more than tennis players. Learn the causes, symptoms, and how sports physiotherapy in Kakkanad and Kochi relieves elbow pain and restores a strong, pain free grip.">
 <meta name="twitter:image" content="https://proudphysio.com/assets/opengraph/preview.webp">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--blue:#4e8a2c;--blue-dark:#3c6e21;--blue-deep:#11283a;--blue-light:#e4f1d4;--green:#6fae33;--green-soft:#eaf5dc;--grad:linear-gradient(135deg,#4e8a2c 0%,#2f7a55 48%,#1e5099 100%);--dark:#11283a;--text:#46555b;--light:#f4f8ef;--border:#e1ecd2}
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;font-size:16px;line-height:1.7}
-nav{position:sticky;top:0;z-index:50;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 8vw;box-shadow:0 2px 12px rgba(0,0,0,.07)}
-nav img{height:60px}
-.nav-back{color:var(--blue);font-weight:600;text-decoration:none;font-size:14px}
-.article-hero{background:var(--grad);padding:54px 8vw;color:#fff}
-.article-hero .tag{display:inline-block;background:rgba(255,255,255,.2);padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:16px}
-.article-hero h1{font-size:38px;font-weight:800;line-height:1.2;max-width:820px;margin-bottom:14px}
-.article-hero .meta{font-size:13px;opacity:.85}
-.wrap{max-width:820px;margin:0 auto;padding:50px 8vw}
-.lead-img{width:100%;border-radius:16px;overflow:hidden;margin:0 auto 36px;max-width:820px;display:block;height:380px;object-fit:cover}
-.article-body h2{font-size:25px;font-weight:800;color:var(--dark);margin:34px 0 12px}
-.article-body h3{font-size:19px;font-weight:700;color:var(--dark);margin:24px 0 8px}
-.article-body p{margin-bottom:16px}
-.article-body ul{margin:0 0 18px 22px}
-.article-body li{margin-bottom:8px}
-.article-body strong{color:var(--dark)}
-.callout{background:var(--green-soft);border-left:4px solid var(--blue);border-radius:10px;padding:18px 22px;margin:26px 0;font-size:15px}
-.cta-box{background:var(--grad);border-radius:18px;padding:34px;color:#fff;text-align:center;margin-top:44px}
-.cta-box h3{font-size:24px;font-weight:800;margin-bottom:10px}
-.cta-box p{opacity:.9;margin-bottom:20px}
-.cta-box a{display:inline-block;background:#fff;color:var(--blue);font-weight:700;padding:13px 28px;border-radius:30px;text-decoration:none}
-footer{background:var(--blue-deep);color:#9fb8c2;padding:34px 8vw;font-size:13px;text-align:center;margin-top:10px}
-footer a{color:#8cc63f;text-decoration:none}
-@media(max-width:700px){.article-hero h1{font-size:28px}nav img{height:50px}.lead-img{height:240px}}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/inner.css">
 </head>
 <body>
 <nav>
-  <a href="../index.html"><img src="../assets/logo.png" alt="Proud Physio & Wellness, Best Physiotherapist in Kakkanad and Kochi"></a>
-  <a href="../index.html" class="nav-back">&larr; Back to Home</a>
+  <a href="../index.html" class="nav-logo"><img src="../assets/logo.png" alt="Proud Physio & Wellness, Best Physiotherapist in Kakkanad and Kochi"></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#services">Our Services</a></li>
+    <li><a href="../index.html#check">Check Your Pain</a></li>
+    <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
+    <li><a href="../index.html#visit" class="nav-cta">Book Now</a></li>
+  </ul>
 </nav>
-<header class="article-hero">
+
+<header class="page-hero">
+  <div class="breadcrumb"><a href="../index.html">Home</a> &rsaquo; <a href="../blog/index.html">Blog</a> &rsaquo; Tennis Elbow</div>
   <span class="tag">Sports &amp; Fitness</span>
   <h1>Tennis Elbow Explained: How Physiotherapy Gets You Back to Your Best</h1>
-  <div class="meta">By Proud Physio &amp; Wellness, Kakkanad &amp; Kochi &nbsp;|&nbsp; 12 June 2026</div>
+  <div class="meta"><i class="fas fa-user-pen"></i> By Proud Physio &amp; Wellness &nbsp;<i class="fas fa-calendar"></i> 12 June 2026 &nbsp;<i class="fas fa-clock"></i> 7 min read</div>
 </header>
-<main class="wrap">
-  <img class="lead-img" src="../assets/472357-1024x720.jpg" alt="Tennis Elbow Explained: How Physiotherapy Gets You Back to Your Best">
-  <article class="article-body">
-    <p>The name is misleading. <strong>Tennis elbow</strong> affects far more people who have never picked up a racket than those who have. Painters, cooks, IT professionals, new parents, and gym goers all develop it. If you feel a nagging pain on the outer side of your elbow when you grip, lift, or twist, this article is for you.</p>
-    <h2>What Is Tennis Elbow</h2>
-    <p>Tennis elbow, known medically as lateral epicondylitis, is an overuse injury of the tendons that attach your forearm muscles to the outer elbow. Repeated gripping and wrist movements create tiny strains in these tendons, leading to pain, weakness, and tenderness.</p>
-    <h2>Common Symptoms</h2>
-    <ul>
-      <li>Pain on the outer elbow that may travel down the forearm</li>
-      <li>A weak or painful grip, for example when holding a cup or shaking hands</li>
-      <li>Discomfort when lifting, twisting, or straightening the wrist</li>
-      <li>Stiffness in the elbow, often worse in the morning</li>
-    </ul>
-    <h2>Why Rest Alone Is Not Enough</h2>
-    <p>Many people simply wait for tennis elbow to settle. While rest can ease symptoms for a while, the pain often returns the moment normal activity resumes, because the underlying tendon weakness was never addressed. This is why structured physiotherapy gives far better long term results.</p>
-    <h2>How Physiotherapy Treats Tennis Elbow</h2>
-    <h3>Accurate assessment</h3>
-    <p>We first confirm the diagnosis and identify the activities and movement patterns driving your pain.</p>
-    <h3>Pain relief</h3>
-    <p>Hands on therapy, soft tissue work, and activity modification calm the irritated tendon and reduce day to day discomfort.</p>
-    <h3>Progressive loading</h3>
-    <p>The most important part of recovery is carefully strengthening the tendon with graded exercises. This rebuilds capacity so the elbow can handle your work and sport again.</p>
-    <h3>Prevention</h3>
-    <p>We review your technique, ergonomics, and equipment so the problem does not come back.</p>
-    <div class="callout">Most cases of tennis elbow improve significantly with the right loading programme. The key is consistency and expert guidance, not complete rest.</div>
-    <h2>Get Back to What You Love</h2>
-    <p>Whether you are an athlete chasing peak performance or someone who simply wants to lift a kettle without wincing, our <strong>sports and musculoskeletal physiotherapy</strong> in Kakkanad and Kochi is designed to get you there. Home care visits are also available if travelling is difficult.</p>
-    <div class="cta-box">
-      <h3>Book Your Physiotherapy Session in Kakkanad</h3>
-      <p>Personalised, evidence based care from Dr. Noora and the Proud Physio team. Home care available across Kochi.</p>
-      <a href="/#visit">Book an Appointment</a>
+
+<div class="article-layout">
+  <main class="article-main">
+    <img class="lead-img" src="../assets/472357-1024x720.jpg" alt="Tennis Elbow Explained: How Physiotherapy Gets You Back to Your Best">
+    <p class="lead-caption">Progressive loading, not rest alone, is what rebuilds a strong, pain-free elbow.</p>
+    <article class="article-body">
+      <p>The name is misleading. <strong>Tennis elbow</strong> affects far more people who have never picked up a racket than those who have. Painters, cooks, IT professionals, new parents, gardeners and gym-goers all develop it. In fact, most of the patients we see for tennis elbow at our Kakkanad clinic have never played a competitive match in their lives. If you feel a nagging pain on the outer side of your elbow when you grip, lift or twist, this article is for you.</p>
+      <p>The good news is that tennis elbow is highly treatable. With an accurate diagnosis and a properly structured programme, the vast majority of people return to a strong, pain-free grip and get back to the work and sport they enjoy. The key is understanding why it happens and, just as importantly, why simply resting rarely fixes it for good.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="num">1-3%</div><div class="lbl">Of adults experience tennis elbow each year, most are not players</div></div>
+        <div class="stat-box"><div class="num">35-54</div><div class="lbl">The age range in which it is most common</div></div>
+        <div class="stat-box"><div class="num">80%+</div><div class="lbl">Improve well with a structured loading programme</div></div>
+      </div>
+
+      <h2>What Is Tennis Elbow</h2>
+      <p>Tennis elbow, known medically as lateral epicondylitis, is an overuse injury of the tendons that attach your forearm muscles to the bony bump on the outer elbow. Repeated gripping and wrist movements create tiny strains in these tendons. Over time, the tendon struggles to repair itself as fast as it is being loaded, and it becomes irritated, weakened and painful. It is less an inflammation problem and more a tendon that has lost some of its capacity to cope with demand, which is exactly why the right kind of exercise, rather than pure rest, is the cornerstone of recovery.</p>
+      <p>Because it is driven by repetition rather than a single dramatic injury, tennis elbow often creeps up gradually. Many patients cannot point to a moment when it started, only that everyday tasks slowly became uncomfortable. The activities that most commonly trigger it include long hours at a keyboard and mouse, manual trades such as painting and plastering, repetitive kitchen work, carrying a young child on one arm, and gym exercises performed with poor technique or too much load too soon.</p>
+
+      <h2>Common Symptoms</h2>
+      <ul>
+        <li>Pain on the outer elbow that may travel down the forearm</li>
+        <li>A weak or painful grip, for example when holding a cup, turning a key or shaking hands</li>
+        <li>Discomfort when lifting, twisting or straightening the wrist</li>
+        <li>Stiffness in the elbow, often worse in the morning or after a period of rest</li>
+        <li>Tenderness when you press on the outer edge of the elbow</li>
+      </ul>
+
+      <h2>Why Rest Alone Is Not Enough</h2>
+      <p>Many people simply wait for tennis elbow to settle. While rest can ease symptoms for a while, the pain often returns the moment normal activity resumes, because the underlying tendon weakness was never addressed. A tendon that is not loaded gradually loses even more of its strength, so complete rest can leave you more vulnerable when you go back to your usual tasks. This is why structured physiotherapy, which rebuilds the tendon rather than just calming it down, gives far better long-term results.</p>
+
+      <p class="pullquote">Tennis elbow is not cured by avoiding your arm. It is cured by carefully rebuilding the tendon's ability to handle load again.</p>
+
+      <h2>How Physiotherapy Treats Tennis Elbow</h2>
+      <h3>Accurate assessment</h3>
+      <p>We first confirm the diagnosis and rule out other causes of elbow pain, then identify the specific activities and movement patterns driving your symptoms, whether that is your keyboard set-up, a repetitive task at work or your technique in the gym.</p>
+      <h3>Pain relief</h3>
+      <p>Hands-on therapy, soft tissue work and short-term activity modification calm the irritated tendon and reduce day-to-day discomfort, giving you a comfortable base to begin strengthening from.</p>
+      <h3>Progressive loading</h3>
+      <p>The most important part of recovery is carefully strengthening the tendon with graded exercises. Starting gently and building up over the weeks, this rebuilds the tendon's capacity so the elbow can handle your work and sport again without flaring up.</p>
+      <h3>Prevention</h3>
+      <p>We review your technique, ergonomics and equipment, from your grip size to your desk posture, so the problem does not simply come back once you feel better.</p>
+
+      <div class="callout"><strong>Consistency beats rest.</strong> Most cases of tennis elbow improve significantly with the right loading programme. The key is doing your exercises steadily under expert guidance, not stopping the moment the pain eases.</div>
+
+      <h2>What Recovery Looks Like</h2>
+      <table class="info-table">
+        <thead><tr><th>Phase</th><th>Focus</th><th>What to expect</th></tr></thead>
+        <tbody>
+          <tr><td>Weeks 1-2</td><td>Settle the pain</td><td>Assessment, hands-on therapy, activity advice, first gentle exercises</td></tr>
+          <tr><td>Weeks 3-6</td><td>Build strength</td><td>Progressive tendon loading, grip work, gradual return to tasks</td></tr>
+          <tr><td>Weeks 6-12</td><td>Restore capacity</td><td>Heavier loading, sport and work-specific movements, technique review</td></tr>
+          <tr><td>Ongoing</td><td>Prevent recurrence</td><td>Maintenance exercises, ergonomic and equipment adjustments</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Get Back to What You Love</h2>
+      <p>Whether you are an athlete chasing peak performance or someone who simply wants to lift a kettle without wincing, our <a href="../services/musculoskeletal-sports-physiotherapy.html">sports and musculoskeletal physiotherapy</a> in Kakkanad and Kochi is designed to get you there. Because tennis elbow so often sits alongside other overuse and posture-related aches, it can be worth reading our guides on <a href="back-pain-desk-workers.html">back pain in desk workers</a> and <a href="knee-pain-physiotherapy.html">knee pain physiotherapy</a> too. Home care visits are also available if travelling is difficult.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="mini-faq">
+        <details>
+          <summary>How long does tennis elbow take to heal?</summary>
+          <p>It varies with how long you have had it and how much you load the arm, but many people feel meaningfully better within six to twelve weeks of a structured programme. Longer-standing cases can take a little more time, which is why starting the right treatment early helps.</p>
+        </details>
+        <details>
+          <summary>Should I completely stop using my arm?</summary>
+          <p>No. We usually modify rather than stop activity. Complete rest tends to weaken the tendon further, so the aim is to keep the arm moving within comfortable limits while we gradually rebuild its strength.</p>
+        </details>
+        <details>
+          <summary>Do I need a scan or an injection?</summary>
+          <p>Most cases are diagnosed clinically and respond well to physiotherapy without scans or injections. If your recovery stalls, we will discuss further options with you and, where appropriate, liaise with your doctor.</p>
+        </details>
+        <details>
+          <summary>Can I keep working while I recover?</summary>
+          <p>Usually yes. We look at your work tasks, desk set-up and equipment and adjust them so you can stay productive while the tendon recovers, rather than having to take time off.</p>
+        </details>
+      </div>
+
+      <div class="cta-box">
+        <h3>Book Your Physiotherapy Session in Kakkanad</h3>
+        <p>Personalised, evidence-based care from Dr. Noora and the Proud Physio team. Home care available across Kochi.</p>
+        <a href="tel:+918089414419">Call +91 80894 14419</a>
+        <a class="ghost" href="../index.html#visit">Book Online</a>
+      </div>
+    </article>
+  </main>
+
+  <aside class="article-aside">
+    <div class="aside-card aside-book">
+      <h3>Book an Appointment</h3>
+      <p>Personalised sports and musculoskeletal care with Dr. Noora Ameen TA (PT). Clinic or home visits, no referral needed.</p>
+      <a class="aside-btn" href="tel:+918089414419"><i class="fas fa-phone"></i> +91 80894 14419</a>
+      <a class="aside-btn ghost" href="../index.html#visit"><i class="fas fa-calendar-check"></i> Book Online</a>
     </div>
-  </article>
-</main>
+    <div class="aside-card">
+      <h3>Clinic at a Glance</h3>
+      <ul class="aside-facts">
+        <li><i class="fas fa-location-dot"></i><span>SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi 682021</span></li>
+        <li><i class="fas fa-clock"></i><span>Open every day, 8:00 AM to 10:00 PM</span></li>
+        <li><i class="fas fa-house-medical"></i><span>Home visits across Kochi &amp; Ernakulam</span></li>
+        <li><i class="fas fa-stethoscope"></i><span>No doctor's referral required</span></li>
+      </ul>
+    </div>
+    <div class="aside-card">
+      <h3>Related Reading</h3>
+      <ul class="aside-links">
+        <li><a href="../services/musculoskeletal-sports-physiotherapy.html"><i class="fas fa-angle-right"></i> Musculoskeletal &amp; Sports Physiotherapy</a></li>
+        <li><a href="back-pain-desk-workers.html"><i class="fas fa-angle-right"></i> Back Pain in Desk Workers</a></li>
+        <li><a href="knee-pain-physiotherapy.html"><i class="fas fa-angle-right"></i> Knee Pain Physiotherapy</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<section class="related-section">
+  <div class="related-inner">
+    <h2>Related Reading</h2>
+    <div class="related-grid">
+      <a class="related-card" href="../services/musculoskeletal-sports-physiotherapy.html"><i class="fas fa-dumbbell"></i><h3>Sports &amp; Musculoskeletal Physiotherapy</h3><p>Expert care for tendon, joint and sports injuries in Kakkanad and Kochi.</p></a>
+      <a class="related-card" href="back-pain-desk-workers.html"><i class="fas fa-chair"></i><h3>Back Pain in Desk Workers</h3><p>How to ease and prevent desk-related back and neck pain.</p></a>
+      <a class="related-card" href="knee-pain-physiotherapy.html"><i class="fas fa-person-walking"></i><h3>Knee Pain Physiotherapy</h3><p>Understanding knee pain and how physiotherapy helps you move freely.</p></a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <p>&copy; 2026 <strong style="color:#fff">Proud Physio &amp; Wellness</strong>. Kakkanad, Kochi, Kerala &nbsp;|&nbsp; +91 80894 14419 &nbsp;|&nbsp; <a href="../index.html">proudphysio.com</a></p>
+  <p>&copy; 2026 <strong style="color:#fff">Proud Physio &amp; Wellness</strong>. SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021 &nbsp;|&nbsp; +91 80894 14419 &nbsp;|&nbsp; proudphysio1@gmail.com &nbsp;|&nbsp; <a href="../index.html">proudphysio.com</a></p>
 </footer>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (toggle && links) {
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+      });
+    }
+  })();
+</script>
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -108,11 +197,23 @@ footer a{color:#8cc63f;text-decoration:none}
   "description":"Tennis elbow affects far more than tennis players. Learn the causes, symptoms, and how sports physiotherapy in Kakkanad and Kochi relieves elbow pain and restores a strong, pain free grip.",
   "image":"https://proudphysio.com/assets/opengraph/preview.webp",
   "datePublished":"2026-06-12",
-  "dateModified":"2026-06-12",
+  "dateModified":"2026-07-10",
   "author":{"@type":"Organization","name":"Proud Physio & Wellness"},
   "publisher":{"@type":"Organization","name":"Proud Physio & Wellness","logo":{"@type":"ImageObject","url":"https://proudphysio.com/assets/logo.png"}},
   "mainEntityOfPage":{"@type":"WebPage","@id":"https://proudphysio.com/blog/tennis-elbow-physiotherapy.html"},
   "about":"Physiotherapy in Kakkanad and Kochi"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How long does tennis elbow take to heal?","acceptedAnswer":{"@type":"Answer","text":"It varies with how long you have had it and how much you load the arm, but many people feel meaningfully better within six to twelve weeks of a structured programme. Longer-standing cases can take a little more time, which is why starting the right treatment early helps."}},
+    {"@type":"Question","name":"Should I completely stop using my arm?","acceptedAnswer":{"@type":"Answer","text":"No. We usually modify rather than stop activity. Complete rest tends to weaken the tendon further, so the aim is to keep the arm moving within comfortable limits while we gradually rebuild its strength."}},
+    {"@type":"Question","name":"Do I need a scan or an injection for tennis elbow?","acceptedAnswer":{"@type":"Answer","text":"Most cases are diagnosed clinically and respond well to physiotherapy without scans or injections. If your recovery stalls, we will discuss further options with you and, where appropriate, liaise with your doctor."}},
+    {"@type":"Question","name":"Can I keep working while I recover?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. We look at your work tasks, desk set-up and equipment and adjust them so you can stay productive while the tendon recovers, rather than having to take time off."}}
+  ]
 }
 </script>
 </body>

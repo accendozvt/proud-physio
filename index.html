@@ -328,7 +328,7 @@
 
   /* FOOTER */
   footer { background: var(--blue-deep); padding: 50px 10vw 24px; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1.6fr 0.9fr 1.1fr 1.1fr 0.9fr; gap: 34px; margin-bottom: 40px; }
   .footer-brand .brand-logo { margin-bottom: 14px; }
   .footer-brand .brand-logo img { height: 54px; width: auto; background: white; padding: 8px 12px; border-radius: 10px; }
   .footer-brand p { font-size: 13px; color: #9fb8c2; line-height: 1.8; max-width: 260px; }
@@ -345,6 +345,75 @@
   .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; text-align: center; }
   .footer-bottom p { font-size: 12px; color: #7a98a3; }
   .footer-bottom span { color: var(--green-light); }
+
+  /* SERVICE CARD LINKS */
+  .service-card-overlay { position: absolute; inset: 0; z-index: 2; }
+  .service-card-body::after { content: 'Learn More →'; color: var(--blue); font-weight: 600; font-size: 13px; display: inline-block; margin-top: 10px; }
+
+  /* BODY MAP / SYMPTOM CHECKER */
+  .bodymap-section { padding: 70px 10vw; background: var(--white); }
+  .bodymap-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: start; margin-top: 10px; }
+  .bodymap-figure { background: var(--light-gray); border-radius: 20px; padding: 24px 10px; display: flex; justify-content: center; }
+  .bodymap-figure svg { max-width: 260px; width: 100%; height: auto; }
+  .bm-body { fill: #d6e8bd; }
+  .bm-spot { cursor: pointer; }
+  .bm-spot circle.dot { fill: var(--blue); stroke: #fff; stroke-width: 2.5; transition: fill .2s; }
+  .bm-spot circle.pulse { fill: none; stroke: var(--blue); stroke-width: 2; opacity: .55; animation: bmPulse 2s ease-out infinite; }
+  .bm-spot.active circle.dot, .bm-spot:hover circle.dot { fill: var(--logo-blue); }
+  @keyframes bmPulse { 0% { transform: scale(.6); opacity: .6; } 100% { transform: scale(1.7); opacity: 0; } }
+  .bm-panel { background: var(--light-gray); border-radius: 20px; padding: 30px; min-height: 380px; }
+  .bm-panel h3 { font-size: 24px; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+  .bm-panel .bm-sub { font-size: 13px; color: var(--blue); font-weight: 600; margin-bottom: 16px; }
+  .bm-panel h4 { font-size: 14px; font-weight: 700; color: var(--dark); margin: 16px 0 8px; letter-spacing: .5px; text-transform: uppercase; }
+  .bm-conditions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .bm-conditions span { background: var(--blue-light); color: var(--blue-dark); font-size: 12.5px; font-weight: 600; padding: 7px 14px; border-radius: 20px; }
+  .bm-panel p { font-size: 14px; color: #666; line-height: 1.75; }
+  .bm-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+  .bm-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; text-decoration: none; padding: 10px 20px; border-radius: 25px; }
+  .bm-links a.primary { background: var(--blue); color: #fff; }
+  .bm-links a.secondary { border: 2px solid var(--blue); color: var(--blue); }
+  .bm-note { font-size: 12px; color: #99a; margin-top: 18px; }
+  @media (max-width: 900px) { .bodymap-grid { grid-template-columns: 1fr; } .bodymap-section { padding: 40px 20px; } .bm-panel { min-height: 0; } }
+
+  /* RECOVERY JOURNEYS (BEFORE / AFTER) */
+  .journeys-section { padding: 70px 10vw; background: var(--light-gray); }
+  .journeys-header { margin-bottom: 36px; }
+  .journeys-header h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; }
+  .journeys-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .journey-card { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+  .journey-icon { width: 42px; height: 42px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .journey-icon i { color: var(--blue); font-size: 19px; }
+  .journey-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+  .journey-meta { font-size: 12.5px; color: #99a; margin-bottom: 18px; }
+  .jbar-row { margin-bottom: 14px; }
+  .jbar-label { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 600; color: var(--dark); margin-bottom: 5px; }
+  .jbar-label .before-val { color: #b55; font-weight: 700; }
+  .jbar-label .after-val { color: var(--blue); font-weight: 700; }
+  .jbar-track { height: 9px; background: #eceee6; border-radius: 6px; overflow: hidden; margin-bottom: 4px; position: relative; }
+  .jbar-fill { height: 100%; border-radius: 6px; width: 0; transition: width 1.2s cubic-bezier(.25,.7,.3,1); }
+  .jbar-fill.before { background: #d8a0a0; }
+  .jbar-fill.after { background: var(--grad); }
+  .jbar-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #aab; }
+  .journey-quote { font-size: 12.5px; color: #778; font-style: italic; margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6; }
+  .journeys-note { font-size: 12px; color: #99a; margin-top: 22px; }
+  @media (max-width: 900px) { .journeys-grid { grid-template-columns: 1fr; } .journeys-section { padding: 40px 20px; } }
+
+  /* KNOWLEDGE HUB */
+  .knowledge-section { padding: 70px 10vw; background: var(--white); }
+  .knowledge-header { margin-bottom: 36px; }
+  .knowledge-header h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; }
+  .knowledge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .knowledge-card { background: var(--light-gray); border-radius: 16px; padding: 24px; transition: transform .25s, box-shadow .25s; }
+  .knowledge-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.09); }
+  .knowledge-card .k-icon { width: 42px; height: 42px; background: var(--grad); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .knowledge-card .k-icon i { color: #fff; font-size: 18px; }
+  .knowledge-card h3 { font-size: 17px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .knowledge-card p { font-size: 12.5px; color: #888; line-height: 1.6; margin-bottom: 14px; }
+  .k-links { display: flex; flex-direction: column; gap: 7px; }
+  .k-links a { font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; }
+  .k-links a:hover { text-decoration: underline; }
+  .k-links a i { font-size: 11px; margin-right: 6px; }
+  @media (max-width: 900px) { .knowledge-grid { grid-template-columns: 1fr; } .knowledge-section { padding: 40px 20px; } }
 
   /* UTILS */
   .see-more-btn-outline { display: inline-flex; align-items: center; gap: 6px; border: 2px solid var(--blue); color: var(--blue); padding: 10px 22px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; background: transparent; }
@@ -402,8 +471,9 @@
     <li><a href="#">Home</a></li>
     <li><a href="#about">About Us</a></li>
     <li><a href="#services">Our Services</a></li>
+    <li><a href="#check">Check Your Pain</a></li>
     <li><a href="#visit">Visit Us</a></li>
-    <li><a href="#blog">Blogs</a></li>
+    <li><a href="blog/index.html">Blogs</a></li>
     <li><a href="#visit" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
@@ -549,6 +619,7 @@
       <div class="service-card-img">
         <img src="assets/189318.jpg" alt="Geriatric Physiotherapy">
       </div>
+      <a class="service-card-overlay" href="services/geriatric-physiotherapy.html" aria-label="Geriatric Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-user-injured"></i></div>
@@ -560,6 +631,7 @@
       <div class="service-card-img">
         <img src="assets/22246.jpg" alt="Neurological Rehabilitation">
       </div>
+      <a class="service-card-overlay" href="services/neurological-rehabilitation.html" aria-label="Neurological Rehabilitation in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-brain"></i></div>
@@ -569,8 +641,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/13553236.jpg" alt="Pediatric Physiotherapy">
+        <img src="assets/paediatric-physiotherapy-child.jpg" alt="Paediatric physiotherapy for children in Kakkanad and Kochi" style="object-position: center 30%;">
       </div>
+      <a class="service-card-overlay" href="services/paediatric-physiotherapy.html" aria-label="Paediatric Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-child"></i></div>
@@ -582,6 +655,7 @@
       <div class="service-card-img">
         <img src="assets/472357-1024x720.jpg" alt="Musculoskeletal & sports physiotherapy">
       </div>
+      <a class="service-card-overlay" href="services/musculoskeletal-sports-physiotherapy.html" aria-label="Musculoskeletal and Sports Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-running"></i></div>
@@ -593,6 +667,7 @@
       <div class="service-card-img">
         <img src="assets/5704.jpg" alt="Ergonomic, nutrition & lifestyle guidance">
       </div>
+      <a class="service-card-overlay" href="services/ergonomic-nutrition-lifestyle-guidance.html" aria-label="Ergonomic, Nutrition and Lifestyle Guidance in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-apple-alt"></i></div>
@@ -604,6 +679,7 @@
       <div class="service-card-img">
         <img src="assets/269427-1.jpg" alt="Women's health physiotherapy">
       </div>
+      <a class="service-card-overlay" href="services/womens-health-physiotherapy.html" aria-label="Women's Health Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-venus"></i></div>
@@ -615,6 +691,7 @@
       <div class="service-card-img">
         <img src="assets/269396.jpg" alt="Recurrence Management">
       </div>
+      <a class="service-card-overlay" href="services/recurrence-management.html" aria-label="Recurrence Management and Injury Prevention in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-redo-alt"></i></div>
@@ -626,6 +703,7 @@
       <div class="service-card-img">
         <img src="assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.jpg" alt="Post-Surgical Rehabilitation">
       </div>
+      <a class="service-card-overlay" href="services/post-surgical-rehabilitation.html" aria-label="Post-Surgical Rehabilitation in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-procedures"></i></div>
@@ -637,12 +715,57 @@
       <div class="service-card-img">
         <img src="assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Home Care Physiotherapy">
       </div>
+      <a class="service-card-overlay" href="services/home-care-physiotherapy.html" aria-label="Home Care Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-house-medical"></i></div>
         <h3>Home Care Physiotherapy</h3>
         <p>We bring quality physiotherapy directly to your home, providing the convenience and support you need to recover comfortably from wherever you are.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BODY MAP / SYMPTOM CHECKER -->
+<section class="bodymap-section" id="check">
+  <div class="section-label">Check Your Pain</div>
+  <div class="services-header">
+    <h2>Where Does It Hurt? Tap a Body Area to Learn More</h2>
+  </div>
+  <div class="bodymap-grid">
+    <div class="bodymap-figure">
+      <svg viewBox="0 0 200 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive human body map, tap an area to see common conditions">
+        <!-- silhouette -->
+        <circle class="bm-body" cx="100" cy="38" r="23"/>
+        <rect class="bm-body" x="92" y="58" width="16" height="16" rx="5"/>
+        <rect class="bm-body" x="68" y="72" width="64" height="118" rx="20"/>
+        <rect class="bm-body" x="44" y="80" width="17" height="152" rx="8.5"/>
+        <rect class="bm-body" x="139" y="80" width="17" height="152" rx="8.5"/>
+        <rect class="bm-body" x="70" y="186" width="60" height="52" rx="18"/>
+        <rect class="bm-body" x="74" y="232" width="21" height="192" rx="10.5"/>
+        <rect class="bm-body" x="105" y="232" width="21" height="192" rx="10.5"/>
+        <ellipse class="bm-body" cx="83" cy="430" rx="15" ry="8"/>
+        <ellipse class="bm-body" cx="117" cy="430" rx="15" ry="8"/>
+        <!-- hotspots -->
+        <g class="bm-spot" data-region="head" tabindex="0" role="button" aria-label="Head, dizziness and balance"><circle class="pulse" cx="100" cy="34" r="9"/><circle class="dot" cx="100" cy="34" r="7"/></g>
+        <g class="bm-spot" data-region="neck" tabindex="0" role="button" aria-label="Neck and shoulders"><circle class="pulse" cx="100" cy="72" r="9"/><circle class="dot" cx="100" cy="72" r="7"/></g>
+        <g class="bm-spot" data-region="shoulder" tabindex="0" role="button" aria-label="Shoulder"><circle class="pulse" cx="61" cy="88" r="9"/><circle class="dot" cx="61" cy="88" r="7"/></g>
+        <g class="bm-spot active" data-region="back" tabindex="0" role="button" aria-label="Back and spine"><circle class="pulse" cx="100" cy="140" r="9"/><circle class="dot" cx="100" cy="140" r="7"/></g>
+        <g class="bm-spot" data-region="elbow" tabindex="0" role="button" aria-label="Elbow and wrist"><circle class="pulse" cx="52" cy="165" r="9"/><circle class="dot" cx="52" cy="165" r="7"/></g>
+        <g class="bm-spot" data-region="pelvis" tabindex="0" role="button" aria-label="Hip and pelvis"><circle class="pulse" cx="100" cy="212" r="9"/><circle class="dot" cx="100" cy="212" r="7"/></g>
+        <g class="bm-spot" data-region="knee" tabindex="0" role="button" aria-label="Knee"><circle class="pulse" cx="85" cy="330" r="9"/><circle class="dot" cx="85" cy="330" r="7"/></g>
+        <g class="bm-spot" data-region="ankle" tabindex="0" role="button" aria-label="Ankle and foot"><circle class="pulse" cx="85" cy="415" r="9"/><circle class="dot" cx="85" cy="415" r="7"/></g>
+      </svg>
+    </div>
+    <div class="bm-panel" id="bmPanel">
+      <h3 id="bmTitle"></h3>
+      <div class="bm-sub" id="bmSub"></div>
+      <h4>Common Issues We Treat</h4>
+      <div class="bm-conditions" id="bmConditions"></div>
+      <h4>How We Help</h4>
+      <p id="bmHelp"></p>
+      <div class="bm-links" id="bmLinks"></div>
+      <p class="bm-note">This tool is for general guidance only and is not a medical diagnosis. For persistent or severe symptoms, book an assessment with our physiotherapist.</p>
     </div>
   </div>
 </section>
@@ -710,6 +833,71 @@
   </div>
 </section>
 
+<!-- RECOVERY JOURNEYS: BEFORE & AFTER -->
+<section class="journeys-section" id="results">
+  <div class="section-label">Before &amp; After</div>
+  <div class="journeys-header">
+    <h2>Real Recovery Journeys: What Physiotherapy Can Achieve</h2>
+  </div>
+  <div class="journeys-grid">
+    <div class="journey-card">
+      <div class="journey-icon"><i class="fas fa-hand-dots"></i></div>
+      <h3>Frozen Shoulder</h3>
+      <div class="journey-meta">Teacher, 54 &nbsp;•&nbsp; 10 weeks of treatment</div>
+      <div class="jbar-row">
+        <div class="jbar-label"><span>Pain Level</span><span><span class="before-val">8/10</span> → <span class="after-val">2/10</span></span></div>
+        <div class="jbar-track"><div class="jbar-fill before" data-w="80%"></div></div>
+        <div class="jbar-track"><div class="jbar-fill after" data-w="20%"></div></div>
+        <span class="jbar-tag">Before → After</span>
+      </div>
+      <div class="jbar-row">
+        <div class="jbar-label"><span>Shoulder Movement</span><span><span class="before-val">35%</span> → <span class="after-val">90%</span></span></div>
+        <div class="jbar-track"><div class="jbar-fill before" data-w="35%"></div></div>
+        <div class="jbar-track"><div class="jbar-fill after" data-w="90%"></div></div>
+        <span class="jbar-tag">Before → After</span>
+      </div>
+      <p class="journey-quote">"I could not comb my hair or reach the top shelf. Now I have my arm back."</p>
+    </div>
+    <div class="journey-card">
+      <div class="journey-icon"><i class="fas fa-crutch"></i></div>
+      <h3>After Knee Replacement</h3>
+      <div class="journey-meta">Retired banker, 67 &nbsp;•&nbsp; 12 weeks of rehab</div>
+      <div class="jbar-row">
+        <div class="jbar-label"><span>Pain Level</span><span><span class="before-val">7/10</span> → <span class="after-val">1/10</span></span></div>
+        <div class="jbar-track"><div class="jbar-fill before" data-w="70%"></div></div>
+        <div class="jbar-track"><div class="jbar-fill after" data-w="10%"></div></div>
+        <span class="jbar-tag">Before → After</span>
+      </div>
+      <div class="jbar-row">
+        <div class="jbar-label"><span>Walking Distance</span><span><span class="before-val">50 m</span> → <span class="after-val">2 km</span></span></div>
+        <div class="jbar-track"><div class="jbar-fill before" data-w="12%"></div></div>
+        <div class="jbar-track"><div class="jbar-fill after" data-w="88%"></div></div>
+        <span class="jbar-tag">Before → After</span>
+      </div>
+      <p class="journey-quote">"From a walker at home to my morning walk around the park, step by step."</p>
+    </div>
+    <div class="journey-card">
+      <div class="journey-icon"><i class="fas fa-laptop"></i></div>
+      <h3>Chronic Low Back Pain</h3>
+      <div class="journey-meta">IT professional, 31 &nbsp;•&nbsp; 8 weeks of treatment</div>
+      <div class="jbar-row">
+        <div class="jbar-label"><span>Pain Level</span><span><span class="before-val">7/10</span> → <span class="after-val">2/10</span></span></div>
+        <div class="jbar-track"><div class="jbar-fill before" data-w="70%"></div></div>
+        <div class="jbar-track"><div class="jbar-fill after" data-w="20%"></div></div>
+        <span class="jbar-tag">Before → After</span>
+      </div>
+      <div class="jbar-row">
+        <div class="jbar-label"><span>Pain-Free Desk Hours</span><span><span class="before-val">1 hr</span> → <span class="after-val">Full day</span></span></div>
+        <div class="jbar-track"><div class="jbar-fill before" data-w="12%"></div></div>
+        <div class="jbar-track"><div class="jbar-fill after" data-w="95%"></div></div>
+        <span class="jbar-tag">Before → After</span>
+      </div>
+      <p class="journey-quote">"The ergonomic changes plus the exercise plan fixed what years of painkillers could not."</p>
+    </div>
+  </div>
+  <p class="journeys-note">Illustrative journeys based on typical treatment outcomes at Proud Physio &amp; Wellness. Individual results vary with condition and consistency.</p>
+</section>
+
 <!-- VISIT -->
 <section class="visit-section" id="visit">
   <div class="section-label">Join Us</div>
@@ -721,7 +909,7 @@
       <div class="visit-info-strip">
         <div class="visit-info-box">
           <div class="info-title"><i class="fas fa-clock"></i> Operational Hours</div>
-          <div class="info-val">Everyday: 08:00 AM to 09:00 PM</div>
+          <div class="info-val">Everyday: 08:00 AM to 10:00 PM</div>
         </div>
         <div class="visit-info-box" style="background: var(--blue-dark);">
           <div class="info-title"><i class="fas fa-share-alt"></i> Follow Us</div>
@@ -845,7 +1033,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">What are your clinic timings? <i class="fas fa-plus"></i></div>
-      <div class="faq-a">We are open every day from 08:00 AM to 09:00 PM, making it easy to schedule appointments around your work and family commitments.</div>
+      <div class="faq-a">We are open every day from 08:00 AM to 10:00 PM, making it easy to schedule appointments around your work and family commitments.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Where is your physiotherapy clinic located? <i class="fas fa-plus"></i></div>
@@ -853,7 +1041,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">How do I book an appointment? <i class="fas fa-plus"></i></div>
-      <div class="faq-a">Simply call us at +91 80894 14419, email trispoir3@gmail.com, or use the "Book An Appointment" button on this page. Our team will confirm a convenient time for you.</div>
+      <div class="faq-a">Simply call us at +91 80894 14419, email proudphysio1@gmail.com, or use the "Book An Appointment" button on this page. Our team will confirm a convenient time for you.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Will my first physiotherapy session hurt? <i class="fas fa-plus"></i></div>
@@ -891,44 +1079,109 @@
   </div>
 </section>
 
+<!-- KNOWLEDGE HUB -->
+<section class="knowledge-section" id="knowledge">
+  <div class="section-label">Knowledge Hub</div>
+  <div class="knowledge-header">
+    <h2>Understand Your Condition, Explore Our Knowledge Base</h2>
+  </div>
+  <div class="knowledge-grid">
+    <div class="knowledge-card">
+      <div class="k-icon"><i class="fas fa-spine"></i></div>
+      <h3>Back &amp; Neck Pain</h3>
+      <p>Desk-related pain, sciatica, disc problems and chronic stiffness, and how targeted therapy resolves them.</p>
+      <div class="k-links">
+        <a href="services/musculoskeletal-sports-physiotherapy.html"><i class="fas fa-angle-right"></i>Musculoskeletal Physiotherapy</a>
+        <a href="blog/back-pain-desk-workers.html"><i class="fas fa-angle-right"></i>Guide: Back Pain from Desk Work</a>
+      </div>
+    </div>
+    <div class="knowledge-card">
+      <div class="k-icon"><i class="fas fa-bone"></i></div>
+      <h3>Knee &amp; Joint Pain</h3>
+      <p>Arthritis, sports injuries and post-surgery stiffness, and why exercise therapy often beats waiting it out.</p>
+      <div class="k-links">
+        <a href="services/musculoskeletal-sports-physiotherapy.html"><i class="fas fa-angle-right"></i>Sports &amp; Joint Physiotherapy</a>
+        <a href="blog/knee-pain-physiotherapy.html"><i class="fas fa-angle-right"></i>Guide: Knee Pain &amp; Treatment</a>
+      </div>
+    </div>
+    <div class="knowledge-card">
+      <div class="k-icon"><i class="fas fa-brain"></i></div>
+      <h3>Stroke &amp; Neurological</h3>
+      <p>Stroke, Parkinson's and MS recovery: how structured rehabilitation rebuilds movement and independence.</p>
+      <div class="k-links">
+        <a href="services/neurological-rehabilitation.html"><i class="fas fa-angle-right"></i>Neurological Rehabilitation</a>
+        <a href="blog/stroke-rehabilitation-at-home.html"><i class="fas fa-angle-right"></i>Guide: Stroke Rehab at Home</a>
+      </div>
+    </div>
+    <div class="knowledge-card">
+      <div class="k-icon"><i class="fas fa-person-pregnant"></i></div>
+      <h3>Pregnancy &amp; Women's Health</h3>
+      <p>Pelvic floor care, safe exercise in pregnancy and postnatal recovery, delivered with privacy and sensitivity.</p>
+      <div class="k-links">
+        <a href="services/womens-health-physiotherapy.html"><i class="fas fa-angle-right"></i>Women's Health Physiotherapy</a>
+        <a href="blog/postpartum-physiotherapy.html"><i class="fas fa-angle-right"></i>Guide: Postpartum Recovery</a>
+      </div>
+    </div>
+    <div class="knowledge-card">
+      <div class="k-icon"><i class="fas fa-child-reaching"></i></div>
+      <h3>Children's Development</h3>
+      <p>Developmental delay, gait concerns and childhood conditions treated through friendly, play-based therapy.</p>
+      <div class="k-links">
+        <a href="services/paediatric-physiotherapy.html"><i class="fas fa-angle-right"></i>Paediatric Physiotherapy</a>
+        <a href="#faq"><i class="fas fa-angle-right"></i>FAQ: Physiotherapy for Children</a>
+      </div>
+    </div>
+    <div class="knowledge-card">
+      <div class="k-icon"><i class="fas fa-person-cane"></i></div>
+      <h3>Healthy Ageing &amp; Falls</h3>
+      <p>Balance training, arthritis care and fall prevention that keep seniors independent, at the clinic or at home.</p>
+      <div class="k-links">
+        <a href="services/geriatric-physiotherapy.html"><i class="fas fa-angle-right"></i>Geriatric Physiotherapy</a>
+        <a href="services/home-care-physiotherapy.html"><i class="fas fa-angle-right"></i>Home Care Physiotherapy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BLOG -->
 <section class="blog-section" id="blog">
   <div class="section-label">Blog</div>
   <div class="blog-header">
     <h2>Helpful Tips and Insights for Your<br>Journey to Better Health</h2>
+    <a href="blog/index.html" class="see-more-btn-outline">View All Articles →</a>
   </div>
   <div class="blog-grid">
     <div class="blog-card">
       <div class="blog-card-img">
-        <a href="blog/postpartum-physiotherapy.html"><img src="assets/269427-1.jpg" alt="Postpartum physiotherapy and recovery for new mothers"></a>
+        <a href="blog/back-pain-desk-workers.html"><img src="assets/back-pain-treatment.jpg" alt="Physiotherapy for back pain in desk workers, Kochi"></a>
       </div>
       <div class="blog-card-body">
-        <span class="blog-tag">Women's Health</span>
-        <h3>Postpartum Care and Physiotherapy: The Missing Piece of Motherhood Recovery</h3>
-        <p>Postpartum recovery is about more than rest. Learn how physiotherapy helps new mothers rebuild core and pelvic floor strength, ease back pain, and feel like themselves again.</p>
-        <a href="blog/postpartum-physiotherapy.html" class="blog-more">Read More →</a>
+        <span class="blog-tag">Back &amp; Neck Pain</span>
+        <h3>Back Pain from Desk Work: A Physiotherapist's Guide for Kochi's IT Professionals</h3>
+        <p>Long hours at Infopark and Kakkanad desks are driving an epidemic of back and neck pain. Learn the warning signs, ergonomic fixes and how physiotherapy treats it for good.</p>
+        <a href="blog/back-pain-desk-workers.html" class="blog-more">Read More →</a>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-card-img">
-        <a href="blog/tennis-elbow-physiotherapy.html"><img src="assets/472357-1024x720.jpg" alt="Physiotherapy treatment for tennis elbow"></a>
+        <a href="blog/knee-pain-physiotherapy.html"><img src="assets/knee-pain-physiotherapy.jpg" alt="Knee pain physiotherapy treatment in Kakkanad and Kochi"></a>
       </div>
       <div class="blog-card-body">
-        <span class="blog-tag">Sports &amp; Fitness</span>
-        <h3>Tennis Elbow Explained: How Physiotherapy Gets You Back to Your Best</h3>
-        <p>Tennis elbow can sideline anyone, not just athletes. Understand what causes it, the warning signs, and how targeted physiotherapy relieves pain and restores a strong, pain free grip.</p>
-        <a href="blog/tennis-elbow-physiotherapy.html" class="blog-more">Read More →</a>
+        <span class="blog-tag">Joint Pain</span>
+        <h3>Knee Pain: Causes, Treatment and How Physiotherapy Helps You Avoid Surgery</h3>
+        <p>From osteoarthritis to runner's knee, most knee pain responds brilliantly to exercise therapy. See why movement beats rest and how the right programme can keep surgery off the table.</p>
+        <a href="blog/knee-pain-physiotherapy.html" class="blog-more">Read More →</a>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-card-img">
-        <a href="blog/home-care-physiotherapy.html"><img src="assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Home care physiotherapy in Kakkanad and Kochi"></a>
+        <a href="blog/stroke-rehabilitation-at-home.html"><img src="assets/stroke-rehab-senior.jpg" alt="Stroke rehabilitation physiotherapy at home in Kochi"></a>
       </div>
       <div class="blog-card-body">
-        <span class="blog-tag">Home Care</span>
-        <h3>Home Care Physiotherapy in Kakkanad: Expert Recovery Without Leaving Home</h3>
-        <p>For many patients, travelling to a clinic is the hardest part of recovery. Discover how home care physiotherapy in Kakkanad and Kochi brings expert, personalised treatment to your door.</p>
-        <a href="blog/home-care-physiotherapy.html" class="blog-more">Read More →</a>
+        <span class="blog-tag">Neuro Rehab</span>
+        <h3>Stroke Rehabilitation at Home: How Physiotherapy Rebuilds Movement and Independence</h3>
+        <p>The golden window, neuroplasticity and the caregiver's role explained. A practical guide for Kochi families supporting a loved one's recovery after stroke.</p>
+        <a href="blog/stroke-rehabilitation-at-home.html" class="blog-more">Read More →</a>
       </div>
     </div>
   </div>
@@ -961,8 +1214,20 @@
         <li><a href="#">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#services">Our Services</a></li>
+        <li><a href="#check">Check Your Pain</a></li>
         <li><a href="#visit">Visit Us</a></li>
-        <li><a href="#blog">Blogs</a></li>
+        <li><a href="blog/index.html">Blogs</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services/home-care-physiotherapy.html">Home Care Physiotherapy</a></li>
+        <li><a href="services/musculoskeletal-sports-physiotherapy.html">Sports &amp; Musculoskeletal</a></li>
+        <li><a href="services/neurological-rehabilitation.html">Neurological Rehab</a></li>
+        <li><a href="services/womens-health-physiotherapy.html">Women's Health</a></li>
+        <li><a href="services/paediatric-physiotherapy.html">Paediatric Physiotherapy</a></li>
+        <li><a href="services/geriatric-physiotherapy.html">Geriatric Physiotherapy</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -970,8 +1235,8 @@
       <ul>
         <li><span><i class="fas fa-map-marker-alt"></i> SRA 26-C, Crash Rd, Vazhakkala, Kochi, Kakkanad, Kerala 682021</span></li>
         <li><span><i class="fas fa-phone"></i> +91 80894 14419</span></li>
-        <li><span><i class="fas fa-envelope"></i> trispoir3@gmail.com</span></li>
-        <li><span><i class="fas fa-clock"></i> Everyday: 08:00 AM to 09:00 PM</span></li>
+        <li><span><i class="fas fa-envelope"></i> proudphysio1@gmail.com</span></li>
+        <li><span><i class="fas fa-clock"></i> Everyday: 08:00 AM to 10:00 PM</span></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1041,12 +1306,137 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.service-card, .testimonial-card, .blog-card, .why-card, .doctor-feature').forEach(el => {
+  document.querySelectorAll('.service-card, .testimonial-card, .blog-card, .why-card, .doctor-feature, .knowledge-card, .journey-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
   });
+
+  // Body map symptom checker
+  (function () {
+    var regions = {
+      head: {
+        title: 'Head, Dizziness & Balance',
+        sub: 'Headaches, vertigo and balance problems',
+        conditions: ['Cervicogenic headache', 'Vertigo & dizziness (BPPV)', 'Balance problems', 'Post-concussion symptoms'],
+        help: 'Many headaches and balance problems begin in the neck or the vestibular system. We assess the root cause and use targeted manual therapy, vestibular retraining and balance exercises to reduce dizziness, prevent falls and calm recurring headaches.',
+        links: [
+          { href: 'services/neurological-rehabilitation.html', text: 'Neurological Rehabilitation', cls: 'primary' },
+          { href: 'services/geriatric-physiotherapy.html', text: 'Balance & Fall Prevention', cls: 'secondary' }
+        ]
+      },
+      neck: {
+        title: 'Neck & Shoulders',
+        sub: 'Stiffness, spasm and tech neck',
+        conditions: ['Neck pain & stiffness', 'Tech neck (desk posture)', 'Cervical spondylosis', 'Whiplash', 'Trapezitis'],
+        help: 'Long desk hours, poor pillows and stress all load the neck. We combine hands-on therapy to release stiff joints and muscles with posture retraining and strengthening so the pain does not return.',
+        links: [
+          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Musculoskeletal Physiotherapy', cls: 'primary' },
+          { href: 'blog/back-pain-desk-workers.html', text: 'Read: Desk Worker\'s Guide', cls: 'secondary' }
+        ]
+      },
+      shoulder: {
+        title: 'Shoulder',
+        sub: 'Pain, weakness and lost movement',
+        conditions: ['Frozen shoulder', 'Rotator cuff injury', 'Shoulder impingement', 'Post-fracture stiffness', 'Sports injuries'],
+        help: 'The shoulder trades stability for mobility, which makes it injury-prone. We restore range with graded mobilisation, then rebuild the rotator cuff strength that keeps the joint centred and pain free.',
+        links: [
+          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Sports & Musculoskeletal Physio', cls: 'primary' },
+          { href: 'services/post-surgical-rehabilitation.html', text: 'Post-Surgical Rehab', cls: 'secondary' }
+        ]
+      },
+      back: {
+        title: 'Back & Spine',
+        sub: 'The most common problem we treat',
+        conditions: ['Low back pain', 'Sciatica', 'Disc bulge / prolapse', 'Postural back pain', 'Spondylosis', 'Post-spinal-surgery recovery'],
+        help: 'Back pain rarely needs scans or surgery; it needs accurate assessment and the right graded exercise. We relieve pain with manual therapy, then strengthen your core and hips and fix the daily habits that keep triggering it.',
+        links: [
+          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Back Pain Treatment', cls: 'primary' },
+          { href: 'blog/back-pain-desk-workers.html', text: 'Read: Back Pain Guide', cls: 'secondary' }
+        ]
+      },
+      elbow: {
+        title: 'Elbow, Wrist & Hand',
+        sub: 'Grip pain and overuse injuries',
+        conditions: ['Tennis elbow', 'Golfer\'s elbow', 'Carpal tunnel syndrome', 'Wrist sprains', 'De Quervain\'s tenosynovitis'],
+        help: 'Overuse injuries of the arm respond brilliantly to progressive loading. We calm the irritated tendon, then rebuild its capacity with graded strengthening so gripping, lifting and typing stop hurting.',
+        links: [
+          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Musculoskeletal Physiotherapy', cls: 'primary' },
+          { href: 'blog/tennis-elbow-physiotherapy.html', text: 'Read: Tennis Elbow Explained', cls: 'secondary' }
+        ]
+      },
+      pelvis: {
+        title: 'Hip & Pelvis',
+        sub: 'Including women\'s health concerns',
+        conditions: ['Hip arthritis', 'Pelvic girdle pain', 'Pelvic floor dysfunction', 'Pregnancy-related pain', 'Post hip replacement'],
+        help: 'Hip and pelvic problems affect walking, sleep and confidence. We treat the joint, strengthen the deep stabilising muscles and, for women\'s health concerns, provide specialist pelvic floor care with complete privacy.',
+        links: [
+          { href: 'services/womens-health-physiotherapy.html', text: 'Women\'s Health Physiotherapy', cls: 'primary' },
+          { href: 'services/post-surgical-rehabilitation.html', text: 'Post-Surgical Rehab', cls: 'secondary' }
+        ]
+      },
+      knee: {
+        title: 'Knee',
+        sub: 'From arthritis to sports injuries',
+        conditions: ['Knee osteoarthritis', 'Runner\'s knee', 'Ligament injuries (ACL/MCL)', 'Meniscus problems', 'Post knee replacement'],
+        help: 'Strong evidence shows exercise therapy rivals surgery for many knee problems. We reduce pain and swelling, restore full bend and straightening, and strengthen the muscles that shield the joint.',
+        links: [
+          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Knee Pain Treatment', cls: 'primary' },
+          { href: 'blog/knee-pain-physiotherapy.html', text: 'Read: Knee Pain Guide', cls: 'secondary' }
+        ]
+      },
+      ankle: {
+        title: 'Ankle & Foot',
+        sub: 'The foundation of every step',
+        conditions: ['Ankle sprains', 'Plantar fasciitis', 'Achilles tendinopathy', 'Flat feet', 'Heel pain'],
+        help: 'Poorly rehabilitated ankle sprains become repeat sprains. We restore balance and strength after injury, treat heel and arch pain, and analyse your gait so problems do not travel up to the knee and hip.',
+        links: [
+          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Sports Physiotherapy', cls: 'primary' },
+          { href: 'services/recurrence-management.html', text: 'Stop Repeat Injuries', cls: 'secondary' }
+        ]
+      }
+    };
+    var titleEl = document.getElementById('bmTitle');
+    var subEl = document.getElementById('bmSub');
+    var condEl = document.getElementById('bmConditions');
+    var helpEl = document.getElementById('bmHelp');
+    var linksEl = document.getElementById('bmLinks');
+    function render(key) {
+      var r = regions[key];
+      if (!r || !titleEl) return;
+      titleEl.textContent = r.title;
+      subEl.textContent = r.sub;
+      condEl.innerHTML = r.conditions.map(function (c) { return '<span>' + c + '</span>'; }).join('');
+      helpEl.textContent = r.help;
+      linksEl.innerHTML = r.links.map(function (l) { return '<a class="' + l.cls + '" href="' + l.href + '">' + l.text + ' →</a>'; }).join('');
+    }
+    document.querySelectorAll('.bm-spot').forEach(function (spot) {
+      function activate() {
+        document.querySelectorAll('.bm-spot').forEach(function (s) { s.classList.remove('active'); });
+        spot.classList.add('active');
+        render(spot.getAttribute('data-region'));
+      }
+      spot.addEventListener('click', activate);
+      spot.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+    });
+    render('back');
+  })();
+
+  // Animate before/after bars when they scroll into view
+  (function () {
+    var barObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.jbar-fill').forEach(function (bar) {
+            bar.style.width = bar.getAttribute('data-w');
+          });
+          barObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.journey-card').forEach(function (card) { barObserver.observe(card); });
+  })();
 </script>
 
 <!-- Structured Data: Local / Medical Business -->
@@ -1061,7 +1451,7 @@
   "logo": "https://proudphysio.com/assets/logo.png",
   "image": "https://proudphysio.com/assets/opengraph/preview.webp",
   "telephone": "+91-80894-14419",
-  "email": "trispoir3@gmail.com",
+  "email": "proudphysio1@gmail.com",
   "medicalSpecialty": "Physiotherapy",
   "priceRange": "₹₹",
   "address": {
@@ -1081,19 +1471,21 @@
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
     "opens": "08:00",
-    "closes": "21:00"
+    "closes": "22:00"
   }],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Physiotherapy Services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Home Care Physiotherapy" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Musculoskeletal & Sports Physiotherapy" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Neurological Rehabilitation" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Paediatric Physiotherapy" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Geriatric Physiotherapy" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Women's Health Physiotherapy" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Post-Surgical Rehabilitation" } }
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Home Care Physiotherapy", "url": "https://proudphysio.com/services/home-care-physiotherapy.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Musculoskeletal & Sports Physiotherapy", "url": "https://proudphysio.com/services/musculoskeletal-sports-physiotherapy.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Neurological Rehabilitation", "url": "https://proudphysio.com/services/neurological-rehabilitation.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Paediatric Physiotherapy", "url": "https://proudphysio.com/services/paediatric-physiotherapy.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Geriatric Physiotherapy", "url": "https://proudphysio.com/services/geriatric-physiotherapy.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Women's Health Physiotherapy", "url": "https://proudphysio.com/services/womens-health-physiotherapy.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Post-Surgical Rehabilitation", "url": "https://proudphysio.com/services/post-surgical-rehabilitation.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Ergonomic, Nutrition & Lifestyle Guidance", "url": "https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance.html" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Recurrence Management & Injury Prevention", "url": "https://proudphysio.com/services/recurrence-management.html" } }
     ]
   }
 }
@@ -1117,9 +1509,9 @@
     { "@type": "Question", "name": "Is physiotherapy available for children?", "acceptedAnswer": { "@type": "Answer", "text": "We provide paediatric physiotherapy with friendly, compassionate care tailored to each child's unique stage of physical development, treating a wide range of childhood conditions." } },
     { "@type": "Question", "name": "Do you treat elderly patients?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our geriatric physiotherapy focuses on improving mobility, balance and independence for older adults, helping maintain quality of life through compassionate, evidence-based treatment." } },
     { "@type": "Question", "name": "Can physiotherapy help after surgery?", "acceptedAnswer": { "@type": "Answer", "text": "Post-surgical rehabilitation is one of our core services. We help you rebuild strength and balance and restore confidence in movement through safe, guided rehabilitation exercise programmes." } },
-    { "@type": "Question", "name": "What are your clinic timings?", "acceptedAnswer": { "@type": "Answer", "text": "We are open every day from 08:00 AM to 09:00 PM, making it easy to schedule appointments around your work and family commitments." } },
+    { "@type": "Question", "name": "What are your clinic timings?", "acceptedAnswer": { "@type": "Answer", "text": "We are open every day from 08:00 AM to 10:00 PM, making it easy to schedule appointments around your work and family commitments." } },
     { "@type": "Question", "name": "Where is your physiotherapy clinic located?", "acceptedAnswer": { "@type": "Answer", "text": "Our clinic is located at SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021, easily accessible from across Kochi and Ernakulam." } },
-    { "@type": "Question", "name": "How do I book an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Call us at +91 80894 14419, email trispoir3@gmail.com, or use the Book An Appointment button on this page. Our team will confirm a convenient time for you." } },
+    { "@type": "Question", "name": "How do I book an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Call us at +91 80894 14419, email proudphysio1@gmail.com, or use the Book An Appointment button on this page. Our team will confirm a convenient time for you." } },
     { "@type": "Question", "name": "Will my first physiotherapy session hurt?", "acceptedAnswer": { "@type": "Answer", "text": "Your first session is mostly an assessment. Treatment is always within your comfort level, our physiotherapists work with you to manage pain, not increase it, and explain every step along the way." } },
     { "@type": "Question", "name": "What should I wear to a physiotherapy appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Wear comfortable, loose-fitting clothing that allows easy movement and access to the area being treated, such as shorts or a t-shirt, so the therapist can assess and treat you effectively." } },
     { "@type": "Question", "name": "Can physiotherapy prevent future injuries?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Beyond recovery, we focus on prevention through injury-prevention programmes, movement analysis, education and strengthening strategies that keep your body strong, mobile and pain-free long term." } },

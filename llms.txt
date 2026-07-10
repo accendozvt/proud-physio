@@ -8,22 +8,24 @@ Proud Physio & Wellness helps people recover from injuries, manage chronic condi
 
 - **Location:** SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021, India
 - **Phone:** +91 80894 14419
-- **Email:** trispoir3@gmail.com
-- **Hours:** Every day, 08:00 AM to 09:00 PM
+- **Email:** proudphysio1@gmail.com
+- **Hours:** Every day, 08:00 AM to 10:00 PM
 - **Website:** https://proudphysio.com/
 - **Service area:** Kakkanad, Kochi, Ernakulam and surrounding areas (in-clinic and home-care)
 
 ## Services
 
-- **Home Care Physiotherapy**, specialised physiotherapy delivered at the patient's home for those unable to travel.
-- **Musculoskeletal & Sports Physiotherapy**, treatment of joint, muscle and ligament injuries through targeted exercise, manual therapy and education.
-- **Neurological Rehabilitation**, care for stroke, multiple sclerosis, Parkinson's disease and other neurological conditions.
-- **Paediatric Physiotherapy**, compassionate, child-focused care across a wide range of conditions.
-- **Geriatric Physiotherapy**, improving mobility, balance and independence for older adults.
-- **Women's Health Physiotherapy**, pelvic floor dysfunction, prenatal and postnatal support.
-- **Post-Surgical Rehabilitation**, rebuilding strength, balance and confidence in movement after surgery.
-- **Ergonomic, Nutrition & Lifestyle Guidance**, strategies to support overall physical and mental performance.
-- **Recurrence Management**, identifying root causes and preventing future injury.
+Each service has a dedicated page with details, conditions treated and FAQs:
+
+- [Home Care Physiotherapy](https://proudphysio.com/services/home-care-physiotherapy.html), specialised physiotherapy delivered at the patient's home for those unable to travel, across Kakkanad, Kochi and Ernakulam.
+- [Musculoskeletal & Sports Physiotherapy](https://proudphysio.com/services/musculoskeletal-sports-physiotherapy.html), treatment of back and neck pain, joint, muscle and ligament injuries through targeted exercise, manual therapy and education.
+- [Neurological Rehabilitation](https://proudphysio.com/services/neurological-rehabilitation.html), care for stroke, multiple sclerosis, Parkinson's disease and other neurological conditions.
+- [Paediatric Physiotherapy](https://proudphysio.com/services/paediatric-physiotherapy.html), compassionate, play-based, child-focused care across a wide range of conditions including developmental delay and cerebral palsy.
+- [Geriatric Physiotherapy](https://proudphysio.com/services/geriatric-physiotherapy.html), improving mobility, balance, fall prevention and independence for older adults.
+- [Women's Health Physiotherapy](https://proudphysio.com/services/womens-health-physiotherapy.html), pelvic floor dysfunction, prenatal and postnatal support from a female physiotherapist.
+- [Post-Surgical Rehabilitation](https://proudphysio.com/services/post-surgical-rehabilitation.html), rebuilding strength, balance and confidence in movement after knee/hip replacement, ACL and other surgeries.
+- [Ergonomic, Nutrition & Lifestyle Guidance](https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance.html), workstation ergonomics, posture and lifestyle strategies to support overall physical and mental performance.
+- [Recurrence Management](https://proudphysio.com/services/recurrence-management.html), identifying root causes of recurring pain and preventing future injury.
 
 ## Team
 
@@ -39,14 +41,19 @@ Proud Physio & Wellness helps people recover from injuries, manage chronic condi
 
 ## Key Pages
 
-- [Homepage](https://proudphysio.com/): Overview of clinic, services, team, testimonials and FAQs.
-- [Services](https://proudphysio.com/#services): Full list of physiotherapy services offered.
+- [Homepage](https://proudphysio.com/): Overview of clinic, services, team, testimonials, interactive symptom checker and FAQs.
+- [Services](https://proudphysio.com/#services): Full list of physiotherapy services offered, each linking to a detailed service page.
+- [Check Your Pain](https://proudphysio.com/#check): Interactive body map connecting symptoms to conditions and treatments.
 - [FAQ](https://proudphysio.com/#faq): Answers to common questions about physiotherapy, recovery, home care and appointments.
 - [Visit Us](https://proudphysio.com/#visit): Location, map and clinic hours.
+- [Blog](https://proudphysio.com/blog/): All physiotherapy tips and insights.
+- [Blog: Back Pain from Desk Work, a Guide for Kochi's IT Professionals](https://proudphysio.com/blog/back-pain-desk-workers.html)
+- [Blog: Knee Pain, Causes, Treatment and Avoiding Surgery](https://proudphysio.com/blog/knee-pain-physiotherapy.html)
+- [Blog: Stroke Rehabilitation at Home](https://proudphysio.com/blog/stroke-rehabilitation-at-home.html)
 - [Blog: Postpartum Care and Physiotherapy](https://proudphysio.com/blog/postpartum-physiotherapy.html)
 - [Blog: Tennis Elbow and Physiotherapy](https://proudphysio.com/blog/tennis-elbow-physiotherapy.html)
 - [Blog: Home Care Physiotherapy in Kakkanad](https://proudphysio.com/blog/home-care-physiotherapy.html)
 
 ## Contact
 
-To book an appointment, call +91 80894 14419, email trispoir3@gmail.com, or visit https://proudphysio.com/. No doctor's referral is required.
+To book an appointment, call +91 80894 14419, email proudphysio1@gmail.com, or visit https://proudphysio.com/. No doctor's referral is required.

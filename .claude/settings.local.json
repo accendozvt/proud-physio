@@ -9,7 +9,14 @@
       "Bash(perl -CSD -i -pe 's/08:00 AM \\\\x{2013} 09:00 PM/08:00 AM to 09:00 PM/g; s/Kochi \\\\x{2014} Frequently Asked Questions/Kochi: Frequently Asked Questions/g; s/\\\\s\\\\x{2014}\\\\s/, /g; s/\\\\s\\\\x{2013}\\\\s/, /g; s/\\\\x{2014}/, /g; s/\\\\x{2013}/, /g;' index.html)",
       "Bash(python3 -c ' *)",
       "Bash(perl -CSD -i -pe \"s/\\\\.service-card, \\\\.testimonial-card, \\\\.blog-card, \\\\.why-card, \\\\.team-card/.service-card, .testimonial-card, .blog-card, .why-card, .doctor-feature/\" index.html)",
-      "Bash(perl -CSD -i -pe 's/08:00 AM \\\\x{2013} 09:00 PM/08:00 AM to 09:00 PM/g; s/08.00 AM \\\\x{2013} 09.00 PM/08.00 AM to 09.00 PM/g; s/\\\\s\\\\x{2014}\\\\s/, /g; s/\\\\s\\\\x{2013}\\\\s/, /g; s/\\\\x{2014}/, /g; s/\\\\x{2013}/, /g; s/ , /, /g;' llms.txt robots.txt)"
+      "Bash(perl -CSD -i -pe 's/08:00 AM \\\\x{2013} 09:00 PM/08:00 AM to 09:00 PM/g; s/08.00 AM \\\\x{2013} 09.00 PM/08.00 AM to 09.00 PM/g; s/\\\\s\\\\x{2014}\\\\s/, /g; s/\\\\s\\\\x{2013}\\\\s/, /g; s/\\\\x{2014}/, /g; s/\\\\x{2013}/, /g; s/ , /, /g;' llms.txt robots.txt)",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(curl -sL -o paediatric-physiotherapy-child.jpg \"https://images.pexels.com/photos/6340568/pexels-photo-6340568.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(curl -sL -o paediatric-physio-alt.jpg \"https://images.pexels.com/photos/7447271/pexels-photo-7447271.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(curl -sL -o back-pain-desk-worker.jpg \"https://images.pexels.com/photos/12357437/pexels-photo-12357437.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(curl -sL -o back-pain-treatment.jpg \"https://images.pexels.com/photos/5793794/pexels-photo-5793794.jpeg?auto=compress&cs=tinysrgb&w=1200\")",
+      "Bash(curl -sL -o knee-pain-physiotherapy.jpg \"https://images.pexels.com/photos/20860607/pexels-photo-20860607.jpeg?auto=compress&cs=tinysrgb&w=1200\")"
     ]
   }
 }
