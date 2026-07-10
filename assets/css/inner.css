@@ -171,6 +171,23 @@ footer a { color: #8cc63f; text-decoration: none; }
 /* generic centered wrap (used by blog hub CTA) */
 .wrap { max-width: 1100px; margin: 0 auto; padding: 10px 6vw 50px; }
 
+/* DOCTOR FEATURE (About page) */
+.doctor-feature { display: grid; grid-template-columns: 1.5fr 0.9fr; gap: 40px; align-items: center; margin: 22px 0 8px; }
+.doctor-feature .doctor-info h3 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+.doctor-role { font-size: 15px; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
+.doctor-credential { font-size: 13px; color: #888; margin-bottom: 18px; }
+.doctor-info p { margin-bottom: 14px; }
+.doctor-points { list-style: none !important; margin: 16px 0 22px 0 !important; }
+.doctor-points li { font-size: 15px; color: #555; line-height: 1.6; padding-left: 28px; position: relative; margin-bottom: 10px; }
+.doctor-points li i { position: absolute; left: 0; top: 4px; color: var(--green); }
+.doctor-socials { display: flex; gap: 10px; }
+.doctor-socials a { width: 40px; height: 40px; background: var(--blue-light); color: var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; text-decoration: none; transition: all .2s; }
+.doctor-socials a:hover { background: var(--blue); color: #fff; }
+.doctor-photo { position: relative; border-radius: 20px; overflow: hidden; background: var(--grad); min-height: 320px; display: flex; align-items: flex-end; justify-content: center; }
+.doctor-photo img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+.doctor-badge { position: absolute; top: 16px; left: 16px; background: #fff; border-radius: 12px; padding: 9px 14px; box-shadow: 0 8px 24px rgba(0,0,0,.15); font-size: 12px; font-weight: 700; color: var(--blue-deep); }
+@media (max-width: 760px) { .doctor-feature { grid-template-columns: 1fr; gap: 22px; } .doctor-photo { min-height: 340px; order: -1; } }
+
 /* RESPONSIVE */
 @media (max-width: 1040px) {
   .article-layout { grid-template-columns: 1fr; gap: 34px; }
@@ -195,4 +212,9 @@ footer a { color: #8cc63f; text-decoration: none; }
 @media (max-width: 640px) {
   .stat-row { grid-template-columns: 1fr 1fr; }
   .cta-box { padding: 28px 22px; }
+  .info-table { table-layout: fixed; }
+  .info-table th, .info-table td { padding: 10px 10px; font-size: 13px; word-break: break-word; }
 }
+/* never let long words or wide content force the page to scroll sideways */
+.article-body { overflow-wrap: break-word; }
+.article-body img, .article-body table { max-width: 100%; }

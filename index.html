@@ -378,24 +378,28 @@
 
   /* RECOVERY JOURNEYS (BEFORE / AFTER) */
   .journeys-section { padding: 70px 10vw; background: var(--light-gray); }
-  .journeys-header { margin-bottom: 36px; }
+  .journeys-header { margin-bottom: 30px; }
   .journeys-header h2 { font-size: 32px; font-weight: 800; color: var(--dark); line-height: 1.25; }
+  .journeys-intro { font-size: 14px; color: #667; line-height: 1.7; max-width: 660px; margin-top: 12px; }
   .journeys-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .journey-card { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
-  .journey-icon { width: 42px; height: 42px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
-  .journey-icon i { color: var(--blue); font-size: 19px; }
+  .journey-icon { width: 46px; height: 46px; background: var(--blue-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .journey-icon i { color: var(--blue); font-size: 20px; }
   .journey-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-  .journey-meta { font-size: 12.5px; color: #99a; margin-bottom: 18px; }
-  .jbar-row { margin-bottom: 14px; }
-  .jbar-label { display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 600; color: var(--dark); margin-bottom: 5px; }
-  .jbar-label .before-val { color: #b55; font-weight: 700; }
-  .jbar-label .after-val { color: var(--blue); font-weight: 700; }
-  .jbar-track { height: 9px; background: #eceee6; border-radius: 6px; overflow: hidden; margin-bottom: 4px; position: relative; }
-  .jbar-fill { height: 100%; border-radius: 6px; width: 0; transition: width 1.2s cubic-bezier(.25,.7,.3,1); }
-  .jbar-fill.before { background: #d8a0a0; }
+  .journey-meta { font-size: 12.5px; color: #99a; margin-bottom: 20px; }
+  .jbar-row { margin-bottom: 18px; }
+  .jbar-metric { font-size: 13.5px; font-weight: 700; color: var(--dark); margin-bottom: 9px; }
+  .jbar-line { display: grid; grid-template-columns: 46px 1fr 54px; align-items: center; gap: 10px; margin-bottom: 7px; }
+  .jbar-cap { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #bd7676; }
+  .jbar-cap.after { color: var(--blue); }
+  .jbar-track { height: 10px; background: #eceee6; border-radius: 6px; overflow: hidden; position: relative; }
+  .jbar-fill { height: 100%; border-radius: 6px; width: 0; transition: width 1.1s cubic-bezier(.25,.7,.3,1); }
+  .jbar-fill.before { background: #d99a9a; }
   .jbar-fill.after { background: var(--grad); }
-  .jbar-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #aab; }
-  .journey-quote { font-size: 12.5px; color: #778; font-style: italic; margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6; }
+  .jbar-num { font-size: 12.5px; font-weight: 700; text-align: right; }
+  .before-val { color: #b55; }
+  .after-val { color: var(--blue); }
+  .journey-quote { font-size: 12.5px; color: #778; font-style: italic; margin-top: 16px; border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.6; }
   .journeys-note { font-size: 12px; color: #99a; margin-top: 22px; }
   @media (max-width: 900px) { .journeys-grid { grid-template-columns: 1fr; } .journeys-section { padding: 40px 20px; } }
 
@@ -424,7 +428,10 @@
     .about-section, .services-section, .why-section, .team-section, .visit-section, .testimonials-section, .faq-section, .cta-section, .blog-section, footer, .features-strip { padding: 40px 20px; }
     .hero { padding: 40px 20px; grid-template-columns: 1fr; }
     .about-header { flex-direction: column; gap: 20px; }
+    .about-header-right { flex-wrap: wrap; gap: 24px 30px; align-items: center; }
+    .about-btn-sm { margin-left: 0; }
     .healing-process { grid-template-columns: 1fr; }
+    .journeys-section, .bodymap-section, .knowledge-section { padding: 40px 20px; }
 
     /* Shorter header + hamburger */
     nav { padding: 8px 20px; }
@@ -730,59 +737,27 @@
   </div>
 </section>
 
-<!-- DOCTOR -->
-<section class="team-section" id="doctor">
-  <div class="team-header">
-    <div class="section-label">Meet Your Physiotherapist</div>
-    <h2>Expert Care, Led by Dr. Noora</h2>
-  </div>
-  <div class="doctor-feature">
-    <div class="doctor-info">
-      <h3>Dr. Noora Ameen TA (PT)</h3>
-      <div class="doctor-role">Founder and Lead Physiotherapist</div>
-      <div class="doctor-credential">BPT, MPT (Physiotherapy)</div>
-      <p>Dr. Noora is the heart of Proud Physio and Wellness. With years of clinical experience across Kakkanad and Kochi, she has helped hundreds of patients move better, recover faster, and live with less pain. Her approach is simple and personal. She listens first, assesses thoroughly, and builds a treatment plan around each patient's body, goals, and daily life.</p>
-      <p>From sports injuries and post surgical recovery to neurological rehabilitation, women's health, and home care physiotherapy, Dr. Noora brings warmth, patience, and evidence based expertise to every session. She believes recovery is a partnership, and she stays by your side at every step.</p>
-      <ul class="doctor-points">
-        <li><i class="fas fa-circle-check"></i> Certified, experienced physiotherapist trusted across Kakkanad and Kochi</li>
-        <li><i class="fas fa-circle-check"></i> Personalised, evidence based treatment for every patient</li>
-        <li><i class="fas fa-circle-check"></i> Home care visits for those who cannot travel to the clinic</li>
-      </ul>
-      <div class="doctor-socials">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#visit" aria-label="Book an appointment"><i class="fas fa-calendar-check"></i></a>
-      </div>
-    </div>
-    <div class="doctor-photo">
-      <div class="doctor-badge">Founder &amp; Lead Physiotherapist</div>
-      <img src="/assets/Dr.Noora.png" alt="Dr. Noora Ameen TA (PT), Lead Physiotherapist at Proud Physio and Wellness, Kakkanad">
-    </div>
-  </div>
-</section>
-
 <!-- RECOVERY JOURNEYS: BEFORE & AFTER -->
 <section class="journeys-section" id="results">
   <div class="section-label">Before &amp; After</div>
   <div class="journeys-header">
     <h2>Real Recovery Journeys: What Physiotherapy Can Achieve</h2>
+    <p class="journeys-intro">Each card follows one patient's measured progress, comparing where they started at their first assessment (<strong>Before</strong>) with where they finished at the end of their programme (<strong>After</strong>).</p>
   </div>
   <div class="journeys-grid">
     <div class="journey-card">
-      <div class="journey-icon"><i class="fas fa-hand-dots"></i></div>
+      <div class="journey-icon"><i class="fas fa-user-injured"></i></div>
       <h3>Frozen Shoulder</h3>
       <div class="journey-meta">Teacher, 54 &nbsp;•&nbsp; 10 weeks of treatment</div>
       <div class="jbar-row">
-        <div class="jbar-label"><span>Pain Level</span><span><span class="before-val">8/10</span> → <span class="after-val">2/10</span></span></div>
-        <div class="jbar-track"><div class="jbar-fill before" data-w="80%"></div></div>
-        <div class="jbar-track"><div class="jbar-fill after" data-w="20%"></div></div>
-        <span class="jbar-tag">Before → After</span>
+        <div class="jbar-metric">Pain Level (lower is better)</div>
+        <div class="jbar-line"><span class="jbar-cap">Before</span><div class="jbar-track"><div class="jbar-fill before" data-w="80%"></div></div><span class="jbar-num before-val">8/10</span></div>
+        <div class="jbar-line"><span class="jbar-cap after">After</span><div class="jbar-track"><div class="jbar-fill after" data-w="20%"></div></div><span class="jbar-num after-val">2/10</span></div>
       </div>
       <div class="jbar-row">
-        <div class="jbar-label"><span>Shoulder Movement</span><span><span class="before-val">35%</span> → <span class="after-val">90%</span></span></div>
-        <div class="jbar-track"><div class="jbar-fill before" data-w="35%"></div></div>
-        <div class="jbar-track"><div class="jbar-fill after" data-w="90%"></div></div>
-        <span class="jbar-tag">Before → After</span>
+        <div class="jbar-metric">Shoulder Movement (higher is better)</div>
+        <div class="jbar-line"><span class="jbar-cap">Before</span><div class="jbar-track"><div class="jbar-fill before" data-w="35%"></div></div><span class="jbar-num before-val">35%</span></div>
+        <div class="jbar-line"><span class="jbar-cap after">After</span><div class="jbar-track"><div class="jbar-fill after" data-w="90%"></div></div><span class="jbar-num after-val">90%</span></div>
       </div>
       <p class="journey-quote">"I could not comb my hair or reach the top shelf. Now I have my arm back."</p>
     </div>
@@ -791,34 +766,30 @@
       <h3>After Knee Replacement</h3>
       <div class="journey-meta">Retired banker, 67 &nbsp;•&nbsp; 12 weeks of rehab</div>
       <div class="jbar-row">
-        <div class="jbar-label"><span>Pain Level</span><span><span class="before-val">7/10</span> → <span class="after-val">1/10</span></span></div>
-        <div class="jbar-track"><div class="jbar-fill before" data-w="70%"></div></div>
-        <div class="jbar-track"><div class="jbar-fill after" data-w="10%"></div></div>
-        <span class="jbar-tag">Before → After</span>
+        <div class="jbar-metric">Pain Level (lower is better)</div>
+        <div class="jbar-line"><span class="jbar-cap">Before</span><div class="jbar-track"><div class="jbar-fill before" data-w="70%"></div></div><span class="jbar-num before-val">7/10</span></div>
+        <div class="jbar-line"><span class="jbar-cap after">After</span><div class="jbar-track"><div class="jbar-fill after" data-w="10%"></div></div><span class="jbar-num after-val">1/10</span></div>
       </div>
       <div class="jbar-row">
-        <div class="jbar-label"><span>Walking Distance</span><span><span class="before-val">50 m</span> → <span class="after-val">2 km</span></span></div>
-        <div class="jbar-track"><div class="jbar-fill before" data-w="12%"></div></div>
-        <div class="jbar-track"><div class="jbar-fill after" data-w="88%"></div></div>
-        <span class="jbar-tag">Before → After</span>
+        <div class="jbar-metric">Walking Distance (higher is better)</div>
+        <div class="jbar-line"><span class="jbar-cap">Before</span><div class="jbar-track"><div class="jbar-fill before" data-w="12%"></div></div><span class="jbar-num before-val">50 m</span></div>
+        <div class="jbar-line"><span class="jbar-cap after">After</span><div class="jbar-track"><div class="jbar-fill after" data-w="88%"></div></div><span class="jbar-num after-val">2 km</span></div>
       </div>
       <p class="journey-quote">"From a walker at home to my morning walk around the park, step by step."</p>
     </div>
     <div class="journey-card">
-      <div class="journey-icon"><i class="fas fa-laptop"></i></div>
+      <div class="journey-icon"><i class="fas fa-chair"></i></div>
       <h3>Chronic Low Back Pain</h3>
       <div class="journey-meta">IT professional, 31 &nbsp;•&nbsp; 8 weeks of treatment</div>
       <div class="jbar-row">
-        <div class="jbar-label"><span>Pain Level</span><span><span class="before-val">7/10</span> → <span class="after-val">2/10</span></span></div>
-        <div class="jbar-track"><div class="jbar-fill before" data-w="70%"></div></div>
-        <div class="jbar-track"><div class="jbar-fill after" data-w="20%"></div></div>
-        <span class="jbar-tag">Before → After</span>
+        <div class="jbar-metric">Pain Level (lower is better)</div>
+        <div class="jbar-line"><span class="jbar-cap">Before</span><div class="jbar-track"><div class="jbar-fill before" data-w="70%"></div></div><span class="jbar-num before-val">7/10</span></div>
+        <div class="jbar-line"><span class="jbar-cap after">After</span><div class="jbar-track"><div class="jbar-fill after" data-w="20%"></div></div><span class="jbar-num after-val">2/10</span></div>
       </div>
       <div class="jbar-row">
-        <div class="jbar-label"><span>Pain-Free Desk Hours</span><span><span class="before-val">1 hr</span> → <span class="after-val">Full day</span></span></div>
-        <div class="jbar-track"><div class="jbar-fill before" data-w="12%"></div></div>
-        <div class="jbar-track"><div class="jbar-fill after" data-w="95%"></div></div>
-        <span class="jbar-tag">Before → After</span>
+        <div class="jbar-metric">Pain-Free Desk Hours (higher is better)</div>
+        <div class="jbar-line"><span class="jbar-cap">Before</span><div class="jbar-track"><div class="jbar-fill before" data-w="12%"></div></div><span class="jbar-num before-val">1 hr</span></div>
+        <div class="jbar-line"><span class="jbar-cap after">After</span><div class="jbar-track"><div class="jbar-fill after" data-w="95%"></div></div><span class="jbar-num after-val">Full day</span></div>
       </div>
       <p class="journey-quote">"The ergonomic changes plus the exercise plan fixed what years of painkillers could not."</p>
     </div>
@@ -1015,7 +986,7 @@
   </div>
   <div class="knowledge-grid">
     <div class="knowledge-card">
-      <div class="k-icon"><i class="fas fa-spine"></i></div>
+      <div class="k-icon"><i class="fas fa-x-ray"></i></div>
       <h3>Back &amp; Neck Pain</h3>
       <p>Desk-related pain, sciatica, disc problems and chronic stiffness, and how targeted therapy resolves them.</p>
       <div class="k-links">
