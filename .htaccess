@@ -1,0 +1,18 @@
+# Proud Physio & Wellness — clean URL support (Apache / mod_rewrite hosts)
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # /path/index.html  ->  /path/   (also handles the root "index.html" -> "/")
+  RewriteCond %{THE_REQUEST} \s/+(.*)index\.html[?\s] [NC]
+  RewriteRule (.*)index\.html$ /%1 [R=301,L]
+
+  # /path/name.html  ->  /path/name/   (legacy links to the old flat .html pages)
+  RewriteCond %{THE_REQUEST} \s/+(.+)\.html[?\s] [NC]
+  RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
+
+  # force apex domain (strip www.)
+  RewriteCond %{HTTP_HOST} ^www\.proudphysio\.com [NC]
+  RewriteRule ^(.*)$ https://proudphysio.com/$1 [R=301,L]
+</IfModule>

@@ -12,57 +12,64 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://proudphysio.com/about/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Service pages -->
   <url>
-    <loc>https://proudphysio.com/services/home-care-physiotherapy.html</loc>
+    <loc>https://proudphysio.com/services/home-care-physiotherapy/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/musculoskeletal-sports-physiotherapy.html</loc>
+    <loc>https://proudphysio.com/services/musculoskeletal-sports-physiotherapy/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/neurological-rehabilitation.html</loc>
+    <loc>https://proudphysio.com/services/neurological-rehabilitation/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/paediatric-physiotherapy.html</loc>
+    <loc>https://proudphysio.com/services/paediatric-physiotherapy/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/geriatric-physiotherapy.html</loc>
+    <loc>https://proudphysio.com/services/geriatric-physiotherapy/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/womens-health-physiotherapy.html</loc>
+    <loc>https://proudphysio.com/services/womens-health-physiotherapy/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/post-surgical-rehabilitation.html</loc>
+    <loc>https://proudphysio.com/services/post-surgical-rehabilitation/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance.html</loc>
+    <loc>https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/services/recurrence-management.html</loc>
+    <loc>https://proudphysio.com/services/recurrence-management/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -76,38 +83,38 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/blog/back-pain-desk-workers.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <loc>https://proudphysio.com/blog/back-pain-desk-workers/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/blog/knee-pain-physiotherapy.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <loc>https://proudphysio.com/blog/knee-pain-physiotherapy/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/blog/stroke-rehabilitation-at-home.html</loc>
-    <lastmod>2026-06-28</lastmod>
+    <loc>https://proudphysio.com/blog/stroke-rehabilitation-at-home/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/blog/postpartum-physiotherapy.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://proudphysio.com/blog/postpartum-physiotherapy/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/blog/tennis-elbow-physiotherapy.html</loc>
-    <lastmod>2026-06-12</lastmod>
+    <loc>https://proudphysio.com/blog/tennis-elbow-physiotherapy/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://proudphysio.com/blog/home-care-physiotherapy.html</loc>
-    <lastmod>2026-06-14</lastmod>
+    <loc>https://proudphysio.com/blog/home-care-physiotherapy/</loc>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

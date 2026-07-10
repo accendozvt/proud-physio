@@ -12,7 +12,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#8cc63f">
 <link rel="canonical" href="https://proudphysio.com/">
-<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="icon" type="image/png" href="/assets/logo.png">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
@@ -355,7 +355,7 @@
   .bodymap-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 50px; align-items: start; margin-top: 10px; }
   .bodymap-figure { background: var(--light-gray); border-radius: 20px; padding: 24px 10px; display: flex; justify-content: center; }
   .bodymap-figure svg { max-width: 260px; width: 100%; height: auto; }
-  .bm-body { fill: #d6e8bd; }
+  .bm-body { fill: #d9ecc3; stroke: var(--blue); stroke-width: 1.6; stroke-linejoin: round; paint-order: fill; filter: drop-shadow(0 4px 10px rgba(78,138,44,0.16)); }
   .bm-spot { cursor: pointer; }
   .bm-spot circle.dot { fill: var(--blue); stroke: #fff; stroke-width: 2.5; transition: fill .2s; }
   .bm-spot circle.pulse { fill: none; stroke: var(--blue); stroke-width: 2; opacity: .55; animation: bmPulse 2s ease-out infinite; }
@@ -443,37 +443,22 @@
 </style>
 </head>
 <body>
-<script>
-  // Canonical normalisation fallback: force apex domain and strip /index.html
-  (function () {
-    try {
-      var l = window.location;
-      var host = l.hostname;
-      var path = l.pathname;
-      var changed = false;
-      if (host.indexOf('www.') === 0) { host = host.slice(4); changed = true; }
-      if (/\/index\.html$/i.test(path)) { path = path.replace(/\/index\.html$/i, '/'); changed = true; }
-      if (changed) {
-        l.replace(l.protocol + '//' + host + path + l.search + l.hash);
-      }
-    } catch (e) {}
-  })();
-</script>
+<script src="/assets/js/canonicalize.js"></script>
 <div class="page-wrap">
 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">
-    <img src="assets/logo.png" alt="Proud Physio & Wellness - Best Physiotherapist in Kakkanad and Kochi">
+    <img src="/assets/logo.png" alt="Proud Physio & Wellness - Best Physiotherapist in Kakkanad and Kochi">
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
   <ul class="nav-links" id="navLinks">
     <li><a href="#">Home</a></li>
-    <li><a href="#about">About Us</a></li>
+    <li><a href="/about/">About Us</a></li>
     <li><a href="#services">Our Services</a></li>
     <li><a href="#check">Check Your Pain</a></li>
     <li><a href="#visit">Visit Us</a></li>
-    <li><a href="blog/index.html">Blogs</a></li>
+    <li><a href="/blog/">Blogs</a></li>
     <li><a href="#visit" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
@@ -502,7 +487,7 @@
   </div>
   <div class="hero-images">
     <div class="hero-img-main">
-      <img src="assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-05-21-29-06-utc-1024x683.jpg" alt="Physiotherapy session">
+      <img src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-05-21-29-06-utc-1024x683.jpg" alt="Physiotherapy session">
       <div class="hero-stat-badge top-left">
         <div>
           <div class="badge-num">Expert</div>
@@ -517,10 +502,10 @@
       </div>
     </div>
     <div class="hero-img-sub">
-      <img src="assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-09-15-43-46-utc-1024x683.jpg" alt="Physio treatment">
+      <img src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-09-15-43-46-utc-1024x683.jpg" alt="Physio treatment">
     </div>
     <div class="hero-img-sub">
-      <img src="assets/472357-1024x720.jpg" alt="Exercise therapy">
+      <img src="/assets/472357-1024x720.jpg" alt="Exercise therapy">
     </div>
   </div>
 </section>
@@ -557,7 +542,7 @@
   </div>
 </div>
 
-<!-- ABOUT SECTION -->
+<!-- ABOUT SECTION (short teaser, full story on the About page) -->
 <section class="about-section" id="about">
   <div class="section-label">About Us</div>
   <div class="about-header">
@@ -573,7 +558,7 @@
         <div class="num">Trusted</div>
         <div class="lbl">Wellness Care</div>
       </div>
-      <a href="#" class="about-btn-sm">About Us →</a>
+      <a href="/about/" class="about-btn-sm">About Us →</a>
     </div>
   </div>
 
@@ -582,28 +567,10 @@
       <h3>Welcome to Proud Physio & Wellness</h3>
       <p>At Proud Physio, we are dedicated to helping you recover faster, move with greater confidence, and live your life with less pain. Our team of expert physiotherapists are committed to providing personalised care for each and every patient.</p>
       <p>Whether you're recovering from an injury, managing a chronic condition, or simply wanting to improve your physical performance, we're here to guide you through every step of your recovery journey.</p>
-      <div class="about-img">
-        <img src="assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.jpg" alt="Physio team">
-      </div>
+      <a href="/about/" class="see-more-btn">Our Story, Mission &amp; Dr. Noora →</a>
     </div>
-    <div class="about-right">
-      <h3>Mission Statement</h3>
-      <p class="mission-text">Our mission is to empower individuals to take control of their physical health through expert physiotherapy, education, and continuous support.</p>
-      <h4>The Healing Process</h4>
-      <div class="healing-process">
-        <div class="healing-img">
-          <img src="assets/partial-view-of-physiotherapist-massaging-leg-of-f-2024-11-17-22-03-31-utc-1024x684.jpg" alt="Healing process 1">
-        </div>
-        <div class="healing-img">
-          <img src="assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Healing process 2">
-        </div>
-      </div>
-      <ul class="healing-steps">
-        <li>From sports injuries to chronic pain, we treat a full range of conditions.</li>
-        <li>At Proud Physio, we're committed to delivering evidence-based treatments.</li>
-        <li>Trusted rehabilitation for complete recovery and long-term wellbeing.</li>
-      </ul>
-      <a href="#" class="see-more-btn">See More →</a>
+    <div class="about-img">
+      <img src="/assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.jpg" alt="Physio team">
     </div>
   </div>
 </section>
@@ -617,9 +584,9 @@
   <div class="services-grid">
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/189318.jpg" alt="Geriatric Physiotherapy">
+        <img src="/assets/189318.jpg" alt="Geriatric Physiotherapy">
       </div>
-      <a class="service-card-overlay" href="services/geriatric-physiotherapy.html" aria-label="Geriatric Physiotherapy in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/geriatric-physiotherapy/" aria-label="Geriatric Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-user-injured"></i></div>
@@ -629,9 +596,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/22246.jpg" alt="Neurological Rehabilitation">
+        <img src="/assets/22246.jpg" alt="Neurological Rehabilitation">
       </div>
-      <a class="service-card-overlay" href="services/neurological-rehabilitation.html" aria-label="Neurological Rehabilitation in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/neurological-rehabilitation/" aria-label="Neurological Rehabilitation in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-brain"></i></div>
@@ -641,9 +608,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/paediatric-physiotherapy-child.jpg" alt="Paediatric physiotherapy for children in Kakkanad and Kochi" style="object-position: center 30%;">
+        <img src="/assets/paediatric-physiotherapy-child.jpg" alt="Paediatric physiotherapy for children in Kakkanad and Kochi" style="object-position: center 30%;">
       </div>
-      <a class="service-card-overlay" href="services/paediatric-physiotherapy.html" aria-label="Paediatric Physiotherapy in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/paediatric-physiotherapy/" aria-label="Paediatric Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-child"></i></div>
@@ -653,9 +620,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/472357-1024x720.jpg" alt="Musculoskeletal & sports physiotherapy">
+        <img src="/assets/472357-1024x720.jpg" alt="Musculoskeletal & sports physiotherapy">
       </div>
-      <a class="service-card-overlay" href="services/musculoskeletal-sports-physiotherapy.html" aria-label="Musculoskeletal and Sports Physiotherapy in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/musculoskeletal-sports-physiotherapy/" aria-label="Musculoskeletal and Sports Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-running"></i></div>
@@ -665,9 +632,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/5704.jpg" alt="Ergonomic, nutrition & lifestyle guidance">
+        <img src="/assets/5704.jpg" alt="Ergonomic, nutrition & lifestyle guidance">
       </div>
-      <a class="service-card-overlay" href="services/ergonomic-nutrition-lifestyle-guidance.html" aria-label="Ergonomic, Nutrition and Lifestyle Guidance in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/ergonomic-nutrition-lifestyle-guidance/" aria-label="Ergonomic, Nutrition and Lifestyle Guidance in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-apple-alt"></i></div>
@@ -677,9 +644,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/269427-1.jpg" alt="Women's health physiotherapy">
+        <img src="/assets/269427-1.jpg" alt="Women's health physiotherapy">
       </div>
-      <a class="service-card-overlay" href="services/womens-health-physiotherapy.html" aria-label="Women's Health Physiotherapy in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/womens-health-physiotherapy/" aria-label="Women's Health Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-venus"></i></div>
@@ -689,9 +656,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/269396.jpg" alt="Recurrence Management">
+        <img src="/assets/269396.jpg" alt="Recurrence Management">
       </div>
-      <a class="service-card-overlay" href="services/recurrence-management.html" aria-label="Recurrence Management and Injury Prevention in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/recurrence-management/" aria-label="Recurrence Management and Injury Prevention in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-redo-alt"></i></div>
@@ -701,9 +668,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.jpg" alt="Post-Surgical Rehabilitation">
+        <img src="/assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.jpg" alt="Post-Surgical Rehabilitation">
       </div>
-      <a class="service-card-overlay" href="services/post-surgical-rehabilitation.html" aria-label="Post-Surgical Rehabilitation in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/post-surgical-rehabilitation/" aria-label="Post-Surgical Rehabilitation in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-procedures"></i></div>
@@ -713,9 +680,9 @@
     </div>
     <div class="service-card">
       <div class="service-card-img">
-        <img src="assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Home Care Physiotherapy">
+        <img src="/assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Home Care Physiotherapy">
       </div>
-      <a class="service-card-overlay" href="services/home-care-physiotherapy.html" aria-label="Home Care Physiotherapy in Kakkanad and Kochi"></a>
+      <a class="service-card-overlay" href="/services/home-care-physiotherapy/" aria-label="Home Care Physiotherapy in Kakkanad and Kochi"></a>
       <div class="service-card-badge">+</div>
       <div class="service-card-body">
         <div class="service-card-icon"><i class="fas fa-house-medical"></i></div>
@@ -734,27 +701,21 @@
   </div>
   <div class="bodymap-grid">
     <div class="bodymap-figure">
-      <svg viewBox="0 0 200 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive human body map, tap an area to see common conditions">
-        <!-- silhouette -->
-        <circle class="bm-body" cx="100" cy="38" r="23"/>
-        <rect class="bm-body" x="92" y="58" width="16" height="16" rx="5"/>
-        <rect class="bm-body" x="68" y="72" width="64" height="118" rx="20"/>
-        <rect class="bm-body" x="44" y="80" width="17" height="152" rx="8.5"/>
-        <rect class="bm-body" x="139" y="80" width="17" height="152" rx="8.5"/>
-        <rect class="bm-body" x="70" y="186" width="60" height="52" rx="18"/>
-        <rect class="bm-body" x="74" y="232" width="21" height="192" rx="10.5"/>
-        <rect class="bm-body" x="105" y="232" width="21" height="192" rx="10.5"/>
-        <ellipse class="bm-body" cx="83" cy="430" rx="15" ry="8"/>
-        <ellipse class="bm-body" cx="117" cy="430" rx="15" ry="8"/>
+      <svg viewBox="0 0 200 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive human body outline, tap an area to see common conditions">
+        <!-- silhouette (smooth anatomical outline, generated from a symmetric profile) -->
+        <circle class="bm-body" cx="100" cy="34" r="23"/>
+        <path class="bm-body" d="M115.0,58.0 Q115.0,58.0 116.0,62.0 Q117.0,66.0 123.5,71.0 Q130.0,76.0 131.0,82.0 Q132.0,88.0 131.0,96.5 Q130.0,105.0 128.5,115.0 Q127.0,125.0 125.5,137.5 Q124.0,150.0 122.5,161.0 Q121.0,172.0 122.5,180.0 Q124.0,188.0 126.5,195.0 Q129.0,202.0 128.0,209.0 Q127.0,216.0 126.0,224.0 Q125.0,232.0 123.5,248.5 Q122.0,265.0 120.5,282.5 Q119.0,300.0 118.0,315.0 Q117.0,330.0 116.5,346.0 Q116.0,362.0 115.5,377.0 Q115.0,392.0 115.5,402.0 Q116.0,412.0 119.0,419.0 Q122.0,426.0 124.0,431.0 Q126.0,436.0 117.0,438.0 Q108.0,440.0 108.0,433.0 Q108.0,426.0 107.0,419.0 Q106.0,412.0 106.0,401.0 Q106.0,390.0 106.5,372.5 Q107.0,355.0 107.0,337.5 Q107.0,320.0 106.5,302.5 Q106.0,285.0 105.5,267.5 Q105.0,250.0 104.5,235.0 Q104.0,220.0 100.0,220.0 Q96.0,220.0 95.5,235.0 Q95.0,250.0 94.5,267.5 Q94.0,285.0 93.5,302.5 Q93.0,320.0 93.0,337.5 Q93.0,355.0 93.5,372.5 Q94.0,390.0 94.0,401.0 Q94.0,412.0 93.0,419.0 Q92.0,426.0 92.0,433.0 Q92.0,440.0 83.0,438.0 Q74.0,436.0 76.0,431.0 Q78.0,426.0 81.0,419.0 Q84.0,412.0 84.5,402.0 Q85.0,392.0 84.5,377.0 Q84.0,362.0 83.5,346.0 Q83.0,330.0 82.0,315.0 Q81.0,300.0 79.5,282.5 Q78.0,265.0 76.5,248.5 Q75.0,232.0 74.0,224.0 Q73.0,216.0 72.0,209.0 Q71.0,202.0 73.5,195.0 Q76.0,188.0 77.5,180.0 Q79.0,172.0 77.5,161.0 Q76.0,150.0 74.5,137.5 Q73.0,125.0 71.5,115.0 Q70.0,105.0 69.0,96.5 Q68.0,88.0 69.0,82.0 Q70.0,76.0 76.5,71.0 Q83.0,66.0 84.0,62.0 L85.0,58.0 Z"/>
+        <path class="bm-body" d="M134.0,90.0 Q134.0,90.0 139.5,101.0 Q145.0,112.0 148.0,125.0 Q151.0,138.0 152.0,151.5 Q153.0,165.0 152.5,177.5 Q152.0,190.0 150.0,200.0 Q148.0,210.0 146.5,217.0 Q145.0,224.0 143.5,228.0 Q142.0,232.0 137.5,230.0 Q133.0,228.0 132.5,219.0 Q132.0,210.0 131.0,197.5 Q130.0,185.0 129.0,171.5 Q128.0,158.0 127.0,144.0 Q126.0,130.0 125.5,117.5 Q125.0,105.0 126.0,98.5 L127.0,92.0 Z"/>
+        <path class="bm-body" d="M66.0,90.0 Q66.0,90.0 60.5,101.0 Q55.0,112.0 52.0,125.0 Q49.0,138.0 48.0,151.5 Q47.0,165.0 47.5,177.5 Q48.0,190.0 50.0,200.0 Q52.0,210.0 53.5,217.0 Q55.0,224.0 56.5,228.0 Q58.0,232.0 62.5,230.0 Q67.0,228.0 67.5,219.0 Q68.0,210.0 69.0,197.5 Q70.0,185.0 71.0,171.5 Q72.0,158.0 73.0,144.0 Q74.0,130.0 74.5,117.5 Q75.0,105.0 74.0,98.5 L73.0,92.0 Z"/>
         <!-- hotspots -->
         <g class="bm-spot" data-region="head" tabindex="0" role="button" aria-label="Head, dizziness and balance"><circle class="pulse" cx="100" cy="34" r="9"/><circle class="dot" cx="100" cy="34" r="7"/></g>
-        <g class="bm-spot" data-region="neck" tabindex="0" role="button" aria-label="Neck and shoulders"><circle class="pulse" cx="100" cy="72" r="9"/><circle class="dot" cx="100" cy="72" r="7"/></g>
-        <g class="bm-spot" data-region="shoulder" tabindex="0" role="button" aria-label="Shoulder"><circle class="pulse" cx="61" cy="88" r="9"/><circle class="dot" cx="61" cy="88" r="7"/></g>
-        <g class="bm-spot active" data-region="back" tabindex="0" role="button" aria-label="Back and spine"><circle class="pulse" cx="100" cy="140" r="9"/><circle class="dot" cx="100" cy="140" r="7"/></g>
-        <g class="bm-spot" data-region="elbow" tabindex="0" role="button" aria-label="Elbow and wrist"><circle class="pulse" cx="52" cy="165" r="9"/><circle class="dot" cx="52" cy="165" r="7"/></g>
-        <g class="bm-spot" data-region="pelvis" tabindex="0" role="button" aria-label="Hip and pelvis"><circle class="pulse" cx="100" cy="212" r="9"/><circle class="dot" cx="100" cy="212" r="7"/></g>
-        <g class="bm-spot" data-region="knee" tabindex="0" role="button" aria-label="Knee"><circle class="pulse" cx="85" cy="330" r="9"/><circle class="dot" cx="85" cy="330" r="7"/></g>
-        <g class="bm-spot" data-region="ankle" tabindex="0" role="button" aria-label="Ankle and foot"><circle class="pulse" cx="85" cy="415" r="9"/><circle class="dot" cx="85" cy="415" r="7"/></g>
+        <g class="bm-spot" data-region="neck" tabindex="0" role="button" aria-label="Neck and shoulders"><circle class="pulse" cx="100" cy="68" r="9"/><circle class="dot" cx="100" cy="68" r="7"/></g>
+        <g class="bm-spot" data-region="shoulder" tabindex="0" role="button" aria-label="Shoulder"><circle class="pulse" cx="67" cy="96" r="9"/><circle class="dot" cx="67" cy="96" r="7"/></g>
+        <g class="bm-spot active" data-region="back" tabindex="0" role="button" aria-label="Back and spine"><circle class="pulse" cx="100" cy="150" r="9"/><circle class="dot" cx="100" cy="150" r="7"/></g>
+        <g class="bm-spot" data-region="elbow" tabindex="0" role="button" aria-label="Elbow and wrist"><circle class="pulse" cx="50" cy="165" r="9"/><circle class="dot" cx="50" cy="165" r="7"/></g>
+        <g class="bm-spot" data-region="pelvis" tabindex="0" role="button" aria-label="Hip and pelvis"><circle class="pulse" cx="100" cy="210" r="9"/><circle class="dot" cx="100" cy="210" r="7"/></g>
+        <g class="bm-spot" data-region="knee" tabindex="0" role="button" aria-label="Knee"><circle class="pulse" cx="88" cy="330" r="9"/><circle class="dot" cx="88" cy="330" r="7"/></g>
+        <g class="bm-spot" data-region="ankle" tabindex="0" role="button" aria-label="Ankle and foot"><circle class="pulse" cx="88" cy="410" r="9"/><circle class="dot" cx="88" cy="410" r="7"/></g>
       </svg>
     </div>
     <div class="bm-panel" id="bmPanel">
@@ -766,38 +727,6 @@
       <p id="bmHelp"></p>
       <div class="bm-links" id="bmLinks"></div>
       <p class="bm-note">This tool is for general guidance only and is not a medical diagnosis. For persistent or severe symptoms, book an assessment with our physiotherapist.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why-section">
-  <div class="why-left">
-    <div class="why-label">Why Choose Us?</div>
-    <h2>You're not just a patient, you're someone we care about deeply.</h2>
-    <p>At Proud Physio, we're committed to supporting and empowering our patients through their recovery journey. Our physiotherapists provide expert and personalised care for each patient, ensuring every patient gets the best possible treatment outcome.</p>
-    <a href="#" class="why-btn">See More →</a>
-  </div>
-  <div class="why-right">
-    <div class="why-card">
-      <div class="why-card-icon"><i class="fas fa-user-check"></i></div>
-      <h4>Personalised care for you</h4>
-      <p>Our treatment plans are designed around each patient individually, ensuring you receive the right treatment for your body and your goals, delivered with care and expertise.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon"><i class="fas fa-home"></i></div>
-      <h4>Home Care Physiotherapy</h4>
-      <p>We bring quality physiotherapy directly to your home, giving you the convenience and support you need to recover comfortably from wherever you are.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon"><i class="fas fa-chart-line"></i></div>
-      <h4>Recovery and prevention</h4>
-      <p>We help you not only recover from injury but also prevent future problems by teaching you strategies that keep your body strong, mobile, and pain-free for the long term.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon"><i class="fas fa-hands-helping"></i></div>
-      <h4>Friendly and Supportive</h4>
-      <p>Our team creates a warm and welcoming environment for every patient who visits us, making sure you always feel heard, respected, and fully supported through every visit.</p>
     </div>
   </div>
 </section>
@@ -828,7 +757,7 @@
     </div>
     <div class="doctor-photo">
       <div class="doctor-badge">Founder &amp; Lead Physiotherapist</div>
-      <img src="assets/Dr.Noora.png" alt="Dr. Noora Ameen TA (PT), Lead Physiotherapist at Proud Physio and Wellness, Kakkanad">
+      <img src="/assets/Dr.Noora.png" alt="Dr. Noora Ameen TA (PT), Lead Physiotherapist at Proud Physio and Wellness, Kakkanad">
     </div>
   </div>
 </section>
@@ -943,7 +872,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">"The team at Proud Physio was absolutely incredible. The care and attention I received was outstanding, and I felt supported through every step of my recovery."</p>
       <div class="testimonial-author">
-        <img class="testimonial-avatar" src="assets/retail-mall-christmas-and-man-shopping-for-discou-2025-04-06-07-10-42-utc-300x300.jpg" alt="James Anderson">
+        <img class="testimonial-avatar" src="/assets/retail-mall-christmas-and-man-shopping-for-discou-2025-04-06-07-10-42-utc-300x300.jpg" alt="James Anderson">
         <div>
           <div class="testimonial-name">James Anderson</div>
           <div class="testimonial-role">Entrepreneur</div>
@@ -954,7 +883,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">"After my injury, I was worried about getting back to my active lifestyle. The team designed a personalised recovery plan and I'm now back to my best. Couldn't be happier!"</p>
       <div class="testimonial-author">
-        <img class="testimonial-avatar" src="assets/positive-young-asian-entrepreneur-showing-thumb-up-2025-04-02-10-59-44-utc-300x300.jpg" alt="Mario Deximersen">
+        <img class="testimonial-avatar" src="/assets/positive-young-asian-entrepreneur-showing-thumb-up-2025-04-02-10-59-44-utc-300x300.jpg" alt="Mario Deximersen">
         <div>
           <div class="testimonial-name">Mario Deximersen</div>
           <div class="testimonial-role">Entrepreneur</div>
@@ -965,7 +894,7 @@
       <div class="testimonial-stars">★★★★★</div>
       <p class="testimonial-text">"Wonderful physiotherapy clinic. The team genuinely care about your progress and make every session count. The home care service was a lifesaver. Highly recommended."</p>
       <div class="testimonial-author">
-        <img class="testimonial-avatar" src="assets/smiling-black-man-in-casual-wear-2025-01-08-23-24-16-utc-300x300.jpg" alt="Patient">
+        <img class="testimonial-avatar" src="/assets/smiling-black-man-in-casual-wear-2025-01-08-23-24-16-utc-300x300.jpg" alt="Patient">
         <div>
           <div class="testimonial-name">David Thomas</div>
           <div class="testimonial-role">Home Care Patient</div>
@@ -1075,7 +1004,7 @@
     <a href="#visit" class="cta-btn">Book Us Now →</a>
   </div>
   <div class="cta-img">
-    <img src="assets/image.png" alt="Physiotherapist caring for a patient at Proud Physio and Wellness, Kakkanad">
+    <img src="/assets/image.png" alt="Physiotherapist caring for a patient at Proud Physio and Wellness, Kakkanad">
   </div>
 </section>
 
@@ -1091,8 +1020,8 @@
       <h3>Back &amp; Neck Pain</h3>
       <p>Desk-related pain, sciatica, disc problems and chronic stiffness, and how targeted therapy resolves them.</p>
       <div class="k-links">
-        <a href="services/musculoskeletal-sports-physiotherapy.html"><i class="fas fa-angle-right"></i>Musculoskeletal Physiotherapy</a>
-        <a href="blog/back-pain-desk-workers.html"><i class="fas fa-angle-right"></i>Guide: Back Pain from Desk Work</a>
+        <a href="/services/musculoskeletal-sports-physiotherapy/"><i class="fas fa-angle-right"></i>Musculoskeletal Physiotherapy</a>
+        <a href="/blog/back-pain-desk-workers/"><i class="fas fa-angle-right"></i>Guide: Back Pain from Desk Work</a>
       </div>
     </div>
     <div class="knowledge-card">
@@ -1100,8 +1029,8 @@
       <h3>Knee &amp; Joint Pain</h3>
       <p>Arthritis, sports injuries and post-surgery stiffness, and why exercise therapy often beats waiting it out.</p>
       <div class="k-links">
-        <a href="services/musculoskeletal-sports-physiotherapy.html"><i class="fas fa-angle-right"></i>Sports &amp; Joint Physiotherapy</a>
-        <a href="blog/knee-pain-physiotherapy.html"><i class="fas fa-angle-right"></i>Guide: Knee Pain &amp; Treatment</a>
+        <a href="/services/musculoskeletal-sports-physiotherapy/"><i class="fas fa-angle-right"></i>Sports &amp; Joint Physiotherapy</a>
+        <a href="/blog/knee-pain-physiotherapy/"><i class="fas fa-angle-right"></i>Guide: Knee Pain &amp; Treatment</a>
       </div>
     </div>
     <div class="knowledge-card">
@@ -1109,8 +1038,8 @@
       <h3>Stroke &amp; Neurological</h3>
       <p>Stroke, Parkinson's and MS recovery: how structured rehabilitation rebuilds movement and independence.</p>
       <div class="k-links">
-        <a href="services/neurological-rehabilitation.html"><i class="fas fa-angle-right"></i>Neurological Rehabilitation</a>
-        <a href="blog/stroke-rehabilitation-at-home.html"><i class="fas fa-angle-right"></i>Guide: Stroke Rehab at Home</a>
+        <a href="/services/neurological-rehabilitation/"><i class="fas fa-angle-right"></i>Neurological Rehabilitation</a>
+        <a href="/blog/stroke-rehabilitation-at-home/"><i class="fas fa-angle-right"></i>Guide: Stroke Rehab at Home</a>
       </div>
     </div>
     <div class="knowledge-card">
@@ -1118,8 +1047,8 @@
       <h3>Pregnancy &amp; Women's Health</h3>
       <p>Pelvic floor care, safe exercise in pregnancy and postnatal recovery, delivered with privacy and sensitivity.</p>
       <div class="k-links">
-        <a href="services/womens-health-physiotherapy.html"><i class="fas fa-angle-right"></i>Women's Health Physiotherapy</a>
-        <a href="blog/postpartum-physiotherapy.html"><i class="fas fa-angle-right"></i>Guide: Postpartum Recovery</a>
+        <a href="/services/womens-health-physiotherapy/"><i class="fas fa-angle-right"></i>Women's Health Physiotherapy</a>
+        <a href="/blog/postpartum-physiotherapy/"><i class="fas fa-angle-right"></i>Guide: Postpartum Recovery</a>
       </div>
     </div>
     <div class="knowledge-card">
@@ -1127,7 +1056,7 @@
       <h3>Children's Development</h3>
       <p>Developmental delay, gait concerns and childhood conditions treated through friendly, play-based therapy.</p>
       <div class="k-links">
-        <a href="services/paediatric-physiotherapy.html"><i class="fas fa-angle-right"></i>Paediatric Physiotherapy</a>
+        <a href="/services/paediatric-physiotherapy/"><i class="fas fa-angle-right"></i>Paediatric Physiotherapy</a>
         <a href="#faq"><i class="fas fa-angle-right"></i>FAQ: Physiotherapy for Children</a>
       </div>
     </div>
@@ -1136,8 +1065,8 @@
       <h3>Healthy Ageing &amp; Falls</h3>
       <p>Balance training, arthritis care and fall prevention that keep seniors independent, at the clinic or at home.</p>
       <div class="k-links">
-        <a href="services/geriatric-physiotherapy.html"><i class="fas fa-angle-right"></i>Geriatric Physiotherapy</a>
-        <a href="services/home-care-physiotherapy.html"><i class="fas fa-angle-right"></i>Home Care Physiotherapy</a>
+        <a href="/services/geriatric-physiotherapy/"><i class="fas fa-angle-right"></i>Geriatric Physiotherapy</a>
+        <a href="/services/home-care-physiotherapy/"><i class="fas fa-angle-right"></i>Home Care Physiotherapy</a>
       </div>
     </div>
   </div>
@@ -1148,40 +1077,40 @@
   <div class="section-label">Blog</div>
   <div class="blog-header">
     <h2>Helpful Tips and Insights for Your<br>Journey to Better Health</h2>
-    <a href="blog/index.html" class="see-more-btn-outline">View All Articles →</a>
+    <a href="/blog/" class="see-more-btn-outline">View All Articles →</a>
   </div>
   <div class="blog-grid">
     <div class="blog-card">
       <div class="blog-card-img">
-        <a href="blog/back-pain-desk-workers.html"><img src="assets/back-pain-treatment.jpg" alt="Physiotherapy for back pain in desk workers, Kochi"></a>
+        <a href="/blog/back-pain-desk-workers/"><img src="/assets/back-pain-treatment.jpg" alt="Physiotherapy for back pain in desk workers, Kochi"></a>
       </div>
       <div class="blog-card-body">
         <span class="blog-tag">Back &amp; Neck Pain</span>
         <h3>Back Pain from Desk Work: A Physiotherapist's Guide for Kochi's IT Professionals</h3>
         <p>Long hours at Infopark and Kakkanad desks are driving an epidemic of back and neck pain. Learn the warning signs, ergonomic fixes and how physiotherapy treats it for good.</p>
-        <a href="blog/back-pain-desk-workers.html" class="blog-more">Read More →</a>
+        <a href="/blog/back-pain-desk-workers/" class="blog-more">Read More →</a>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-card-img">
-        <a href="blog/knee-pain-physiotherapy.html"><img src="assets/knee-pain-physiotherapy.jpg" alt="Knee pain physiotherapy treatment in Kakkanad and Kochi"></a>
+        <a href="/blog/knee-pain-physiotherapy/"><img src="/assets/knee-pain-physiotherapy.jpg" alt="Knee pain physiotherapy treatment in Kakkanad and Kochi"></a>
       </div>
       <div class="blog-card-body">
         <span class="blog-tag">Joint Pain</span>
         <h3>Knee Pain: Causes, Treatment and How Physiotherapy Helps You Avoid Surgery</h3>
         <p>From osteoarthritis to runner's knee, most knee pain responds brilliantly to exercise therapy. See why movement beats rest and how the right programme can keep surgery off the table.</p>
-        <a href="blog/knee-pain-physiotherapy.html" class="blog-more">Read More →</a>
+        <a href="/blog/knee-pain-physiotherapy/" class="blog-more">Read More →</a>
       </div>
     </div>
     <div class="blog-card">
       <div class="blog-card-img">
-        <a href="blog/stroke-rehabilitation-at-home.html"><img src="assets/stroke-rehab-senior.jpg" alt="Stroke rehabilitation physiotherapy at home in Kochi"></a>
+        <a href="/blog/stroke-rehabilitation-at-home/"><img src="/assets/stroke-rehab-senior.jpg" alt="Stroke rehabilitation physiotherapy at home in Kochi"></a>
       </div>
       <div class="blog-card-body">
         <span class="blog-tag">Neuro Rehab</span>
         <h3>Stroke Rehabilitation at Home: How Physiotherapy Rebuilds Movement and Independence</h3>
         <p>The golden window, neuroplasticity and the caregiver's role explained. A practical guide for Kochi families supporting a loved one's recovery after stroke.</p>
-        <a href="blog/stroke-rehabilitation-at-home.html" class="blog-more">Read More →</a>
+        <a href="/blog/stroke-rehabilitation-at-home/" class="blog-more">Read More →</a>
       </div>
     </div>
   </div>
@@ -1204,7 +1133,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="brand-logo">
-        <img src="assets/logo.png" alt="Proud Physio & Wellness">
+        <img src="/assets/logo.png" alt="Proud Physio & Wellness">
       </div>
       <p>We are dedicated to helping you move better, feel stronger and live life to the fullest with expert physiotherapy care.</p>
     </div>
@@ -1212,22 +1141,22 @@
       <h4>Navigation</h4>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="/about/">About Us</a></li>
         <li><a href="#services">Our Services</a></li>
         <li><a href="#check">Check Your Pain</a></li>
         <li><a href="#visit">Visit Us</a></li>
-        <li><a href="blog/index.html">Blogs</a></li>
+        <li><a href="/blog/">Blogs</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Our Services</h4>
       <ul>
-        <li><a href="services/home-care-physiotherapy.html">Home Care Physiotherapy</a></li>
-        <li><a href="services/musculoskeletal-sports-physiotherapy.html">Sports &amp; Musculoskeletal</a></li>
-        <li><a href="services/neurological-rehabilitation.html">Neurological Rehab</a></li>
-        <li><a href="services/womens-health-physiotherapy.html">Women's Health</a></li>
-        <li><a href="services/paediatric-physiotherapy.html">Paediatric Physiotherapy</a></li>
-        <li><a href="services/geriatric-physiotherapy.html">Geriatric Physiotherapy</a></li>
+        <li><a href="/services/home-care-physiotherapy/">Home Care Physiotherapy</a></li>
+        <li><a href="/services/musculoskeletal-sports-physiotherapy/">Sports &amp; Musculoskeletal</a></li>
+        <li><a href="/services/neurological-rehabilitation/">Neurological Rehab</a></li>
+        <li><a href="/services/womens-health-physiotherapy/">Women's Health</a></li>
+        <li><a href="/services/paediatric-physiotherapy/">Paediatric Physiotherapy</a></li>
+        <li><a href="/services/geriatric-physiotherapy/">Geriatric Physiotherapy</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1322,8 +1251,8 @@
         conditions: ['Cervicogenic headache', 'Vertigo & dizziness (BPPV)', 'Balance problems', 'Post-concussion symptoms'],
         help: 'Many headaches and balance problems begin in the neck or the vestibular system. We assess the root cause and use targeted manual therapy, vestibular retraining and balance exercises to reduce dizziness, prevent falls and calm recurring headaches.',
         links: [
-          { href: 'services/neurological-rehabilitation.html', text: 'Neurological Rehabilitation', cls: 'primary' },
-          { href: 'services/geriatric-physiotherapy.html', text: 'Balance & Fall Prevention', cls: 'secondary' }
+          { href: '/services/neurological-rehabilitation/', text: 'Neurological Rehabilitation', cls: 'primary' },
+          { href: '/services/geriatric-physiotherapy/', text: 'Balance & Fall Prevention', cls: 'secondary' }
         ]
       },
       neck: {
@@ -1332,8 +1261,8 @@
         conditions: ['Neck pain & stiffness', 'Tech neck (desk posture)', 'Cervical spondylosis', 'Whiplash', 'Trapezitis'],
         help: 'Long desk hours, poor pillows and stress all load the neck. We combine hands-on therapy to release stiff joints and muscles with posture retraining and strengthening so the pain does not return.',
         links: [
-          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Musculoskeletal Physiotherapy', cls: 'primary' },
-          { href: 'blog/back-pain-desk-workers.html', text: 'Read: Desk Worker\'s Guide', cls: 'secondary' }
+          { href: '/services/musculoskeletal-sports-physiotherapy/', text: 'Musculoskeletal Physiotherapy', cls: 'primary' },
+          { href: '/blog/back-pain-desk-workers/', text: 'Read: Desk Worker\'s Guide', cls: 'secondary' }
         ]
       },
       shoulder: {
@@ -1342,8 +1271,8 @@
         conditions: ['Frozen shoulder', 'Rotator cuff injury', 'Shoulder impingement', 'Post-fracture stiffness', 'Sports injuries'],
         help: 'The shoulder trades stability for mobility, which makes it injury-prone. We restore range with graded mobilisation, then rebuild the rotator cuff strength that keeps the joint centred and pain free.',
         links: [
-          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Sports & Musculoskeletal Physio', cls: 'primary' },
-          { href: 'services/post-surgical-rehabilitation.html', text: 'Post-Surgical Rehab', cls: 'secondary' }
+          { href: '/services/musculoskeletal-sports-physiotherapy/', text: 'Sports & Musculoskeletal Physio', cls: 'primary' },
+          { href: '/services/post-surgical-rehabilitation/', text: 'Post-Surgical Rehab', cls: 'secondary' }
         ]
       },
       back: {
@@ -1352,8 +1281,8 @@
         conditions: ['Low back pain', 'Sciatica', 'Disc bulge / prolapse', 'Postural back pain', 'Spondylosis', 'Post-spinal-surgery recovery'],
         help: 'Back pain rarely needs scans or surgery; it needs accurate assessment and the right graded exercise. We relieve pain with manual therapy, then strengthen your core and hips and fix the daily habits that keep triggering it.',
         links: [
-          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Back Pain Treatment', cls: 'primary' },
-          { href: 'blog/back-pain-desk-workers.html', text: 'Read: Back Pain Guide', cls: 'secondary' }
+          { href: '/services/musculoskeletal-sports-physiotherapy/', text: 'Back Pain Treatment', cls: 'primary' },
+          { href: '/blog/back-pain-desk-workers/', text: 'Read: Back Pain Guide', cls: 'secondary' }
         ]
       },
       elbow: {
@@ -1362,8 +1291,8 @@
         conditions: ['Tennis elbow', 'Golfer\'s elbow', 'Carpal tunnel syndrome', 'Wrist sprains', 'De Quervain\'s tenosynovitis'],
         help: 'Overuse injuries of the arm respond brilliantly to progressive loading. We calm the irritated tendon, then rebuild its capacity with graded strengthening so gripping, lifting and typing stop hurting.',
         links: [
-          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Musculoskeletal Physiotherapy', cls: 'primary' },
-          { href: 'blog/tennis-elbow-physiotherapy.html', text: 'Read: Tennis Elbow Explained', cls: 'secondary' }
+          { href: '/services/musculoskeletal-sports-physiotherapy/', text: 'Musculoskeletal Physiotherapy', cls: 'primary' },
+          { href: '/blog/tennis-elbow-physiotherapy/', text: 'Read: Tennis Elbow Explained', cls: 'secondary' }
         ]
       },
       pelvis: {
@@ -1372,8 +1301,8 @@
         conditions: ['Hip arthritis', 'Pelvic girdle pain', 'Pelvic floor dysfunction', 'Pregnancy-related pain', 'Post hip replacement'],
         help: 'Hip and pelvic problems affect walking, sleep and confidence. We treat the joint, strengthen the deep stabilising muscles and, for women\'s health concerns, provide specialist pelvic floor care with complete privacy.',
         links: [
-          { href: 'services/womens-health-physiotherapy.html', text: 'Women\'s Health Physiotherapy', cls: 'primary' },
-          { href: 'services/post-surgical-rehabilitation.html', text: 'Post-Surgical Rehab', cls: 'secondary' }
+          { href: '/services/womens-health-physiotherapy/', text: 'Women\'s Health Physiotherapy', cls: 'primary' },
+          { href: '/services/post-surgical-rehabilitation/', text: 'Post-Surgical Rehab', cls: 'secondary' }
         ]
       },
       knee: {
@@ -1382,8 +1311,8 @@
         conditions: ['Knee osteoarthritis', 'Runner\'s knee', 'Ligament injuries (ACL/MCL)', 'Meniscus problems', 'Post knee replacement'],
         help: 'Strong evidence shows exercise therapy rivals surgery for many knee problems. We reduce pain and swelling, restore full bend and straightening, and strengthen the muscles that shield the joint.',
         links: [
-          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Knee Pain Treatment', cls: 'primary' },
-          { href: 'blog/knee-pain-physiotherapy.html', text: 'Read: Knee Pain Guide', cls: 'secondary' }
+          { href: '/services/musculoskeletal-sports-physiotherapy/', text: 'Knee Pain Treatment', cls: 'primary' },
+          { href: '/blog/knee-pain-physiotherapy/', text: 'Read: Knee Pain Guide', cls: 'secondary' }
         ]
       },
       ankle: {
@@ -1392,8 +1321,8 @@
         conditions: ['Ankle sprains', 'Plantar fasciitis', 'Achilles tendinopathy', 'Flat feet', 'Heel pain'],
         help: 'Poorly rehabilitated ankle sprains become repeat sprains. We restore balance and strength after injury, treat heel and arch pain, and analyse your gait so problems do not travel up to the knee and hip.',
         links: [
-          { href: 'services/musculoskeletal-sports-physiotherapy.html', text: 'Sports Physiotherapy', cls: 'primary' },
-          { href: 'services/recurrence-management.html', text: 'Stop Repeat Injuries', cls: 'secondary' }
+          { href: '/services/musculoskeletal-sports-physiotherapy/', text: 'Sports Physiotherapy', cls: 'primary' },
+          { href: '/services/recurrence-management/', text: 'Stop Repeat Injuries', cls: 'secondary' }
         ]
       }
     };
@@ -1477,15 +1406,15 @@
     "@type": "OfferCatalog",
     "name": "Physiotherapy Services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Home Care Physiotherapy", "url": "https://proudphysio.com/services/home-care-physiotherapy.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Musculoskeletal & Sports Physiotherapy", "url": "https://proudphysio.com/services/musculoskeletal-sports-physiotherapy.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Neurological Rehabilitation", "url": "https://proudphysio.com/services/neurological-rehabilitation.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Paediatric Physiotherapy", "url": "https://proudphysio.com/services/paediatric-physiotherapy.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Geriatric Physiotherapy", "url": "https://proudphysio.com/services/geriatric-physiotherapy.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Women's Health Physiotherapy", "url": "https://proudphysio.com/services/womens-health-physiotherapy.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Post-Surgical Rehabilitation", "url": "https://proudphysio.com/services/post-surgical-rehabilitation.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Ergonomic, Nutrition & Lifestyle Guidance", "url": "https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance.html" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Recurrence Management & Injury Prevention", "url": "https://proudphysio.com/services/recurrence-management.html" } }
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Home Care Physiotherapy", "url": "https://proudphysio.com/services/home-care-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Musculoskeletal & Sports Physiotherapy", "url": "https://proudphysio.com/services/musculoskeletal-sports-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Neurological Rehabilitation", "url": "https://proudphysio.com/services/neurological-rehabilitation/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Paediatric Physiotherapy", "url": "https://proudphysio.com/services/paediatric-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Geriatric Physiotherapy", "url": "https://proudphysio.com/services/geriatric-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Women's Health Physiotherapy", "url": "https://proudphysio.com/services/womens-health-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Post-Surgical Rehabilitation", "url": "https://proudphysio.com/services/post-surgical-rehabilitation/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Ergonomic, Nutrition & Lifestyle Guidance", "url": "https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Recurrence Management & Injury Prevention", "url": "https://proudphysio.com/services/recurrence-management/" } }
     ]
   }
 }
