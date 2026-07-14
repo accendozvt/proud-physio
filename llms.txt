@@ -26,6 +26,20 @@ Each service has a dedicated page with details, conditions treated and FAQs:
 - [Post-Surgical Rehabilitation](https://proudphysio.com/services/post-surgical-rehabilitation/), rebuilding strength, balance and confidence in movement after knee/hip replacement, ACL and other surgeries.
 - [Ergonomic, Nutrition & Lifestyle Guidance](https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance/), workstation ergonomics, posture and lifestyle strategies to support overall physical and mental performance.
 - [Recurrence Management](https://proudphysio.com/services/recurrence-management/), identifying root causes of recurring pain and preventing future injury.
+- [Online Physiotherapy](https://proudphysio.com/services/online-physiotherapy/), expert assessment and guided exercise therapy over video call, for follow-ups, busy professionals and patients away from Kochi (including NRIs).
+- [Myofascial & Active Release Therapy](https://proudphysio.com/services/myofascial-release-therapy/), hands-on soft-tissue techniques that release tight fascia, trigger points and muscle knots.
+- [Taping & Cupping](https://proudphysio.com/services/taping-cupping/), kinesiology taping to support injured joints and cupping therapy to release tight muscles and improve circulation.
+- [Posture Correction](https://proudphysio.com/services/posture-correction/), assessment and correction of tech neck, rounded shoulders and desk-related posture problems.
+- [Dry Needling](https://proudphysio.com/services/dry-needling/), fine sterile needles into muscle trigger points to relieve pain and restore movement, performed by a trained physiotherapist.
+
+## Conditions We Treat
+
+Each condition has a dedicated page explaining the condition and how our physiotherapy helps. Full list at [Conditions We Treat](https://proudphysio.com/conditions/).
+
+- Neurological: [Stroke](https://proudphysio.com/conditions/stroke/), [Parkinson's Disease](https://proudphysio.com/conditions/parkinsons-disease/), [Spinal Cord Injury](https://proudphysio.com/conditions/spinal-cord-injury/), [Neuropathy](https://proudphysio.com/conditions/neuropathy/), [Hemiparesis](https://proudphysio.com/conditions/hemiparesis/).
+- Orthopedic: [Back Pain](https://proudphysio.com/conditions/back-pain/), [Neck Pain](https://proudphysio.com/conditions/neck-pain/), [Knee Pain](https://proudphysio.com/conditions/knee-pain/), [Ankle Sprain](https://proudphysio.com/conditions/ankle-sprain/), [Tennis Elbow](https://proudphysio.com/conditions/tennis-elbow/), [Sports Injuries](https://proudphysio.com/conditions/sports-injuries/).
+- Paediatric: [Developmental Delay](https://proudphysio.com/conditions/developmental-delay/), [Cerebral Palsy](https://proudphysio.com/conditions/cerebral-palsy/), [Muscular Dystrophy](https://proudphysio.com/conditions/muscular-dystrophy/), [Down Syndrome](https://proudphysio.com/conditions/down-syndrome/), [Autism](https://proudphysio.com/conditions/autism/).
+- Women's Health: [PCOS](https://proudphysio.com/conditions/pcos/), [Diastasis Recti](https://proudphysio.com/conditions/diastasis-recti/), [Antenatal & Postnatal](https://proudphysio.com/conditions/antenatal-postnatal/), [Pelvic Floor Dysfunction](https://proudphysio.com/conditions/pelvic-floor-dysfunction/).
 
 ## Team
 
@@ -44,6 +58,7 @@ Each service has a dedicated page with details, conditions treated and FAQs:
 - [Homepage](https://proudphysio.com/): Overview of clinic, services, interactive symptom checker, testimonials and FAQs.
 - [About Us](https://proudphysio.com/about/): Full story, mission statement, healing process, why patients choose us, and Dr. Noora's biography.
 - [Services](https://proudphysio.com/#services): Full list of physiotherapy services offered, each linking to a detailed service page.
+- [Conditions We Treat](https://proudphysio.com/conditions/): Neurological, orthopedic, paediatric and women's health conditions, each with a dedicated page on how physiotherapy helps.
 - [Check Your Pain](https://proudphysio.com/#check): Interactive body map connecting symptoms to conditions and treatments.
 - [FAQ](https://proudphysio.com/#faq): Answers to common questions about physiotherapy, recovery, home care and appointments.
 - [Visit Us](https://proudphysio.com/#visit): Location, map and clinic hours.

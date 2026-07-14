@@ -171,6 +171,14 @@ footer a { color: #8cc63f; text-decoration: none; }
 /* generic centered wrap (used by blog hub CTA) */
 .wrap { max-width: 1100px; margin: 0 auto; padding: 10px 6vw 50px; }
 
+/* CONDITIONS HUB */
+.conditions-hub { padding: 50px 6vw; }
+.conditions-inner { max-width: 1500px; margin: 0 auto; }
+.cond-cat { font-size: 24px; font-weight: 800; color: var(--dark); margin: 44px 0 20px; display: flex; align-items: center; gap: 12px; }
+.cond-cat:first-child { margin-top: 0; }
+.cond-cat i { color: var(--blue); font-size: 20px; }
+.cond-intro { font-size: 15px; color: #667; line-height: 1.7; max-width: 760px; margin-bottom: 8px; }
+
 /* DOCTOR FEATURE (About page) */
 .doctor-feature { display: grid; grid-template-columns: 1.5fr 0.9fr; gap: 40px; align-items: center; margin: 22px 0 8px; }
 .doctor-feature .doctor-info h3 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }

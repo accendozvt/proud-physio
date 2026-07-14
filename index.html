@@ -420,6 +420,19 @@
   .k-links a i { font-size: 11px; margin-right: 6px; }
   @media (max-width: 900px) { .knowledge-grid { grid-template-columns: 1fr; } .knowledge-section { padding: 40px 20px; } }
 
+  /* CONDITIONS WE TREAT (home) */
+  .conditions-home-section { padding: 70px 10vw; background: var(--white); }
+  .conditions-home-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 6px; }
+  .cond-col { background: var(--light-gray); border-radius: 16px; padding: 24px; border: 1px solid var(--border); }
+  .cond-col h3 { font-size: 16px; font-weight: 800; color: var(--dark); margin-bottom: 15px; display: flex; align-items: center; gap: 9px; }
+  .cond-col h3 i { color: var(--blue); font-size: 16px; }
+  .cond-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .cond-col ul a { font-size: 13.5px; color: #566; text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color .2s, padding .2s; }
+  .cond-col ul a:hover { color: var(--blue); padding-left: 3px; }
+  .cond-col ul a i { font-size: 10px; color: var(--blue); }
+  .conditions-home-cta { margin-top: 28px; }
+  @media (min-width: 901px) and (max-width: 1150px) { .conditions-home-grid { grid-template-columns: repeat(2, 1fr); } }
+
   /* UTILS */
   .see-more-btn-outline { display: inline-flex; align-items: center; gap: 6px; border: 2px solid var(--blue); color: var(--blue); padding: 10px 22px; border-radius: 25px; text-decoration: none; font-size: 13px; font-weight: 600; background: transparent; }
 
@@ -431,7 +444,8 @@
     .about-header-right { flex-wrap: wrap; gap: 24px 30px; align-items: center; }
     .about-btn-sm { margin-left: 0; }
     .healing-process { grid-template-columns: 1fr; }
-    .journeys-section, .bodymap-section, .knowledge-section { padding: 40px 20px; }
+    .journeys-section, .bodymap-section, .knowledge-section, .conditions-home-section { padding: 40px 20px; }
+    .conditions-home-grid { grid-template-columns: 1fr; }
 
     /* Shorter header + hamburger */
     nav { padding: 8px 20px; }
@@ -464,8 +478,8 @@
     <li><a href="#">Home</a></li>
     <li><a href="/about/">About Us</a></li>
     <li><a href="#services">Our Services</a></li>
+    <li><a href="/conditions/">Conditions</a></li>
     <li><a href="#check">Check Your Pain</a></li>
-    <li><a href="#visit">Visit Us</a></li>
     <li><a href="/blog/">Blogs</a></li>
     <li><a href="#visit" class="nav-cta">Contact Us</a></li>
   </ul>
@@ -698,6 +712,119 @@
         <p>We bring quality physiotherapy directly to your home, providing the convenience and support you need to recover comfortably from wherever you are.</p>
       </div>
     </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="/assets/online-physiotherapy.jpg" alt="Online physiotherapy video consultation">
+      </div>
+      <a class="service-card-overlay" href="/services/online-physiotherapy/" aria-label="Online Physiotherapy consultation"></a>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-laptop-medical"></i></div>
+        <h3>Online Physiotherapy</h3>
+        <p>Expert assessment and guided exercise therapy over video call, wherever you are, ideal for follow-ups, busy professionals and patients living away from Kochi.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="/assets/partial-view-of-physiotherapist-massaging-leg-of-f-2024-11-17-22-03-31-utc-1024x684.jpg" alt="Myofascial release therapy">
+      </div>
+      <a class="service-card-overlay" href="/services/myofascial-release-therapy/" aria-label="Myofascial Release and Active Release Therapy"></a>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-hands"></i></div>
+        <h3>Myofascial &amp; Active Release Therapy</h3>
+        <p>Hands-on soft-tissue techniques that release tight fascia, trigger points and muscle knots to relieve pain and restore free, comfortable movement.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="/assets/cupping-therapy.jpg" alt="Cupping and kinesiology taping therapy">
+      </div>
+      <a class="service-card-overlay" href="/services/taping-cupping/" aria-label="Taping and Cupping Therapy"></a>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-bandage"></i></div>
+        <h3>Taping &amp; Cupping</h3>
+        <p>Kinesiology taping to support and offload injured joints, and cupping therapy to release tight muscles, improve circulation and speed up recovery.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-05-21-29-06-utc-1024x683.jpg" alt="Posture correction physiotherapy">
+      </div>
+      <a class="service-card-overlay" href="/services/posture-correction/" aria-label="Posture Correction"></a>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-street-view"></i></div>
+        <h3>Posture Correction</h3>
+        <p>Assessment and correction of tech neck, rounded shoulders and desk-related posture problems through targeted exercise, ergonomics and habit retraining.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img src="/assets/dry-needling.jpg" alt="Dry needling physiotherapy">
+      </div>
+      <a class="service-card-overlay" href="/services/dry-needling/" aria-label="Dry Needling"></a>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-syringe"></i></div>
+        <h3>Dry Needling</h3>
+        <p>Fine sterile needles release tight, painful muscle trigger points to quickly reduce pain and restore movement, performed safely by a trained physiotherapist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS WE TREAT -->
+<section class="conditions-home-section" id="conditions">
+  <div class="section-label">Conditions We Treat</div>
+  <div class="services-header">
+    <h2>Conditions We Help With, Across All Ages</h2>
+  </div>
+  <div class="conditions-home-grid">
+    <div class="cond-col">
+      <h3><i class="fas fa-brain"></i> Neurological</h3>
+      <ul>
+        <li><a href="/conditions/stroke/"><i class="fas fa-chevron-right"></i> Stroke</a></li>
+        <li><a href="/conditions/parkinsons-disease/"><i class="fas fa-chevron-right"></i> Parkinson's Disease</a></li>
+        <li><a href="/conditions/spinal-cord-injury/"><i class="fas fa-chevron-right"></i> Spinal Cord Injuries</a></li>
+        <li><a href="/conditions/neuropathy/"><i class="fas fa-chevron-right"></i> Neuropathies</a></li>
+        <li><a href="/conditions/hemiparesis/"><i class="fas fa-chevron-right"></i> Hemiparesis</a></li>
+      </ul>
+    </div>
+    <div class="cond-col">
+      <h3><i class="fas fa-bone"></i> Orthopedic</h3>
+      <ul>
+        <li><a href="/conditions/back-pain/"><i class="fas fa-chevron-right"></i> Back Pain</a></li>
+        <li><a href="/conditions/neck-pain/"><i class="fas fa-chevron-right"></i> Neck Pain</a></li>
+        <li><a href="/conditions/knee-pain/"><i class="fas fa-chevron-right"></i> Knee Pain</a></li>
+        <li><a href="/conditions/ankle-sprain/"><i class="fas fa-chevron-right"></i> Ankle Sprain</a></li>
+        <li><a href="/conditions/tennis-elbow/"><i class="fas fa-chevron-right"></i> Tennis Elbow</a></li>
+        <li><a href="/conditions/sports-injuries/"><i class="fas fa-chevron-right"></i> Sports Injuries</a></li>
+      </ul>
+    </div>
+    <div class="cond-col">
+      <h3><i class="fas fa-child-reaching"></i> Paediatric</h3>
+      <ul>
+        <li><a href="/conditions/developmental-delay/"><i class="fas fa-chevron-right"></i> Developmental Delay</a></li>
+        <li><a href="/conditions/cerebral-palsy/"><i class="fas fa-chevron-right"></i> Cerebral Palsy</a></li>
+        <li><a href="/conditions/muscular-dystrophy/"><i class="fas fa-chevron-right"></i> Muscular Dystrophy</a></li>
+        <li><a href="/conditions/down-syndrome/"><i class="fas fa-chevron-right"></i> Down Syndrome</a></li>
+        <li><a href="/conditions/autism/"><i class="fas fa-chevron-right"></i> Autism</a></li>
+      </ul>
+    </div>
+    <div class="cond-col">
+      <h3><i class="fas fa-venus"></i> Women's Health</h3>
+      <ul>
+        <li><a href="/conditions/pcos/"><i class="fas fa-chevron-right"></i> PCOS</a></li>
+        <li><a href="/conditions/diastasis-recti/"><i class="fas fa-chevron-right"></i> Diastasis Recti</a></li>
+        <li><a href="/conditions/antenatal-postnatal/"><i class="fas fa-chevron-right"></i> Antenatal &amp; Postnatal</a></li>
+        <li><a href="/conditions/pelvic-floor-dysfunction/"><i class="fas fa-chevron-right"></i> Pelvic Floor Dysfunction</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conditions-home-cta">
+    <a href="/conditions/" class="see-more-btn-outline">Explore All Conditions →</a>
   </div>
 </section>
 
@@ -1113,8 +1240,8 @@
         <li><a href="#">Home</a></li>
         <li><a href="/about/">About Us</a></li>
         <li><a href="#services">Our Services</a></li>
+        <li><a href="/conditions/">Conditions</a></li>
         <li><a href="#check">Check Your Pain</a></li>
-        <li><a href="#visit">Visit Us</a></li>
         <li><a href="/blog/">Blogs</a></li>
       </ul>
     </div>
@@ -1124,9 +1251,9 @@
         <li><a href="/services/home-care-physiotherapy/">Home Care Physiotherapy</a></li>
         <li><a href="/services/musculoskeletal-sports-physiotherapy/">Sports &amp; Musculoskeletal</a></li>
         <li><a href="/services/neurological-rehabilitation/">Neurological Rehab</a></li>
-        <li><a href="/services/womens-health-physiotherapy/">Women's Health</a></li>
-        <li><a href="/services/paediatric-physiotherapy/">Paediatric Physiotherapy</a></li>
-        <li><a href="/services/geriatric-physiotherapy/">Geriatric Physiotherapy</a></li>
+        <li><a href="/services/online-physiotherapy/">Online Physiotherapy</a></li>
+        <li><a href="/services/dry-needling/">Dry Needling</a></li>
+        <li><a href="/conditions/">All Conditions Treated</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1384,7 +1511,12 @@
       { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Women's Health Physiotherapy", "url": "https://proudphysio.com/services/womens-health-physiotherapy/" } },
       { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Post-Surgical Rehabilitation", "url": "https://proudphysio.com/services/post-surgical-rehabilitation/" } },
       { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Ergonomic, Nutrition & Lifestyle Guidance", "url": "https://proudphysio.com/services/ergonomic-nutrition-lifestyle-guidance/" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Recurrence Management & Injury Prevention", "url": "https://proudphysio.com/services/recurrence-management/" } }
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Recurrence Management & Injury Prevention", "url": "https://proudphysio.com/services/recurrence-management/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Online Physiotherapy", "url": "https://proudphysio.com/services/online-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Myofascial & Active Release Therapy", "url": "https://proudphysio.com/services/myofascial-release-therapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Taping & Cupping Therapy", "url": "https://proudphysio.com/services/taping-cupping/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Posture Correction", "url": "https://proudphysio.com/services/posture-correction/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Dry Needling", "url": "https://proudphysio.com/services/dry-needling/" } }
     ]
   }
 }
