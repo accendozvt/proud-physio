@@ -261,6 +261,16 @@
   .testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
   .testimonial-name { font-size: 14px; font-weight: 700; color: var(--dark); }
   .testimonial-role { font-size: 12px; color: #aaa; }
+  .testimonial-avatar-initials { width: 44px; height: 44px; border-radius: 50%; background: var(--grad); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0; }
+  .testimonial-source { font-size: 11px; color: #9aa; display: inline-flex; align-items: center; gap: 5px; margin-top: 3px; }
+  .testimonial-source i { color: #4285F4; font-size: 12px; }
+  .reviews-rating { display: flex; align-items: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .rr-badge { display: inline-flex; align-items: center; gap: 10px; background: var(--light-gray); border: 1px solid var(--border); border-radius: 30px; padding: 8px 18px; }
+  .rr-badge i { color: #4285F4; font-size: 18px; }
+  .rr-score { font-size: 20px; font-weight: 800; color: var(--dark); }
+  .rr-stars { color: #f4a261; font-size: 15px; letter-spacing: 1px; }
+  .rr-count { font-size: 13px; color: #778; }
+  .reviews-cta { margin-top: 30px; }
 
   /* FAQ */
   .faq-section { padding: 70px 10vw; background: var(--light-gray); }
@@ -962,42 +972,88 @@
 <section class="testimonials-section">
   <div class="section-label">Testimonials</div>
   <div class="testimonials-header">
-    <h2>Stories of Healing and Hope from Our Patients</h2>
+    <h2>Real Stories from Our Patients in Kakkanad &amp; Kochi</h2>
+    <div class="reviews-rating">
+      <span class="rr-badge"><i class="fab fa-google"></i> <span class="rr-score">4.9</span> <span class="rr-stars">★★★★★</span></span>
+      <span class="rr-count">Rated 4.9 from 208+ verified Google reviews</span>
+    </div>
   </div>
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"The team at Proud Physio was absolutely incredible. The care and attention I received was outstanding, and I felt supported through every step of my recovery."</p>
+      <p class="testimonial-text">"I had an excellent experience at Proud Physio for my knee pain. The clinic is well equipped with advanced treatment techniques, and the care was highly professional. What impressed me most was the noticeable improvement within just 6 sessions. Highly recommended."</p>
       <div class="testimonial-author">
-        <img class="testimonial-avatar" src="/assets/retail-mall-christmas-and-man-shopping-for-discou-2025-04-06-07-10-42-utc-300x300.jpg" alt="James Anderson">
+        <div class="testimonial-avatar-initials">Y</div>
         <div>
-          <div class="testimonial-name">James Anderson</div>
-          <div class="testimonial-role">Entrepreneur</div>
+          <div class="testimonial-name">Yadhukrishna Santhosh</div>
+          <div class="testimonial-role">Knee Pain Recovery</div>
+          <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"After my injury, I was worried about getting back to my active lifestyle. The team designed a personalised recovery plan and I'm now back to my best. Couldn't be happier!"</p>
+      <p class="testimonial-text">"I had a brachial plexus injury and with the help of Dr. Noora and the team I got significant results after just one and a half weeks of sessions. I must say the best physiotherapy clinic in Kakkanad. They are so reasonable and the clinic is neat and clean."</p>
       <div class="testimonial-author">
-        <img class="testimonial-avatar" src="/assets/positive-young-asian-entrepreneur-showing-thumb-up-2025-04-02-10-59-44-utc-300x300.jpg" alt="Mario Deximersen">
+        <div class="testimonial-avatar-initials">S</div>
         <div>
-          <div class="testimonial-name">Mario Deximersen</div>
-          <div class="testimonial-role">Entrepreneur</div>
+          <div class="testimonial-name">Sohal Sebastian</div>
+          <div class="testimonial-role">Neurological Rehabilitation</div>
+          <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">★★★★★</div>
-      <p class="testimonial-text">"Wonderful physiotherapy clinic. The team genuinely care about your progress and make every session count. The home care service was a lifesaver. Highly recommended."</p>
+      <p class="testimonial-text">"Neck pain from long IT working hours had become part of my routine until I visited Proud Physio. They clearly explained the reason behind the pain and focused on correcting posture along with muscle release. I noticed real improvement in flexibility and comfort while working."</p>
       <div class="testimonial-author">
-        <img class="testimonial-avatar" src="/assets/smiling-black-man-in-casual-wear-2025-01-08-23-24-16-utc-300x300.jpg" alt="Patient">
+        <div class="testimonial-avatar-initials">S</div>
         <div>
-          <div class="testimonial-name">David Thomas</div>
-          <div class="testimonial-role">Home Care Patient</div>
+          <div class="testimonial-name">Shravan S.</div>
+          <div class="testimonial-role">Neck Pain, IT Professional</div>
+          <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
         </div>
       </div>
     </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Thank you for the excellent home service physiotherapy. The therapist was very professional, patient and knowledgeable. Receiving treatment at home made a huge difference in my grandfather's recovery. I highly recommend this service to anyone who needs quality physiotherapy at home."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar-initials">B</div>
+        <div>
+          <div class="testimonial-name">Bobby Dominic</div>
+          <div class="testimonial-role">Home Care Physiotherapy</div>
+          <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I am an 18-year-old football player and visited Proud Physio after an ankle sprain that stopped me from playing. The rehab plan focused on movement, balance and match fitness, not just pain relief. I returned to football with confidence and without fear of re-injury."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar-initials">A</div>
+        <div>
+          <div class="testimonial-name">Anson Johnson</div>
+          <div class="testimonial-role">Sports Injury Recovery</div>
+          <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"I visited for severe neck stiffness due to cervical spondylosis. The treatment was gentle yet highly effective, and each session brought noticeable relief. Now my neck feels light, flexible and pain free. Truly grateful, the best physiotherapy centre in Kochi."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar-initials">L</div>
+        <div>
+          <div class="testimonial-name">Lissy Saji</div>
+          <div class="testimonial-role">Cervical Spondylosis</div>
+          <div class="testimonial-source"><i class="fab fa-google"></i> Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reviews-cta">
+    <a href="https://www.google.com/maps/place/?q=place_id:ChIJFQf9ITENCDsR4O0u4ojR1j4" target="_blank" rel="noopener" class="see-more-btn-outline">Read all 208+ reviews on Google →</a>
   </div>
 </section>
 
