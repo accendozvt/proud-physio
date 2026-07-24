@@ -25,20 +25,65 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="/assets/css/inner.css">
+<link rel="stylesheet" href="/assets/css/header.css">
 </head>
 <body>
 <script src="/assets/js/canonicalize.js"></script>
-<nav>
-  <a href="/" class="nav-logo"><img src="/assets/logo.png" alt="Proud Physio & Wellness, Best Physiotherapist in Kakkanad and Kochi"></a>
-  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="/">Home</a></li>
-    <li><a href="/#services">Our Services</a></li>
-    <li><a href="/conditions/" aria-current="page">Conditions</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#visit" class="nav-cta">Book Now</a></li>
-  </ul>
-</nav>
+<!-- SITE HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="mn-bar">
+    <a href="/" class="mn-logo"><img src="/assets/logo.png" alt="Proud Physio &amp; Wellness"></a>
+    <button class="mn-toggle" id="mnToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+    <div class="mn-nav" id="mnNav" role="navigation" aria-label="Main menu">
+      <ul class="mn-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li class="mn-has-mega">
+          <button class="mn-trigger" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></button>
+          <div class="mn-mega">
+            <div class="mn-mega-inner">
+              <div class="mn-mega-head"><h3>Our Physiotherapy Services</h3><p>Expert, personalised care for every need</p><a class="mn-viewall" href="/#services">View all services &rarr;</a></div>
+              <div class="mn-serv-grid">
+          <a class="mn-serv" href="/services/home-care-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-house-medical"></i></span><span class="mn-serv-txt"><b>Home Care Physiotherapy</b><span>Treatment at your doorstep</span></span></a>
+          <a class="mn-serv" href="/services/musculoskeletal-sports-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-person-running"></i></span><span class="mn-serv-txt"><b>Musculoskeletal &amp; Sports</b><span>Back, joint &amp; sports pain</span></span></a>
+          <a class="mn-serv" href="/services/neurological-rehabilitation/"><span class="mn-serv-ico"><i class="fas fa-brain"></i></span><span class="mn-serv-txt"><b>Neurological Rehabilitation</b><span>Stroke, Parkinson's &amp; more</span></span></a>
+          <a class="mn-serv" href="/services/paediatric-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-child"></i></span><span class="mn-serv-txt"><b>Paediatric Physiotherapy</b><span>Play-based child care</span></span></a>
+          <a class="mn-serv" href="/services/geriatric-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-user-injured"></i></span><span class="mn-serv-txt"><b>Geriatric Physiotherapy</b><span>Strength, balance, falls</span></span></a>
+          <a class="mn-serv" href="/services/womens-health-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-venus"></i></span><span class="mn-serv-txt"><b>Women's Health</b><span>Pre &amp; postnatal, pelvic floor</span></span></a>
+          <a class="mn-serv" href="/services/post-surgical-rehabilitation/"><span class="mn-serv-ico"><i class="fas fa-procedures"></i></span><span class="mn-serv-txt"><b>Post-Surgical Rehab</b><span>Safe recovery after surgery</span></span></a>
+          <a class="mn-serv" href="/services/ergonomic-nutrition-lifestyle-guidance/"><span class="mn-serv-ico"><i class="fas fa-apple-alt"></i></span><span class="mn-serv-txt"><b>Ergonomic &amp; Lifestyle</b><span>Posture &amp; workstation</span></span></a>
+          <a class="mn-serv" href="/services/recurrence-management/"><span class="mn-serv-ico"><i class="fas fa-redo-alt"></i></span><span class="mn-serv-txt"><b>Recurrence Management</b><span>Stop pain coming back</span></span></a>
+          <a class="mn-serv" href="/services/online-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-laptop-medical"></i></span><span class="mn-serv-txt"><b>Online Physiotherapy</b><span>Expert care by video</span></span></a>
+          <a class="mn-serv" href="/services/myofascial-release-therapy/"><span class="mn-serv-ico"><i class="fas fa-hands"></i></span><span class="mn-serv-txt"><b>Myofascial Release</b><span>Release tight muscle knots</span></span></a>
+          <a class="mn-serv" href="/services/taping-cupping/"><span class="mn-serv-ico"><i class="fas fa-bandage"></i></span><span class="mn-serv-txt"><b>Taping &amp; Cupping</b><span>Support &amp; muscle release</span></span></a>
+          <a class="mn-serv" href="/services/posture-correction/"><span class="mn-serv-ico"><i class="fas fa-street-view"></i></span><span class="mn-serv-txt"><b>Posture Correction</b><span>Fix tech neck &amp; slouch</span></span></a>
+          <a class="mn-serv" href="/services/dry-needling/"><span class="mn-serv-ico"><i class="fas fa-syringe"></i></span><span class="mn-serv-txt"><b>Dry Needling</b><span>Trigger point relief</span></span></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/conditions/">Conditions</a></li>
+        <li class="mn-has-mega">
+          <button class="mn-trigger" aria-expanded="false">Blog <i class="fas fa-chevron-down"></i></button>
+          <div class="mn-mega">
+            <div class="mn-mega-inner">
+              <div class="mn-mega-head"><h3>From the Blog</h3><p>Evidence-based tips and insights</p><a class="mn-viewall" href="/blog/">View all articles &rarr;</a></div>
+              <div class="mn-blog-grid">
+          <a class="mn-blog" href="/blog/back-pain-latest-guidelines/"><img src="/assets/back-pain-treatment.jpg" alt="What the Latest Research Says About Back Pain" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>What the Latest Research Says About Back Pain</b></span></a>
+          <a class="mn-blog" href="/blog/knee-osteoarthritis-exercise-first/"><img src="/assets/knee-pain-physiotherapy.jpg" alt="Knee Osteoarthritis: Why Exercise Comes First" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>Knee Osteoarthritis: Why Exercise Comes First</b></span></a>
+          <a class="mn-blog" href="/blog/does-online-physiotherapy-work/"><img src="/assets/online-physiotherapy.jpg" alt="Does Online Physiotherapy Really Work?" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>Does Online Physiotherapy Really Work?</b></span></a>
+          <a class="mn-blog" href="/blog/strength-training-after-60/"><img src="/assets/senior-strength-training.jpg" alt="Strength Training After 60" loading="lazy"><span class="mn-blog-b"><span class="tag">Healthy Ageing</span><b>Strength Training After 60</b></span></a>
+          <a class="mn-blog" href="/blog/monsoon-joint-pain-kerala/"><img src="/assets/monsoon-kerala.jpg" alt="Monsoon and Joint Pain in Kerala" loading="lazy"><span class="mn-blog-b"><span class="tag">Kerala &amp; You</span><b>Monsoon and Joint Pain in Kerala</b></span></a>
+          <a class="mn-blog" href="/blog/dry-needling-evidence/"><img src="/assets/dry-needling.jpg" alt="Dry Needling: What the Evidence Shows" loading="lazy"><span class="mn-blog-b"><span class="tag">Treatment</span><b>Dry Needling: What the Evidence Shows</b></span></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="mn-cta-li"><a href="/#visit" class="mn-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
 
 <header class="page-hero">
   <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/conditions/">Conditions</a> &rsaquo; Diastasis Recti</div>
@@ -179,8 +224,53 @@
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2026 <strong style="color:#fff">Proud Physio &amp; Wellness</strong>. SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021 &nbsp;|&nbsp; +91 80894 14419 &nbsp;|&nbsp; proudphysio1@gmail.com &nbsp;|&nbsp; <a href="/">proudphysio.com</a></p>
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+  <div class="sf-grid">
+    <div class="sf-brand">
+      <img src="/assets/logo.png" alt="Proud Physio &amp; Wellness">
+      <p>We help you move better, feel stronger and live life to the fullest with expert, evidence-based physiotherapy, at the clinic, at home or online.</p>
+      <div class="sf-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="sf-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/#services">Our Services</a></li>
+        <li><a href="/conditions/">Conditions</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#visit">Contact</a></li>
+      </ul>
+    </div>
+    <div class="sf-col">
+      <h4>Popular Services</h4>
+      <ul>
+        <li><a href="/services/home-care-physiotherapy/">Home Care Physiotherapy</a></li>
+        <li><a href="/services/musculoskeletal-sports-physiotherapy/">Sports &amp; Musculoskeletal</a></li>
+        <li><a href="/services/neurological-rehabilitation/">Neurological Rehab</a></li>
+        <li><a href="/services/online-physiotherapy/">Online Physiotherapy</a></li>
+        <li><a href="/services/womens-health-physiotherapy/">Women's Health</a></li>
+        <li><a href="/conditions/">All Conditions</a></li>
+      </ul>
+    </div>
+    <div class="sf-col">
+      <h4>Get in Touch</h4>
+      <ul class="sf-contact">
+        <li><i class="fas fa-map-marker-alt"></i><span>SRA 26-C, Crash Rd, Vazhakkala, Kakkanad, Kochi, Kerala 682021</span></li>
+        <li><i class="fas fa-phone"></i><a href="tel:+918089414419">+91 80894 14419</a></li>
+        <li><i class="fas fa-envelope"></i><a href="mailto:proudphysio1@gmail.com">proudphysio1@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i><span>Open every day, 8:00 AM to 10:00 PM</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sf-bottom">
+    <p>&copy; 2026 <strong style="color:#fff">Proud Physio &amp; Wellness</strong>. All rights reserved. &nbsp;|&nbsp; <a href="/">proudphysio.com</a></p>
+  </div>
 </footer>
 
 <script>
@@ -244,5 +334,6 @@
   ]
 }
 </script>
+<script src="/assets/js/nav.js" defer></script>
 </body>
 </html>

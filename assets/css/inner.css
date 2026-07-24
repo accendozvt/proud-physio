@@ -114,7 +114,7 @@ nav .nav-logo img { height: 60px; display: block; }
 .cta-box { background: var(--grad); border-radius: 20px; padding: 40px; color: #fff; text-align: center; margin-top: 46px; position: relative; overflow: hidden; }
 .cta-box::after { content: ''; position: absolute; left: -60px; bottom: -80px; width: 260px; height: 260px; background: rgba(255,255,255,.06); border-radius: 50%; }
 .cta-box > * { position: relative; z-index: 1; }
-.cta-box h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+.cta-box h3, .article-body .cta-box h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; color: #fff; }
 .cta-box p { opacity: .92; margin-bottom: 22px; max-width: 620px; margin-left: auto; margin-right: auto; }
 .cta-box a { display: inline-block; background: #fff; color: var(--blue); font-weight: 700; padding: 14px 30px; border-radius: 30px; text-decoration: none; margin: 0 6px 8px; }
 .cta-box a.ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.6); }
