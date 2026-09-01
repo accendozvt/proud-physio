@@ -4,6 +4,11 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Canonical host: force HTTPS + apex (non-www) in a single 301
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://proudphysio.com%{REQUEST_URI} [R=301,L]
+
   # /path/index.html  ->  /path/   (also handles the root "index.html" -> "/")
   RewriteCond %{THE_REQUEST} \s/+(.*)index\.html[?\s] [NC]
   RewriteRule (.*)index\.html$ /%1 [R=301,L]
@@ -11,8 +16,50 @@ DirectoryIndex index.html
   # /path/name.html  ->  /path/name/   (legacy links to the old flat .html pages)
   RewriteCond %{THE_REQUEST} \s/+(.+)\.html[?\s] [NC]
   RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
+</IfModule>
 
-  # force apex domain (strip www.)
-  RewriteCond %{HTTP_HOST} ^www\.proudphysio\.com [NC]
-  RewriteRule ^(.*)$ https://proudphysio.com/$1 [R=301,L]
+# Custom 404 page (returns HTTP 404)
+ErrorDocument 404 /404.html
+
+# ---------- Compression ----------
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript text/javascript application/json image/svg+xml text/plain application/manifest+json application/xml application/rss+xml
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml text/plain application/manifest+json application/xml application/rss+xml
+</IfModule>
+
+# ---------- Cache expiry ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/manifest+json "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Long, immutable cache for static, versioned assets
+  <FilesMatch "\.(css|js|woff2|webp|avif|png|jpe?g|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
+  # ---------- Security headers ----------
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), browsing-topics=()"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; form-action 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; frame-src https://www.google.com https://maps.google.com; frame-ancestors 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>

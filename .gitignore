@@ -4,3 +4,6 @@
 
 # Local-only marketing assets (not for the repo)
 blog/Posters/
+
+# SEO audit artifacts (local only, never deployed)
+seo-audit/
