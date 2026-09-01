@@ -1,7 +1,7 @@
 /* Proud Physio & Wellness — shared styles for inner pages (services + blog) */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --blue: #4e8a2c;
+  --blue: #43781d;
   --blue-dark: #3c6e21;
   --blue-deep: #11283a;
   --blue-light: #e4f1d4;
@@ -9,7 +9,7 @@
   --green-light: #8cc63f;
   --green-soft: #eaf5dc;
   --logo-blue: #1e5099;
-  --grad: linear-gradient(135deg, #4e8a2c 0%, #2f7a55 48%, #1e5099 100%);
+  --grad: linear-gradient(135deg, #43781d 0%, #2f7a55 48%, #1e5099 100%);
   --dark: #11283a;
   --text: #46555b;
   --light: #f4f8ef;
@@ -51,7 +51,7 @@ nav .nav-logo img { height: 60px; display: block; }
 
 /* LEAD IMAGE (banner) */
 .lead-img { width: 100%; border-radius: 18px; display: block; height: 440px; object-fit: cover; margin-bottom: 14px; box-shadow: 0 14px 40px rgba(17,40,58,.10); }
-.lead-caption { font-size: 12.5px; color: #99a; margin-bottom: 30px; font-style: italic; }
+.lead-caption { font-size: 12.5px; color: #5b6b62; margin-bottom: 30px; font-style: italic; }
 
 /* ARTICLE BODY typography */
 .article-body { font-size: 17px; }
@@ -63,8 +63,8 @@ nav .nav-logo img { height: 60px; display: block; }
 .article-body ul, .article-body ol { margin: 0 0 20px 22px; }
 .article-body li { margin-bottom: 10px; }
 .article-body strong { color: var(--dark); }
-.article-body a { color: var(--blue); font-weight: 600; }
-.article-body a:hover { text-decoration: underline; }
+.article-body a { color: var(--blue); font-weight: 600; text-decoration: underline; }
+.article-body a:hover { text-decoration: underline; opacity: .85; }
 .article-body img { max-width: 100%; border-radius: 14px; }
 
 /* INLINE IMAGE (in-body, wraps or full) */
@@ -74,7 +74,7 @@ nav .nav-logo img { height: 60px; display: block; }
 .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 26px 0 30px; }
 .stat-box { background: var(--light); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center; min-width: 0; }
 .stat-box .num { font-size: 30px; font-weight: 800; color: var(--blue); line-height: 1.1; overflow-wrap: anywhere; }
-.stat-box .lbl { font-size: 12.5px; color: #778; margin-top: 8px; line-height: 1.4; }
+.stat-box .lbl { font-size: 12.5px; color: #5b6b62; margin-top: 8px; line-height: 1.4; }
 
 /* CONDITION CHIPS */
 .condition-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 22px; }
@@ -146,7 +146,7 @@ nav .nav-logo img { height: 60px; display: block; }
 .related-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.09); }
 .related-card i { color: var(--blue); font-size: 22px; margin-bottom: 12px; display: block; }
 .related-card h3 { font-size: 16.5px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
-.related-card p { font-size: 13px; color: #889; line-height: 1.55; }
+.related-card p { font-size: 13px; color: #5b6b62; line-height: 1.55; }
 
 /* FOOTER */
 footer { background: var(--blue-deep); color: #9fb8c2; padding: 38px 6vw; font-size: 13px; text-align: center; }
@@ -161,11 +161,11 @@ footer a { color: #8cc63f; text-decoration: none; }
 .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
 .blog-card:hover .blog-card-img img { transform: scale(1.06); }
 .blog-card-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
-.blog-tag { display: inline-block; background: var(--green-soft); color: var(--green); font-size: 11px; font-weight: 600; padding: 4px 11px; border-radius: 20px; margin-bottom: 12px; align-self: flex-start; }
+.blog-tag { display: inline-block; background: var(--green-soft); color: #43781d; font-size: 11px; font-weight: 600; padding: 4px 11px; border-radius: 20px; margin-bottom: 12px; align-self: flex-start; }
 .blog-card h3, .blog-card h2 { font-size: 18px; font-weight: 700; color: var(--dark); line-height: 1.4; margin: 0 0 10px; }
 .blog-card h3 a { color: inherit; text-decoration: none; }
 .blog-card h3 a:hover { color: var(--blue); }
-.blog-card p { font-size: 13px; color: #888; line-height: 1.6; flex: 1; }
+.blog-card p { font-size: 13px; color: #5b6b62; line-height: 1.6; flex: 1; }
 .blog-more { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-size: 13px; font-weight: 600; text-decoration: none; margin-top: 14px; }
 
 /* generic centered wrap (used by blog hub CTA) */
@@ -183,7 +183,7 @@ footer a { color: #8cc63f; text-decoration: none; }
 .doctor-feature { display: grid; grid-template-columns: 1.5fr 0.9fr; gap: 40px; align-items: center; margin: 22px 0 8px; }
 .doctor-feature .doctor-info h3 { font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
 .doctor-role { font-size: 15px; font-weight: 600; color: var(--blue); margin-bottom: 4px; }
-.doctor-credential { font-size: 13px; color: #888; margin-bottom: 18px; }
+.doctor-credential { font-size: 13px; color: #5b6b62; margin-bottom: 18px; }
 .doctor-info p { margin-bottom: 14px; }
 .doctor-points { list-style: none !important; margin: 16px 0 22px 0 !important; }
 .doctor-points li { font-size: 15px; color: #555; line-height: 1.6; padding-left: 28px; position: relative; margin-bottom: 10px; }
