@@ -11,8 +11,9 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/dmsans-latin.woff2" crossorigin>
 <style>
+  @font-face{font-family:'DM Sans';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/dmsans-latin.woff2) format('woff2')}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'DM Sans',system-ui,sans-serif;color:#11283a;background:#f7faf3;
     min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -32,7 +33,7 @@
 </head>
 <body>
 <main id="main">
-  <img class="logo" src="/assets/logo.png" alt="Proud Physio & Wellness" width="180">
+  <img class="logo" src="/assets/logo.svg" alt="Proud Physio & Wellness" width="180" height="64" decoding="async">
   <div class="code">404</div>
   <h1>We couldn't find that page</h1>
   <p>The page you're looking for may have moved or no longer exists. Let's get you back on track — here are some helpful places to start.</p>

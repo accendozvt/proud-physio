@@ -36,9 +36,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="/assets/css/inner.css">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/dmsans-latin.woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/header.css">
 <!-- schema:core -->
 <script type="application/ld+json">
@@ -81,7 +80,7 @@
 <!-- SITE HEADER -->
 <header class="site-header" id="siteHeader">
   <div class="mn-bar">
-    <a href="/" class="mn-logo"><img src="/assets/logo.png" alt="Proud Physio &amp; Wellness"></a>
+    <a href="/" class="mn-logo"><img loading="eager" decoding="async" width="600" height="215" src="/assets/logo.svg" alt="Proud Physio &amp; Wellness"></a>
     <button class="mn-toggle" id="mnToggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
     <div class="mn-nav" id="mnNav" role="navigation" aria-label="Main menu">
       <ul class="mn-list">
@@ -118,12 +117,12 @@
             <div class="mn-mega-inner">
               <div class="mn-mega-head"><h3>From the Blog</h3><p>Evidence-based tips and insights</p><a class="mn-viewall" href="/blog/">View all articles &rarr;</a></div>
               <div class="mn-blog-grid">
-          <a class="mn-blog" href="/blog/back-pain-latest-guidelines/"><img src="/assets/back-pain-treatment.jpg" alt="What the Latest Research Says About Back Pain" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>What the Latest Research Says About Back Pain</b></span></a>
-          <a class="mn-blog" href="/blog/knee-osteoarthritis-exercise-first/"><img src="/assets/knee-pain-physiotherapy.jpg" alt="Knee Osteoarthritis: Why Exercise Comes First" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>Knee Osteoarthritis: Why Exercise Comes First</b></span></a>
-          <a class="mn-blog" href="/blog/does-online-physiotherapy-work/"><img src="/assets/online-physiotherapy.jpg" alt="Does Online Physiotherapy Really Work?" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>Does Online Physiotherapy Really Work?</b></span></a>
-          <a class="mn-blog" href="/blog/strength-training-after-60/"><img src="/assets/senior-strength-training.jpg" alt="Strength Training After 60" loading="lazy"><span class="mn-blog-b"><span class="tag">Healthy Ageing</span><b>Strength Training After 60</b></span></a>
-          <a class="mn-blog" href="/blog/monsoon-joint-pain-kerala/"><img src="/assets/monsoon-kerala.jpg" alt="Monsoon and Joint Pain in Kerala" loading="lazy"><span class="mn-blog-b"><span class="tag">Kerala &amp; You</span><b>Monsoon and Joint Pain in Kerala</b></span></a>
-          <a class="mn-blog" href="/blog/dry-needling-evidence/"><img src="/assets/dry-needling.jpg" alt="Dry Needling: What the Evidence Shows" loading="lazy"><span class="mn-blog-b"><span class="tag">Treatment</span><b>Dry Needling: What the Evidence Shows</b></span></a>
+          <a class="mn-blog" href="/blog/back-pain-latest-guidelines/"><img decoding="async" width="1200" height="800" src="/assets/back-pain-treatment.webp" alt="What the Latest Research Says About Back Pain" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>What the Latest Research Says About Back Pain</b></span></a>
+          <a class="mn-blog" href="/blog/knee-osteoarthritis-exercise-first/"><img decoding="async" width="1200" height="800" src="/assets/knee-pain-physiotherapy.webp" alt="Knee Osteoarthritis: Why Exercise Comes First" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>Knee Osteoarthritis: Why Exercise Comes First</b></span></a>
+          <a class="mn-blog" href="/blog/does-online-physiotherapy-work/"><img decoding="async" width="1200" height="800" src="/assets/online-physiotherapy.webp" alt="Does Online Physiotherapy Really Work?" loading="lazy"><span class="mn-blog-b"><span class="tag">Research</span><b>Does Online Physiotherapy Really Work?</b></span></a>
+          <a class="mn-blog" href="/blog/strength-training-after-60/"><img decoding="async" width="1200" height="800" src="/assets/senior-strength-training.webp" alt="Strength Training After 60" loading="lazy"><span class="mn-blog-b"><span class="tag">Healthy Ageing</span><b>Strength Training After 60</b></span></a>
+          <a class="mn-blog" href="/blog/monsoon-joint-pain-kerala/"><img decoding="async" width="1200" height="800" src="/assets/monsoon-kerala.webp" alt="Monsoon and Joint Pain in Kerala" loading="lazy"><span class="mn-blog-b"><span class="tag">Kerala &amp; You</span><b>Monsoon and Joint Pain in Kerala</b></span></a>
+          <a class="mn-blog" href="/blog/dry-needling-evidence/"><img decoding="async" width="1200" height="1800" src="/assets/dry-needling.webp" alt="Dry Needling: What the Evidence Shows" loading="lazy"><span class="mn-blog-b"><span class="tag">Treatment</span><b>Dry Needling: What the Evidence Shows</b></span></a>
               </div>
             </div>
           </div>
@@ -145,7 +144,7 @@
 <section class="blog-hub-section">
   <div class="blog-hub-grid">
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/back-pain-latest-guidelines/"><img src="/assets/back-pain-treatment.jpg" alt="What the Latest Research Says About Back Pain (Why Rest and Scans Are Out)" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/back-pain-latest-guidelines/"><img decoding="async" width="1200" height="800" src="/assets/back-pain-treatment.webp" alt="What the Latest Research Says About Back Pain (Why Rest and Scans Are Out)" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Research &amp; Guidelines</span>
         <h2><a href="/blog/back-pain-latest-guidelines/" style="color:inherit;text-decoration:none">What the Latest Research Says About Back Pain (Why Rest and Scans Are Out)</a></h2>
@@ -154,7 +153,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/knee-osteoarthritis-exercise-first/"><img src="/assets/knee-pain-physiotherapy.jpg" alt="Knee Osteoarthritis: Why Exercise Is Now the First Treatment, Not Surgery" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/knee-osteoarthritis-exercise-first/"><img decoding="async" width="1200" height="800" src="/assets/knee-pain-physiotherapy.webp" alt="Knee Osteoarthritis: Why Exercise Is Now the First Treatment, Not Surgery" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Research &amp; Guidelines</span>
         <h2><a href="/blog/knee-osteoarthritis-exercise-first/" style="color:inherit;text-decoration:none">Knee Osteoarthritis: Why Exercise Is Now the First Treatment, Not Surgery</a></h2>
@@ -163,7 +162,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/dry-needling-evidence/"><img src="/assets/dry-needling.jpg" alt="Dry Needling for Muscle Pain: What the Evidence Actually Shows" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/dry-needling-evidence/"><img decoding="async" width="1200" height="1800" src="/assets/dry-needling.webp" alt="Dry Needling for Muscle Pain: What the Evidence Actually Shows" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Treatment Methods</span>
         <h2><a href="/blog/dry-needling-evidence/" style="color:inherit;text-decoration:none">Dry Needling for Muscle Pain: What the Evidence Actually Shows</a></h2>
@@ -172,7 +171,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/shockwave-therapy-explained/"><img src="/assets/472357-1024x720.jpg" alt="Shockwave Therapy for Heel and Elbow Pain: How It Works" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/shockwave-therapy-explained/"><img decoding="async" width="1024" height="720" src="/assets/472357-1024x720.webp" alt="Shockwave Therapy for Heel and Elbow Pain: How It Works" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Treatment Methods</span>
         <h2><a href="/blog/shockwave-therapy-explained/" style="color:inherit;text-decoration:none">Shockwave Therapy for Heel and Elbow Pain: How It Works</a></h2>
@@ -181,7 +180,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/does-online-physiotherapy-work/"><img src="/assets/online-physiotherapy.jpg" alt="Does Online Physiotherapy Really Work? What the Studies Show" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/does-online-physiotherapy-work/"><img decoding="async" width="1200" height="800" src="/assets/online-physiotherapy.webp" alt="Does Online Physiotherapy Really Work? What the Studies Show" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Research &amp; Guidelines</span>
         <h2><a href="/blog/does-online-physiotherapy-work/" style="color:inherit;text-decoration:none">Does Online Physiotherapy Really Work? What the Studies Show</a></h2>
@@ -190,7 +189,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/blood-flow-restriction-training/"><img src="/assets/13553236.jpg" alt="Blood Flow Restriction Training: Build Strength With Lighter Weights" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/blood-flow-restriction-training/"><img decoding="async" width="1000" height="668" src="/assets/13553236.webp" alt="Blood Flow Restriction Training: Build Strength With Lighter Weights" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Treatment Methods</span>
         <h2><a href="/blog/blood-flow-restriction-training/" style="color:inherit;text-decoration:none">Blood Flow Restriction Training: Build Strength With Lighter Weights</a></h2>
@@ -199,7 +198,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/strength-training-after-60/"><img src="/assets/senior-strength-training.jpg" alt="Strength Training After 60: How It Rebuilds Muscle and Prevents Falls" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/strength-training-after-60/"><img decoding="async" width="1200" height="800" src="/assets/senior-strength-training.webp" alt="Strength Training After 60: How It Rebuilds Muscle and Prevents Falls" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Healthy Ageing</span>
         <h2><a href="/blog/strength-training-after-60/" style="color:inherit;text-decoration:none">Strength Training After 60: How It Rebuilds Muscle and Prevents Falls</a></h2>
@@ -208,7 +207,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/vertigo-bppv-physiotherapy/"><img src="/assets/22246.jpg" alt="Dizziness and Vertigo: How Physiotherapy Treats BPPV" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/vertigo-bppv-physiotherapy/"><img decoding="async" width="1000" height="642" src="/assets/22246.webp" alt="Dizziness and Vertigo: How Physiotherapy Treats BPPV" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Treatment Methods</span>
         <h2><a href="/blog/vertigo-bppv-physiotherapy/" style="color:inherit;text-decoration:none">Dizziness and Vertigo: How Physiotherapy Treats BPPV</a></h2>
@@ -217,7 +216,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/why-does-lower-back-hurt/"><img src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-05-21-29-06-utc-1024x683.jpg" alt="Why Does My Lower Back Hurt? The Common Causes Explained" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/why-does-lower-back-hurt/"><img decoding="async" width="1024" height="683" src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-05-21-29-06-utc-1024x683.webp" alt="Why Does My Lower Back Hurt? The Common Causes Explained" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/why-does-lower-back-hurt/" style="color:inherit;text-decoration:none">Why Does My Lower Back Hurt? The Common Causes Explained</a></h2>
@@ -226,7 +225,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/why-does-neck-hurt/"><img src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-09-15-43-46-utc-1024x683.jpg" alt="Why Does My Neck Hurt? Causes Beyond Bad Posture" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/why-does-neck-hurt/"><img decoding="async" width="1024" height="683" src="/assets/spine-and-shoulder-physical-therapist-chiropractic-2025-03-09-15-43-46-utc-1024x683.webp" alt="Why Does My Neck Hurt? Causes Beyond Bad Posture" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/why-does-neck-hurt/" style="color:inherit;text-decoration:none">Why Does My Neck Hurt? Causes Beyond Bad Posture</a></h2>
@@ -235,7 +234,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/knee-pain-on-stairs/"><img src="/assets/knee-pain-physiotherapy.jpg" alt="Why Do My Knees Hurt on the Stairs? What It Really Means" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/knee-pain-on-stairs/"><img decoding="async" width="1200" height="800" src="/assets/knee-pain-physiotherapy.webp" alt="Why Do My Knees Hurt on the Stairs? What It Really Means" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/knee-pain-on-stairs/" style="color:inherit;text-decoration:none">Why Do My Knees Hurt on the Stairs? What It Really Means</a></h2>
@@ -244,7 +243,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/morning-heel-pain-plantar-fasciitis/"><img src="/assets/heel-foot-pain.jpg" alt="Why Your Heel Hurts in the Morning: Plantar Fasciitis Explained" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/morning-heel-pain-plantar-fasciitis/"><img decoding="async" width="1200" height="1800" src="/assets/heel-foot-pain.webp" alt="Why Your Heel Hurts in the Morning: Plantar Fasciitis Explained" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/morning-heel-pain-plantar-fasciitis/" style="color:inherit;text-decoration:none">Why Your Heel Hurts in the Morning: Plantar Fasciitis Explained</a></h2>
@@ -253,7 +252,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/frozen-shoulder-explained/"><img src="/assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.jpg" alt="Why Your Shoulder Stiffens and Hurts: Frozen Shoulder Explained" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/frozen-shoulder-explained/"><img decoding="async" width="1024" height="684" src="/assets/professional-orthopedic-surgeon-is-examining-a-pat-2025-03-08-23-06-57-utc-1024x684.webp" alt="Why Your Shoulder Stiffens and Hurts: Frozen Shoulder Explained" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/frozen-shoulder-explained/" style="color:inherit;text-decoration:none">Why Your Shoulder Stiffens and Hurts: Frozen Shoulder Explained</a></h2>
@@ -262,7 +261,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/cervicogenic-headache/"><img src="/assets/contented-physiatrist-with-a-clipboard-in-his-hand-2024-10-18-17-22-39-utc.png" alt="Headaches That Start in the Neck: Cervicogenic Headache Explained" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/cervicogenic-headache/"><img decoding="async" width="900" height="1118" src="/assets/contented-physiatrist-with-a-clipboard-in-his-hand-2024-10-18-17-22-39-utc.webp" alt="Headaches That Start in the Neck: Cervicogenic Headache Explained" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/cervicogenic-headache/" style="color:inherit;text-decoration:none">Headaches That Start in the Neck: Cervicogenic Headache Explained</a></h2>
@@ -271,7 +270,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/desk-stretches-for-it-professionals/"><img src="/assets/5704.jpg" alt="7 Desk Stretches Every IT Professional in Kochi Should Do" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/desk-stretches-for-it-professionals/"><img decoding="async" width="1000" height="753" src="/assets/5704.webp" alt="7 Desk Stretches Every IT Professional in Kochi Should Do" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Prevention &amp; Wellness</span>
         <h2><a href="/blog/desk-stretches-for-it-professionals/" style="color:inherit;text-decoration:none">7 Desk Stretches Every IT Professional in Kochi Should Do</a></h2>
@@ -280,7 +279,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/safe-exercise-during-pregnancy/"><img src="/assets/269427-1.jpg" alt="Safe Exercise During Pregnancy: A Physiotherapist's Guide" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/safe-exercise-during-pregnancy/"><img decoding="async" width="1000" height="778" src="/assets/269427-1.webp" alt="Safe Exercise During Pregnancy: A Physiotherapist's Guide" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Women's Health</span>
         <h2><a href="/blog/safe-exercise-during-pregnancy/" style="color:inherit;text-decoration:none">Safe Exercise During Pregnancy: A Physiotherapist's Guide</a></h2>
@@ -289,7 +288,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/fall-prevention-for-seniors-at-home/"><img src="/assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Preventing Falls at Home: A Guide for Kerala Families" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/fall-prevention-for-seniors-at-home/"><img decoding="async" width="1024" height="682" src="/assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.webp" alt="Preventing Falls at Home: A Guide for Kerala Families" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Healthy Ageing</span>
         <h2><a href="/blog/fall-prevention-for-seniors-at-home/" style="color:inherit;text-decoration:none">Preventing Falls at Home: A Guide for Kerala Families</a></h2>
@@ -298,7 +297,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/sciatica-explained/"><img src="/assets/back-pain-treatment.jpg" alt="Sciatica: Why That Shooting Leg Pain Happens and How to Treat It" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/sciatica-explained/"><img decoding="async" width="1200" height="800" src="/assets/back-pain-treatment.webp" alt="Sciatica: Why That Shooting Leg Pain Happens and How to Treat It" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Why the Pain</span>
         <h2><a href="/blog/sciatica-explained/" style="color:inherit;text-decoration:none">Sciatica: Why That Shooting Leg Pain Happens and How to Treat It</a></h2>
@@ -307,7 +306,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/monsoon-joint-pain-kerala/"><img src="/assets/monsoon-kerala.jpg" alt="Monsoon and Joint Pain in Kerala: Why It Flares and What Helps" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/monsoon-joint-pain-kerala/"><img decoding="async" width="1200" height="800" src="/assets/monsoon-kerala.webp" alt="Monsoon and Joint Pain in Kerala: Why It Flares and What Helps" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Kerala &amp; You</span>
         <h2><a href="/blog/monsoon-joint-pain-kerala/" style="color:inherit;text-decoration:none">Monsoon and Joint Pain in Kerala: Why It Flares and What Helps</a></h2>
@@ -316,7 +315,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/physiotherapy-and-ayurveda-kerala/"><img src="/assets/partial-view-of-physiotherapist-massaging-leg-of-f-2024-11-17-22-03-31-utc-1024x684.jpg" alt="Physiotherapy and Ayurveda in Kerala: How They Can Work Together" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/physiotherapy-and-ayurveda-kerala/"><img decoding="async" width="1024" height="684" src="/assets/partial-view-of-physiotherapist-massaging-leg-of-f-2024-11-17-22-03-31-utc-1024x684.webp" alt="Physiotherapy and Ayurveda in Kerala: How They Can Work Together" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Kerala &amp; You</span>
         <h2><a href="/blog/physiotherapy-and-ayurveda-kerala/" style="color:inherit;text-decoration:none">Physiotherapy and Ayurveda in Kerala: How They Can Work Together</a></h2>
@@ -325,7 +324,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/back-pain-desk-workers/"><img src="/assets/back-pain-treatment.jpg" alt="Physiotherapist treating back pain in a desk worker from Kochi" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/back-pain-desk-workers/"><img decoding="async" width="1200" height="800" src="/assets/back-pain-treatment.webp" alt="Physiotherapist treating back pain in a desk worker from Kochi" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Back &amp; Neck Pain</span>
         <h2><a href="/blog/back-pain-desk-workers/" style="color:inherit;text-decoration:none">Back Pain from Desk Work: A Physiotherapist's Guide for Kochi's IT Professionals</a></h2>
@@ -334,7 +333,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/knee-pain-physiotherapy/"><img src="/assets/knee-pain-physiotherapy.jpg" alt="Knee pain physiotherapy treatment at Proud Physio and Wellness, Kakkanad" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/knee-pain-physiotherapy/"><img decoding="async" width="1200" height="800" src="/assets/knee-pain-physiotherapy.webp" alt="Knee pain physiotherapy treatment at Proud Physio and Wellness, Kakkanad" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Joint Pain</span>
         <h2><a href="/blog/knee-pain-physiotherapy/" style="color:inherit;text-decoration:none">Knee Pain: Causes, Treatment and How Physiotherapy Helps You Avoid Surgery</a></h2>
@@ -343,7 +342,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/stroke-rehabilitation-at-home/"><img src="/assets/stroke-rehab-senior.jpg" alt="Senior receiving stroke rehabilitation physiotherapy at home in Kochi" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/stroke-rehabilitation-at-home/"><img decoding="async" width="1200" height="800" src="/assets/stroke-rehab-senior.webp" alt="Senior receiving stroke rehabilitation physiotherapy at home in Kochi" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Neuro Rehab</span>
         <h2><a href="/blog/stroke-rehabilitation-at-home/" style="color:inherit;text-decoration:none">Stroke Rehabilitation at Home: How Physiotherapy Rebuilds Movement and Independence</a></h2>
@@ -352,7 +351,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/postpartum-physiotherapy/"><img src="/assets/269427-1.jpg" alt="Postpartum physiotherapy session for a new mother in Kakkanad" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/postpartum-physiotherapy/"><img decoding="async" width="1000" height="778" src="/assets/269427-1.webp" alt="Postpartum physiotherapy session for a new mother in Kakkanad" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Women's Health</span>
         <h2><a href="/blog/postpartum-physiotherapy/" style="color:inherit;text-decoration:none">Postpartum Care and Physiotherapy: The Missing Piece of Motherhood Recovery</a></h2>
@@ -361,7 +360,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/tennis-elbow-physiotherapy/"><img src="/assets/472357-1024x720.jpg" alt="Tennis elbow physiotherapy treatment in Kakkanad and Kochi" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/tennis-elbow-physiotherapy/"><img decoding="async" width="1024" height="720" src="/assets/472357-1024x720.webp" alt="Tennis elbow physiotherapy treatment in Kakkanad and Kochi" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Sports &amp; Fitness</span>
         <h2><a href="/blog/tennis-elbow-physiotherapy/" style="color:inherit;text-decoration:none">Tennis Elbow Explained: How Physiotherapy Gets You Back to Your Best</a></h2>
@@ -370,7 +369,7 @@
       </div>
     </article>
     <article class="blog-card">
-      <a class="blog-card-img" href="/blog/home-care-physiotherapy/"><img src="/assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.jpg" alt="Senior man receiving home care physiotherapy on his sofa in Kakkanad" loading="lazy"></a>
+      <a class="blog-card-img" href="/blog/home-care-physiotherapy/"><img decoding="async" width="1024" height="682" src="/assets/asian-disabled-senior-man-sitting-on-sofa-doing-ph-2025-03-25-21-19-03-utc-1024x682.webp" alt="Senior man receiving home care physiotherapy on his sofa in Kakkanad" loading="lazy"></a>
       <div class="blog-card-body">
         <span class="blog-tag">Home Care</span>
         <h2><a href="/blog/home-care-physiotherapy/" style="color:inherit;text-decoration:none">Home Care Physiotherapy in Kakkanad: Expert Recovery Without Leaving Home</a></h2>
@@ -395,7 +394,7 @@
 <footer class="site-footer">
   <div class="sf-grid">
     <div class="sf-brand">
-      <img src="/assets/logo.png" alt="Proud Physio &amp; Wellness">
+      <img loading="eager" decoding="async" width="600" height="215" src="/assets/logo.svg" alt="Proud Physio &amp; Wellness">
       <p>We help you move better, feel stronger and live life to the fullest with expert, evidence-based physiotherapy, at the clinic, at home or online.</p>
       <div class="sf-social">
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
