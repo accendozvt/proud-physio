@@ -2,6 +2,12 @@
    Self-contained: literal colours, scoped selectors, works on every page. */
 .site-header *, .site-footer * { box-sizing: border-box; }
 
+/* Skip-to-content link (first focusable element on every page) */
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 4000;
+  background: #11283a; color: #fff; padding: 12px 20px; font-weight: 700;
+  text-decoration: none; border-radius: 0 0 8px 0; }
+.skip-link:focus { left: 0; outline: 3px solid #6fae33; outline-offset: 2px; }
+
 /* ---------- HEADER BAR ---------- */
 .site-header { position: sticky; top: 0; z-index: 200; background: #fff; box-shadow: 0 2px 14px rgba(17,40,58,.08); font-family: 'DM Sans', sans-serif; }
 .mn-bar { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 8px 5vw; gap: 20px; }

@@ -1,0 +1,16 @@
+{
+  "name": "Proud Physio & Wellness",
+  "short_name": "Proud Physio",
+  "description": "Expert, evidence-based physiotherapy in Kakkanad & Kochi — clinic, home care and online.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4e8a2c",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

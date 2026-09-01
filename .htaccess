@@ -16,3 +16,6 @@ DirectoryIndex index.html
   RewriteCond %{HTTP_HOST} ^www\.proudphysio\.com [NC]
   RewriteRule ^(.*)$ https://proudphysio.com/$1 [R=301,L]
 </IfModule>
+
+# Custom 404 page (returns HTTP 404)
+ErrorDocument 404 /404.html

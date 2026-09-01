@@ -33,7 +33,11 @@
 <meta name="twitter:description" content="Expert, evidence-based physiotherapy in Kakkanad &amp; Kochi: home care, sports, neuro, paediatric, geriatric and women's health. Book your assessment today.">
 <meta name="twitter:image" content="https://proudphysio.com/assets/opengraph/preview.webp">
 <meta name="twitter:image:alt" content="Proud Physio &amp; Wellness — physiotherapy clinic in Kakkanad, Kochi">
-<link rel="icon" type="image/png" href="/assets/logo.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
 
 
@@ -132,7 +136,7 @@
   .feature-item { display: flex; align-items: flex-start; gap: 14px; }
   .feature-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .feature-icon i { color: white; font-size: 20px; }
-  .feature-text h4 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 5px; }
+  .feature-text .feature-title { font-size: 16px; font-weight: 700; color: white; margin-bottom: 5px; }
   .feature-text p { font-size: 11px; color: rgba(255,255,255,0.78); line-height: 1.5; }
 
   /* SECTION LABEL */
@@ -513,6 +517,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <script src="/assets/js/canonicalize.js"></script>
 <div class="page-wrap">
 
@@ -571,6 +576,7 @@
     </div>
   </div>
 </header>
+<main id="main">
 
 <!-- HERO -->
 <section class="hero">
@@ -624,28 +630,28 @@
   <div class="feature-item">
     <div class="feature-icon"><i class="fas fa-home"></i></div>
     <div class="feature-text">
-      <h4>Home Care Physiotherapy</h4>
+      <p class="feature-title">Home Care Physiotherapy</p>
       <p>Specialised physiotherapy at home for those who are unable to travel, ensuring effective recovery.</p>
     </div>
   </div>
   <div class="feature-item">
     <div class="feature-icon"><i class="fas fa-user-md"></i></div>
     <div class="feature-text">
-      <h4>Personalized Therapy</h4>
+      <p class="feature-title">Personalized Therapy</p>
       <p>Each treatment is designed specifically for you, based on your unique needs, goals and recovery.</p>
     </div>
   </div>
   <div class="feature-item">
     <div class="feature-icon"><i class="fas fa-couch"></i></div>
     <div class="feature-text">
-      <h4>Comfortable Healing</h4>
+      <p class="feature-title">Comfortable Healing</p>
       <p>Our clinic is supportive and comfortable, designed to make you feel at ease during treatment.</p>
     </div>
   </div>
   <div class="feature-item">
     <div class="feature-icon"><i class="fas fa-award"></i></div>
     <div class="feature-text">
-      <h4>Certified Physiotherapists</h4>
+      <p class="feature-title">Certified Physiotherapists</p>
       <p>Our team holds advanced qualifications and certifications, delivering safe and trusted results.</p>
     </div>
   </div>
@@ -1027,16 +1033,14 @@
         <div class="visit-info-box" style="background: var(--blue-dark);">
           <div class="info-title"><i class="fas fa-share-alt"></i> Follow Us</div>
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
     </div>
     <div>
       <div class="map-container">
-        <iframe
+        <iframe title="Map showing Proud Physio & Wellness in Kakkanad, Kochi"
           src="https://www.google.com/maps?q=SRA+26-C,+Crash+Rd,+Vazhakkala,+Kakkanad,+Kerala+682021&output=embed"
           allowfullscreen="" loading="lazy">
         </iframe>
@@ -1359,6 +1363,7 @@
 </div>
 
 <!-- SITE FOOTER -->
+</main>
 <footer class="site-footer">
   <div class="sf-grid">
     <div class="sf-brand">
