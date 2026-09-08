@@ -31,6 +31,7 @@ Each service has a dedicated page with details, conditions treated and FAQs:
 - [Taping & Cupping](https://proudphysio.com/services/taping-cupping/), kinesiology taping to support injured joints and cupping therapy to release tight muscles and improve circulation.
 - [Posture Correction](https://proudphysio.com/services/posture-correction/), assessment and correction of tech neck, rounded shoulders and desk-related posture problems.
 - [Dry Needling](https://proudphysio.com/services/dry-needling/), fine sterile needles into muscle trigger points to relieve pain and restore movement, performed by a trained physiotherapist.
+- [Ultrasound Physiotherapy](https://proudphysio.com/services/ultrasound-physiotherapy/), therapeutic ultrasound delivering deep, gentle heat to soft tissue to reduce pain and inflammation and speed healing of tendons, ligaments and muscle.
 
 ## Conditions We Treat
 
@@ -66,6 +67,7 @@ Each condition has a dedicated page explaining the condition and how our physiot
 - [Blog: Back Pain from Desk Work, a Guide for Kochi's IT Professionals](https://proudphysio.com/blog/back-pain-desk-workers/)
 - [Blog: Knee Pain, Causes, Treatment and Avoiding Surgery](https://proudphysio.com/blog/knee-pain-physiotherapy/)
 - [Blog: Stroke Rehabilitation at Home](https://proudphysio.com/blog/stroke-rehabilitation-at-home/)
+- [Blog: How Physiotherapy Protects Your Heart (World Physiotherapy Day)](https://proudphysio.com/blog/how-physiotherapy-protects-your-heart/)
 - [Blog: Postpartum Care and Physiotherapy](https://proudphysio.com/blog/postpartum-physiotherapy/)
 - [Blog: Tennis Elbow and Physiotherapy](https://proudphysio.com/blog/tennis-elbow-physiotherapy/)
 - [Blog: Home Care Physiotherapy in Kakkanad](https://proudphysio.com/blog/home-care-physiotherapy/)
