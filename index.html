@@ -189,6 +189,32 @@
     display: flex; align-items: center; justify-content: center;
     color: white; font-size: 14px; font-weight: 700;
   }
+  .service-card-img { position: relative; }
+  .service-card-new {
+    position: absolute; top: 12px; left: 12px; z-index: 1;
+    background: var(--logo-blue); color: #fff; font-size: 11px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 999px;
+  }
+
+  /* NEW: TECAR SPOTLIGHT */
+  .spot-section { padding: 70px 10vw; background: linear-gradient(135deg, var(--green-soft) 0%, #ffffff 65%); }
+  .spot-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; max-width: 1240px; margin: 0 auto; }
+  .spot-img { border-radius: 20px; overflow: hidden; box-shadow: 0 18px 48px rgba(17,40,58,0.14); }
+  .spot-img img { width: 100%; height: auto; display: block; }
+  .spot-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--logo-blue); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 7px 14px; border-radius: 999px; }
+  .spot-text h2 { font-size: 36px; font-weight: 800; color: var(--dark); margin: 16px 0 4px; line-height: 1.15; }
+  .spot-sub { color: var(--blue); font-weight: 600; font-size: 15px; margin-bottom: 14px; }
+  .spot-text > p { color: var(--text); font-size: 15px; line-height: 1.75; }
+  .spot-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin: 18px 0; padding: 0; }
+  .spot-list li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--dark); }
+  .spot-list i { color: var(--blue); font-size: 17px; }
+  .spot-text .spot-for { font-size: 14px; }
+  @media (max-width: 900px) {
+    .spot-section { padding: 44px 20px; }
+    .spot-grid { grid-template-columns: 1fr; gap: 26px; }
+    .spot-text h2 { font-size: 28px; }
+  }
+  @media (max-width: 420px) { .spot-list { grid-template-columns: 1fr; } }
 
   /* WHY CHOOSE */
   .why-section {
@@ -548,6 +574,7 @@
           <a class="mn-serv" href="/services/posture-correction/"><span class="mn-serv-ico"><i class="fas fa-street-view"></i></span><span class="mn-serv-txt"><b>Posture Correction</b><span>Fix tech neck &amp; slouch</span></span></a>
           <a class="mn-serv" href="/services/dry-needling/"><span class="mn-serv-ico"><i class="fas fa-syringe"></i></span><span class="mn-serv-txt"><b>Dry Needling</b><span>Trigger point relief</span></span></a>
           <a class="mn-serv" href="/services/ultrasound-physiotherapy/"><span class="mn-serv-ico"><i class="fas fa-wave-square"></i></span><span class="mn-serv-txt"><b>Ultrasound Physiotherapy</b><span>Deep heat for soft tissue</span></span></a>
+          <a class="mn-serv" href="/services/tecar-therapy/"><span class="mn-serv-ico"><i class="fas fa-bolt"></i></span><span class="mn-serv-txt"><b>TECAR Therapy</b><span>Deep energy pain relief</span></span></a>
               </div>
             </div>
           </div>
@@ -684,6 +711,29 @@
     </div>
     <div class="about-img">
       <img loading="lazy" decoding="async" width="1400" height="1045" srcset="/assets/post-surgical-knee-brace-480w.webp 480w, /assets/post-surgical-knee-brace-768w.webp 768w, /assets/post-surgical-knee-brace.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 380px" src="/assets/post-surgical-knee-brace.webp" alt="Post-operative knee range-of-motion exercise with a physiotherapist">
+    </div>
+  </div>
+</section>
+
+<!-- NEW: TECAR SPOTLIGHT -->
+<section class="spot-section" id="tecar" aria-labelledby="tecar-title">
+  <div class="spot-grid">
+    <div class="spot-img">
+      <img loading="lazy" decoding="async" width="1400" height="1045" srcset="/assets/tecar-therapy-shoulder-480w.webp 480w, /assets/tecar-therapy-shoulder-768w.webp 768w, /assets/tecar-therapy-shoulder.webp 1400w" sizes="(max-width: 900px) 92vw, 46vw" src="/assets/tecar-therapy-shoulder.webp" alt="Physiotherapist giving TECAR therapy on a patient's shoulder at Proud Physio and Wellness">
+    </div>
+    <div class="spot-text">
+      <span class="spot-badge"><i class="fas fa-bolt"></i> New at Proud Physio</span>
+      <h2 id="tecar-title">TECAR Therapy</h2>
+      <p class="spot-sub">Transfer of Energy Capacitive and Resistive</p>
+      <p>Our newest treatment delivers gentle energy deep into muscles, tendons and joints, where your body turns it into natural warmth. It works from the inside out, helping injured tissue settle and heal.</p>
+      <ul class="spot-list">
+        <li><i class="fas fa-circle-check"></i><span>Reduces pain</span></li>
+        <li><i class="fas fa-circle-check"></i><span>Reduces swelling</span></li>
+        <li><i class="fas fa-circle-check"></i><span>Improves mobility</span></li>
+        <li><i class="fas fa-circle-check"></i><span>Improves everyday function</span></li>
+      </ul>
+      <p class="spot-for"><strong>Helpful for</strong> tendinitis, stiff muscles, trigger points, sprains, sports injuries, post-surgical recovery and other musculoskeletal conditions.</p>
+      <a href="/services/tecar-therapy/" class="see-more-btn">Learn about TECAR Therapy <i class="fas fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -873,6 +923,19 @@
         <div class="service-card-icon"><i class="fas fa-wave-square"></i></div>
         <h3>Ultrasound Physiotherapy</h3>
         <p>Therapeutic ultrasound delivers deep, gentle heat to soft tissue, reducing pain and inflammation and speeding healing in tendons, ligaments and muscle.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-card-img">
+        <img loading="lazy" decoding="async" width="1400" height="1045" srcset="/assets/tecar-therapy-knee-480w.webp 480w, /assets/tecar-therapy-knee-768w.webp 768w, /assets/tecar-therapy-knee.webp 1400w" sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 380px" src="/assets/tecar-therapy-knee.webp" alt="TECAR therapy on a patient's knee">
+        <span class="service-card-new">New</span>
+      </div>
+      <a class="service-card-overlay" href="/services/tecar-therapy/" aria-label="TECAR Therapy in Kakkanad and Kochi"></a>
+      <div class="service-card-badge">+</div>
+      <div class="service-card-body">
+        <div class="service-card-icon"><i class="fas fa-bolt"></i></div>
+        <h3>TECAR Therapy</h3>
+        <p>Capacitive and resistive energy transfer that reaches deep into muscles, tendons and joints to reduce pain and swelling and improve mobility.</p>
       </div>
     </div>
   </div>
@@ -1679,7 +1742,9 @@
       { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Myofascial & Active Release Therapy", "url": "https://proudphysio.com/services/myofascial-release-therapy/" } },
       { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Taping & Cupping Therapy", "url": "https://proudphysio.com/services/taping-cupping/" } },
       { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Posture Correction", "url": "https://proudphysio.com/services/posture-correction/" } },
-      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Dry Needling", "url": "https://proudphysio.com/services/dry-needling/" } }
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Dry Needling", "url": "https://proudphysio.com/services/dry-needling/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Ultrasound Physiotherapy", "url": "https://proudphysio.com/services/ultrasound-physiotherapy/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "TECAR Therapy", "url": "https://proudphysio.com/services/tecar-therapy/" } }
     ]
   }
 }

@@ -32,6 +32,7 @@ Each service has a dedicated page with details, conditions treated and FAQs:
 - [Posture Correction](https://proudphysio.com/services/posture-correction/), assessment and correction of tech neck, rounded shoulders and desk-related posture problems.
 - [Dry Needling](https://proudphysio.com/services/dry-needling/), fine sterile needles into muscle trigger points to relieve pain and restore movement, performed by a trained physiotherapist.
 - [Ultrasound Physiotherapy](https://proudphysio.com/services/ultrasound-physiotherapy/), therapeutic ultrasound delivering deep, gentle heat to soft tissue to reduce pain and inflammation and speed healing of tendons, ligaments and muscle.
+- [TECAR Therapy](https://proudphysio.com/services/tecar-therapy/), Transfer of Energy Capacitive and Resistive: radiofrequency energy that creates deep, natural warmth in muscles, tendons and joints to reduce pain and swelling and improve mobility; used for tendinitis, stiff muscles, trigger points, sprains, sports injuries, post-surgical recovery and musculoskeletal conditions.
 
 ## Conditions We Treat
 
